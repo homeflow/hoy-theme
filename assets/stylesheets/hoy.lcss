@@ -123,18 +123,9 @@
 		}
 		
 		.banner img {
-			position: absolute; 
-			top: 0px; 
-			left: 0px;
 			border-top:1px solid #abacac;
 			border-right:1px solid #abacac;
 			border-left:1px solid #abacac;
-		}
-		
-		.fadein {
-			position: relative;
-			width: 550px; 
-			height:334px;
 		}
 		
 		.bottom {
