@@ -15,7 +15,7 @@
 			width:150px;
 		}
 		
-		.banner input {
+		.banner input[type="text"] {
 			width:310px;
 		}
 		
