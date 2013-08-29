@@ -34,7 +34,7 @@
 		.logo1 {
 			margin-top:30px;
 			float:left;
-			margin-left:23px;
+			margin-left:8px;
 		}
 		
 		h1, h2, h3, h4, h5 {
@@ -42,10 +42,9 @@
 		}
 		
 		.nav {
-			padding:63px 0 0 140px;
+			padding:63px 0 0 0;
 			text-align:right;
-			min-width:440px;
-			float:left;
+			width:100%;
 		}
 		
 		.navbar {
