@@ -27,7 +27,7 @@
 			margin-top:20px;
 		}
 		
-		.refine select{
+		.refine form select {
 			width:206px;
 			margin-bottom: 10px;
 		}
