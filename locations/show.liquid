@@ -1,28 +1,30 @@
 	{% include 'layouts/search_form' %}
 	 
-	 <h2> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h2>
-    
+	 <div class="col-lg-9">	
+		 <h2> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h2>
+		
 
-    <ul class="nav nav-tabs">
-        <li  id='tab_list'  class="active">
-          <a href="#home">List</a>
-        </li>
-        <li id='tab_map'>
-          <a href="#map">Map</a>
-        </li>
-    </ul>
-      
-    <div class='togglable_area' id='togglable_list'>
-        {% include 'properties/pagination' %}
-        {% include 'properties/properties_list' %}
-        {% include 'properties/pagination' %}
-    </div>
+		<ul class="nav nav-tabs">
+			<li  id='tab_list'  class="active">
+			  <a href="#home">List</a>
+			</li>
+			<li id='tab_map'>
+			  <a href="#map">Map</a>
+			</li>
+		</ul>
+		  
+		<div class='togglable_area' id='togglable_list'>
+			{% include 'properties/pagination' %}
+			{% include 'properties/properties_list' %}
+			{% include 'properties/pagination' %}
+		</div>
 
-    <div class='togglable_area hidden' id='togglable_map'>
-      <div id='draggable_map_view'>
-    
-      </div>
-    </div>
+		<div class='togglable_area hidden' id='togglable_map'>
+		  <div id='draggable_map_view'>
+		
+		  </div>
+		</div>
+	</div>
 
 
 	
