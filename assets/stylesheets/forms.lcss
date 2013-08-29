@@ -23,11 +23,11 @@
 			margin-top:10px;
 		}
 		
-		#search_form {
+		.refine {
 			margin-top:20px;
 		}
 		
-		#search_form select{
+		.refine select{
 			width:206px;
 			margin-bottom: 10px;
 		}
