@@ -32,7 +32,6 @@
 		.logo1 {
 			margin-top:30px;
 			float:left;
-			margin-left:8px;
 		}
 		
 		h1, h2, h3, h4, h5 {
@@ -69,9 +68,6 @@
 		
 		.articles, .contact h3 {
 			color:#222222;
-		}
-		
-		.contact h3 {
 			text-align:center;
 		}
 		
@@ -142,7 +138,7 @@
 			position: relative;
 			width: 550px; 
 			height:334px;
-			margin-left:8px;
+			margin-left:2px;
 		}
 		
 		.bottom {
