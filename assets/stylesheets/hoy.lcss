@@ -150,6 +150,7 @@
 			background-color:#0B8DD8;
 			box-shadow: 0px -7px 7px -7px #abacac;
 			border-top:1px solid #abacac;
+			clear:both;
 		}
 		
 		.bottom-article {

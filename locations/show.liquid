@@ -1,7 +1,3 @@
-<div class="row">
-  {% include 'layouts/search_form' %}
-</div>
-
 <div class="span8 offset1">
       <div class="row">
           <h2> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h2>
@@ -28,4 +24,7 @@
     
       </div>
     </div>
+	<div class="row">
+  {% include 'layouts/search_form' %}
+</div>
 </div>
