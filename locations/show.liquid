@@ -1,5 +1,5 @@
 <div class="container">
-	 <div class="col-lg-9">	
+	<div class="col-lg-9">	
 		 <h2> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h2>
 		
 
@@ -17,14 +17,15 @@
 			{% include 'properties/properties_list' %}
 			{% include 'properties/pagination' %}
 		</div>
-
+	</div>
+	<div class="col-lg-3">	
+		{% include 'layouts/search_form' %}
 		<div class='togglable_area hidden' id='togglable_map'>
 		  <div id='draggable_map_view'>
 		
 		  </div>
 		</div>
 	</div>
-	{% include 'layouts/search_form' %}
 </div>
 
 	
