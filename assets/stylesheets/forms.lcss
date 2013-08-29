@@ -31,3 +31,7 @@
 			width:206px;
 			margin-bottom: 10px;
 		}
+		
+		.radios {
+			margin-bottom:5px;
+		}
