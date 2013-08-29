@@ -12,6 +12,7 @@
     {{ "application" | stylesheet_link_tag }}
 	{{ "bootstrap" | theme_stylesheet_link_tag }}
     {{ "hoy" | theme_stylesheet_link_tag }}
+	{{ "forms" | theme_stylesheet_link_tag }}
     {{ "font-awesome" | stylesheet_link_tag }}
 	
 	<script>
@@ -78,13 +79,13 @@
 								<option value="3" title="3 Beds">3 beds</option>
 								<option value="4" title="4 Beds">4 beds</option>
 								<option value="5" title="5 Beds">5 beds +</option>
-							  </select>
+							  </select><br />
 							  <select id="min_price" class="formelement_bg search" name='min_price'>
 								<option value="" title="Min price">Price min</option>
 							  </select> 
 							  <select id="max_price" class="formelement_bg search" name='max_price'>
 								<option value="" title="Max price">Price max</option>
-							  </select>
+							  </select><br />
 							  <select id="type" class="formelement_bg search" name='type'>
 								  <option value="" title="Max beds">Property type</option>
 								  {{ agency | tag_dropdown_list }}
