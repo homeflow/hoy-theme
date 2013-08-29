@@ -132,7 +132,7 @@
 			width:100%;
 			background-color:#222222;
 			border-bottom:1px solid #abacac;
-			box-shadow: 0px 9px 8px -8px #abacac;
+			box-shadow: 0px 8px 8px -8px #abacac;
 		}
 		
 		.banner img {
