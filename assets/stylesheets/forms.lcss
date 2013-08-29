@@ -1,5 +1,10 @@
+		.banner form {
+			margin-left:30px;
+		}
+		
 		.banner select {
 			margin: 5px 5px 5px 0px;
+			width:150px;
 		}
 		
 		.banner input[type="text"] {
@@ -8,4 +13,8 @@
 		
 		.banner input {
 			width:266px;
+		}
+		
+		.banner .btn {
+			margin-top:10px;
 		}
