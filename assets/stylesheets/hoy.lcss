@@ -34,7 +34,6 @@
 		.logo1 {
 			margin-top:30px;
 			float:left;
-			width:320px;
 			margin-left:12px;
 		}
 		
