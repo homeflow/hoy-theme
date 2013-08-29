@@ -166,5 +166,10 @@
         Ctesius.init()
       });
     </script>
+
+    <script>
+        Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
+        Ctesius.addConfig('branch_map_element', 'map-canvas');
+    </script>
   </body>
 </html>

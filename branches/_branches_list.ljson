@@ -1,0 +1,12 @@
+branches :
+{% for branch in agency.branches %}
+  - 
+    lat: {{branch.lat}}
+    lng: {{branch.lng}}
+    branch_url: {{ branch | url_for_branch }}
+    branch_id: {{branch.branch_id}}
+    name: {{branch.name}}
+    address: {{branch.address | yaml_safe}}
+    sales_enabled: {{branch.sales_enabled}}
+    lettings_enabled: {{branch.lettings_enabled}}
+{% endfor %}
