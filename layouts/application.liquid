@@ -14,14 +14,6 @@
     {{ "hoy" | theme_stylesheet_link_tag }}
 	{{ "forms" | theme_stylesheet_link_tag }}
     {{ "font-awesome" | stylesheet_link_tag }}
-	
-	<script>
-		$(function(){
-			$('.fadein img:gt(0)').hide();
-			setInterval(function(){$('.fadein :first-child').fadeOut(900).next('img').fadeIn(900).end().appendTo('.fadein');}, 3700);
-		});	
-	</script>
-	
   </head>
 
   <body>
@@ -49,12 +41,12 @@
 	</div>
 	<div class="banner">
 		<div class="container">
-			<div class="col-lg-8">
+			<div class="col-lg-7">
 				{% for carousel_item in agency.carousel_items %}
 					<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
 				{% endfor %}
 			</div>
-			<div class="col-lg-4">		  
+			<div class="col-lg-5">		  
 			    <div class="propertySearchBox" id="search_form">
 					<div class="title">Property Search</div>
 					  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">
