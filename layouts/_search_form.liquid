@@ -11,6 +11,9 @@
 		<div class="search_wrapper" id="row2">
 		  <div class="search_row">
 			<div>
+			  <div class="title">Property Search</div>
+			  <div id="rsales"><input type="radio" name="channel" value="sales" checked id="buy"> <label>For Sale</label></div>
+			  <div id="rlettings"><input type="radio" name="channel" value="lettings" id="let"> <label>To Let</label></div>	
 			  <select id="min_beds" class="formelement_bg search" name='min_beds'>
 				<option value="" title="Min beds">Beds min</option>
 				<option value="1" title="1 Bed">1 bed</option>
@@ -19,7 +22,6 @@
 				<option value="4" title="4 Beds">4 beds</option>
 				<option value="5" title="5 Beds">5 beds +</option>
 			  </select>
-
 			  <select id="max_beds" class="formelement_bg search" name='max_beds'>
 				<option value="" title="Min beds">Beds max</option>
 				<option value="1" title="1 Bed">1 bed</option>
@@ -28,15 +30,12 @@
 				<option value="4" title="4 Beds">4 beds</option>
 				<option value="5" title="5 Beds">5 beds +</option>
 			  </select>
-
 			  <select id="min_price" class="formelement_bg search" name='min_price'>
 				<option value="" title="Min price">Price min</option>
 			  </select> 
-
 			  <select id="max_price" class="formelement_bg search" name='max_price'>
 				<option value="" title="Max price">Price max</option>
 			  </select>
-
 			  <select id="type" class="formelement_bg search" name='type'>
 				  <option value="" title="Max beds">Property type</option>
 				  {{ agency | tag_dropdown_list }}
