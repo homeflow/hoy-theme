@@ -7,7 +7,7 @@
 		}
 
 		body {
-			font-family: 'Nobile', Georgia;
+			font-family: Georgia;
 			font-size:16px;
 		}
 		
