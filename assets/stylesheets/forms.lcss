@@ -37,7 +37,7 @@
 		}
 		
 		.h-search-form {
-			float:right;
+			margin-left:15px;
 		}
 		
 		.h-search-form select {
