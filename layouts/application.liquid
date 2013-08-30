@@ -56,7 +56,8 @@
 				</a>
 			</div>
 			<div class="col-lg-9">
-				<div class="nav1">	
+				<div class="nav1">
+					|
 					{% assign primary_menu = 'primary' | site_menu %}
 						{% for menu_item in primary_menu.items %}
 						  <a class="navigation {{menu_item.dom_id}}" data-id="{{menu_item.dom_id}}" href="{{ menu_item.url }}">{{ menu_item.name }}</a> |
