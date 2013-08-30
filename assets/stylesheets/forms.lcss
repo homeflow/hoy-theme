@@ -36,17 +36,17 @@
 			margin-bottom:8px;
 		}
 		
-		.h-search select {
+		.h-search-form select {
 			width:150px;
 			margin-right:5px;
 		}
 		
-		.h-search .btn {
+		.h-search-form .btn {
 			float:right;
 			margin-top:5px;
 		}
 		
-		.h-search input[type="text"] {
+		.h-search-form input[type="text"] {
 			width:476px;
 		}
 		
