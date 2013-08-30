@@ -19,8 +19,19 @@
         Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
         Ctesius.addConfig('branch_map_element', 'map');
     </script>
+	
+	<script>
+		$(window).load(function(){
+			$('.gallery').cycle({ 
+			fx:'fade',
+			timeout: 5000,
+			next: '#next',
+			prev : '#prev'
+			});
+		});
+	</script>
+	
   </head>
-
   <body>
     {% include 'layouts/js_templates' %}
 	
@@ -44,9 +55,11 @@
 	<div class="banner">
 		<div class="container">
 			<div class="col-lg-7">
-				{% for carousel_item in agency.carousel_items %}
-					<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
-				{% endfor %}
+				<div class="gallery">
+					{% for carousel_item in agency.carousel_items %}
+						<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
+					{% endfor %}
+				</div>
 			</div>
 			<div class="col-lg-5">		  
 			    <div class="propertySearchBox" id="search_form">
