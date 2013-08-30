@@ -12,7 +12,7 @@
 		}
 		
 		a {
-			color:#ffffff;
+			color:#0B8DD8;
 			text-decoration:none;
 		}
 		
@@ -48,6 +48,7 @@
 		
 		.nav1 a {
 			padding:0px 10px 0px 10px;
+			color:#ffffff;
 		}
 		
 		.articles {
