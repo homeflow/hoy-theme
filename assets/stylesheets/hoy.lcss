@@ -181,6 +181,6 @@
 			font-weight:bold;
 		}
 		
-		.content-middle a, a:visited {
+		.content-middle a {
 			color:#0B8DD8;
 		}
