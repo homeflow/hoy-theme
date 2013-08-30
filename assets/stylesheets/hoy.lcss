@@ -51,6 +51,11 @@
 			color:#ffffff;
 		}
 		
+		.nav1 a:hover {
+			padding:0px 10px 0px 10px;
+			color:#0B8DD8;
+		}
+		
 		.articles {
 			padding:10px 0 10px 0;
 		}
@@ -109,6 +114,11 @@
 		
 		.footer a {
 			padding:0px 10px 0px 10px;
+			color:#ffffff;
+		}
+		
+		.footer a:hover {
+			color:#0B8DD8;
 		}
 		
 		.banner { 
@@ -164,24 +174,7 @@
 			width:360px;
 		}
 		
-		.contact {
-			text-align:left;
-		}
-		
-		.contact .form-horizontal {
-			margin-bottom:30px;
-			color:#222222;
-		}
-		
-		.contact .form-horizontal .btn{
-			margin-top:10px;
-		}
-		
 		.title {
 			margin-bottom:10px;
 			font-weight:bold;
-		}
-		
-		.content-middle a {
-			color:#0B8DD8;
 		}
