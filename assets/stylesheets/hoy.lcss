@@ -163,12 +163,6 @@
 			color:#ffffff;
 		}
 		
-		#map {
-			width: 520px;
-			height: 295px;
-			margin: 10px 0 10px 0px;
-		}
-		
 		dt {
 			float:left;	
 		}
@@ -206,4 +200,16 @@
 		
 		footer {
 			margin-top:20px;
+		}
+		
+		.offices-map {
+			width: 520px;
+			height: 295px;
+			margin: 10px 0 10px 0px;
+		}
+		
+		.office-map {
+			height: 250px;
+			width: 330px;
+			margin-top: 100px;
 		}
