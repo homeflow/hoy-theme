@@ -180,3 +180,7 @@
 			margin-bottom:10px;
 			font-weight:bold;
 		}
+		
+		.content-middle a, a:visited {
+			color:#0B8DD8;
+		}
