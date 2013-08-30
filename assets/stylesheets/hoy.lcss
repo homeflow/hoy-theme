@@ -188,12 +188,13 @@
 		}
 		
 		.gallery {
-			float:left;
+			position:relative;
 			width:500px;
-			height:340px;
+			height:360px;
 			overflow:hidden;
 		}
 		
 		.gallery-wrapper {
 			float:left;
+			position:relative;
 		}
