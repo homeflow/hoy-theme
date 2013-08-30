@@ -36,13 +36,16 @@
 			margin-bottom:8px;
 		}
 		
+		.h-search-form {
+			float:right;
+		}
+		
 		.h-search-form select {
 			width:150px;
 			margin-right:5px;
 		}
 		
 		.h-search-form .btn {
-			float:right;
 			margin-top:5px;
 		}
 		
