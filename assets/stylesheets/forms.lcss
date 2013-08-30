@@ -45,10 +45,6 @@
 			margin-right:5px;
 		}
 		
-		.h-search-form .btn {
-			margin-top:5px;
-		}
-		
 		.h-search-form input[type="text"] {
 			width:476px;
 		}
