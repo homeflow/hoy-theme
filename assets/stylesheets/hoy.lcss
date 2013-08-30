@@ -197,6 +197,7 @@
 		.gallery-wrapper {
 			float:left;
 			position:relative;
+			margin-right:15px;
 		}
 		
 		gallery-details {
