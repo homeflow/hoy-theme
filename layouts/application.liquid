@@ -23,14 +23,27 @@
 	<script>
 		$(window).load(function(){
 			$('.gallery').cycle({ 
-			fx:'fade',
-			timeout: 5000,
-			next: '#next',
-			prev : '#prev'
+				fx:     'fade',
+				timeout:   3000,
+				pager:    '#pager',
+				pagerAnchorBuilder: function(idx, slide){
+				return '<a href="#"></a>';
+				},
+				before:    function(idx, slide){
+				var details1 = $(this).attr('data-details1');
+				var details2 = $(this).attr('data-details2');
+				var details3 = $(this).attr('data-details3');
+				var id = $(this).attr('data-id');
+
+				$('.gallery h2.details a').html(details1)
+				$('.gallery h2.details a').attr('href', details3);
+				$('.gallery p').html(details2);
+				$('.gallery h2.sub_header a').attr('href', details3);
+				},
+				activePagerClass: 's'
 			});
 		});
 	</script>
-	
   </head>
   <body>
     {% include 'layouts/js_templates' %}
