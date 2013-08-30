@@ -76,15 +76,18 @@
 	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam</h3>
 	<h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam..."  <a href="">Find out more</a>
 	</h4>
-	
-	{% content_block 'homepage_content_slot' multiple:true %}
-		{% for block in content_blocks limit: 2%}
-			<div class="col-lg-3">
-				{{block.content}}
-			</div>
-		{%endfor%}
-	{%endcontent_block%}
-	
+	<div class="col-lg-3">
+		<img src="{{'shed.jpg' | theme_image_url}}">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="">Read more</a>
+		</p>
+	</div>
+	<div class="col-lg-3">
+		<img src="{{'portals.jpg' | theme_image_url}}">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="">Read more</a>
+		</p>
+	</div>
 	<div class="col-lg-3">
 		<img src="{{'like-follow-social-networking.jpg' | theme_image_url}}">
 		<p>
