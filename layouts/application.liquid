@@ -35,10 +35,10 @@
 				var details3 = $(this).attr('data-details3');
 				var id = $(this).attr('data-id');
 
-				$('.gallery-wrapper h2.details a').html(details1)
-				$('.gallery-wrapper h2.details a').attr('href', details3);
-				$('.gallery-wrapper p').html(details2);
-				$('.gallery-wrapper h2.sub_header a').attr('href', details3);
+				$('.gallery-details h2.details a').html(details1)
+				$('.gallery-details h2.details a').attr('href', details3);
+				$('.gallery-details p').html(details2);
+				$('.gallery-details h2.sub_header a').attr('href', details3);
 				},
 				activePagerClass: 's'
 			});
@@ -69,19 +69,16 @@
 		<div class="container">
 			<div class="col-lg-8">
 				<div class="gallery-wrapper">
-					
 					<div class="gallery">
 						{% for carousel_item in agency.carousel_items %}
 							<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
 						{% endfor %}
 					</div>
-					
-					<div class="gallery-details">
-						<h2 class="details"></h2>
-						<p></p>
-						<h2 class="sub_header"></h2>
-					</div>
-					
+				</div>	
+				<div class="gallery-details">
+					<h2 class="details"></h2>
+					<p></p>
+					<h2 class="sub_header"></h2>
 				</div>
 			</div>
 			<div class="col-lg-4">		  

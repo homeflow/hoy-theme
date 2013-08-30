@@ -198,3 +198,7 @@
 			float:left;
 			position:relative;
 		}
+		
+		gallery-details {
+			float:left;
+		}
