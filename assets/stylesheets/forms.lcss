@@ -35,3 +35,18 @@
 		.radios {
 			margin-bottom:8px;
 		}
+		
+		.h-search select {
+			width:150px;
+			margin-right:5px;
+		}
+		
+		.h-search .btn {
+			float:right;
+			margin-top:5px;
+		}
+		
+		.h-search input[type="text"] {
+			width:476px;
+		}
+		
