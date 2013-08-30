@@ -1,12 +1,11 @@
-<div class="main-wrapper clearfix generic">
-    <div class="content-middle">
-		<div class="container">
-			<div class="col-lg-9">
-				<h2>{{cms_page.title}}</h2>
-				{{cms_page.content}}
-			</div>
-			<div class="col-lg-3">
-			</div>
-		</div>
-    </div>
+<div class="h-search-form">
+	{% include 'layouts/h_search_form' %}
+</div>
+<div class="container">
+	<div class="col-lg-9">
+		<h2>{{cms_page.title}}</h2>
+		{{cms_page.content}}
+	</div>
+	<div class="col-lg-3">
+	</div>
 </div>
