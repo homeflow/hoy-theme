@@ -76,12 +76,10 @@
 	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam</h3>
 	<h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam..."  <a href="">Find out more</a>
 	</h4>
-	{% content_block 'homepage_content_1' multiple:false %}
-		{% for block in content_blocks limit: 1%}
-			<div class="col-lg-3">
-				{{block.content}}
-			</div>
-		{%endfor%}
+	{% content_block 'homepage_content_1'%}
+		<div class="col-lg-3">
+			{{block.content}}
+		</div>
 	{%endcontent_block%}
 	<div class="col-lg-3">
 		<img src="{{'portals.jpg' | theme_image_url}}">
