@@ -124,12 +124,20 @@
 		.banner { 
 			position: relative; 
 			overflow: hidden; 
-			height:360px; 
+			height:340px; 
 			width:100%;
 			background-color:#222222;
 			border-bottom:1px solid #abacac;
 			box-shadow: 0px 8px 8px -8px #abacac;
 			text-align:left;
+			color:#ffffff;
+		}
+		
+		.h-search-form {
+			height:150px; 
+			width:100%;
+			background-color:#222222;
+			box-shadow: 0px 8px 8px -8px #abacac;
 			color:#ffffff;
 		}
 		
