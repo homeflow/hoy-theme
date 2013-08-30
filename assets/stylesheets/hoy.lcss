@@ -189,8 +189,11 @@
 		
 		.gallery {
 			float:left;
+			width:500px;
+			height:340px;
+			overflow:hidden;
 		}
 		
-		.gallery-details {
+		.gallery-wrapper {
 			float:left;
 		}

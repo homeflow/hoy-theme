@@ -35,10 +35,10 @@
 				var details3 = $(this).attr('data-details3');
 				var id = $(this).attr('data-id');
 
-				$('.gallery-wrapper h2.details a').html(details1)
-				$('.gallery-wrapper h2.details a').attr('href', details3);
-				$('.gallery-wrapper p').html(details2);
-				$('.gallery-wrapper h2.sub_header a').attr('href', details3);
+				$('.gallery-details h2.details a').html(details1)
+				$('.gallery-details h2.details a').attr('href', details3);
+				$('.gallery-details p').html(details2);
+				$('.gallery-details h2.sub_header a').attr('href', details3);
 				},
 				activePagerClass: 's'
 			});
@@ -67,7 +67,7 @@
 	</div>
 	<div class="banner">
 		<div class="container">
-			<div class="col-lg-7">
+			<div class="col-lg-8">
 				<div class="gallery-wrapper">
 					
 					<div class="gallery">
@@ -84,7 +84,7 @@
 					
 				</div>
 			</div>
-			<div class="col-lg-5">		  
+			<div class="col-lg-4">		  
 			    <div class="propertySearchBox" id="search_form">
 					<div class="title">Property Search</div>
 					  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">
