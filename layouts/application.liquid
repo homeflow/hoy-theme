@@ -71,10 +71,10 @@
 				<div class="gallery">
 					{% for carousel_item in agency.carousel_items %}
 						<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
-						<h2 class="details"></h2>
-						<p></p>
-						<h2 class="sub_header"></h2>
 					{% endfor %}
+					<h2 class="details"></h2>
+					<p></p>
+					<h2 class="sub_header"></h2>
 				</div>
 			</div>
 			<div class="col-lg-5">		  
