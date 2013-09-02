@@ -141,6 +141,10 @@
 			color:#ffffff;
 		}
 		
+		.blue-banner h2 {
+			margin-top:15px;
+		}
+		
 		.banner img {
 			border-top:1px solid #abacac;
 			border-right:1px solid #abacac;
