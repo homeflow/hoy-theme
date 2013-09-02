@@ -1,6 +1,6 @@
 <ul class='thumbnails'>
 	{%for property in properties %}
-		<li class="span8">
+		<li>
 			<div class="thumbnail row">
 				<a href="{{ property | url_for_property }}">
 					<img class='span4' src="{{ property.photos.first | url_for_property_asset : '260x180'}}" alt="">
