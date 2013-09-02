@@ -1,5 +1,16 @@
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+		background-color:transparent;
+		color:#ffffff;
+	}
+	
+	.pagination ul>.disabled>span, .pagination ul>.disabled>a, .pagination ul>.disabled>a:hover {
+		color:#fffffff;
+		text-decoration:none;
+	}
+	
 	.pagination ul>li>a:hover, .pagination ul>.active>a, .pagination ul>.active>span {
-		background-color:#ffffff;
+		background-color: transparent;
+		text-decoration:underline;
 	}
 	
 	.pagination ul>li>a, .pagination ul>li>span {
@@ -64,6 +75,7 @@
 		padding:0 0 0 0;
 		margin:0;
 		border:none;
+		color:#ffffff;
 	}
 	
 	.nav-tabs > li > a:hover {
