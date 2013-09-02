@@ -1,9 +1,18 @@
+	.thumbnail > img {
+		border: 1px solid #dddddd;
+	}
+	
 	.thumbnails { 
 		margin-left:0;
 		clear:both;
 		padding-top:10px;
 	}
-
+	
+	.thumbnail {
+		border:none;
+		box-shadow:none;
+	}
+	
 	.togglable_area {
 		
 	}
