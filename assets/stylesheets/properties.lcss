@@ -12,7 +12,6 @@
 
 .nav {
 	float: left;
-	width:200px;
 	margin-bottom:10px;
 }
 
@@ -23,4 +22,12 @@
 .pagination {
 	float:right;
 	margin:0;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border:none;
+}
+
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover {
+	border:none;
 }
