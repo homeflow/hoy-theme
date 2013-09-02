@@ -5,7 +5,7 @@
 	}
 
 	.togglable_area {
-		text-align:center;
+		
 	}
 
 	.pagination-right {
