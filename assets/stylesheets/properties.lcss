@@ -93,7 +93,3 @@
 	.nav-tabs > li {
 		padding: 0 5px 0 5px;
 	}
-	
-	.pagination-bottom a {
-		color:#333333;
-	}
