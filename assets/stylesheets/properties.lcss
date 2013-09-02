@@ -40,10 +40,10 @@
 		font-size:80%;
 	}
 	
-	.togglable_area {
-		
+	.thumbnail h4 {
+		margin-top:0;
 	}
-
+	
 	.pagination-right {
 		text-align:center;
 	}
