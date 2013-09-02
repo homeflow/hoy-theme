@@ -5,14 +5,17 @@
 			
 			<ul class="nav nav-tabs">
 				<li  id='tab_list'  class="active">
-				  <a href="#home">List</a>
+				  <a href="#home">List</a> |
 				</li>
 				<li id='tab_map'>
-				  <a href="#map">Map</a>
+				  <a href="#map">Map</a> |
+				</li>
+				<li>
+					{{pagination.total_count}} properties found
 				</li>
 			</ul>
 		
-			
+		<hr />	
 		
 		<div class='togglable_area' id='togglable_list'>
 			{% include 'properties/pagination' %}

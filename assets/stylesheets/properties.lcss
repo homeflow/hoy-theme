@@ -1,5 +1,6 @@
 	.thumbnails { 
 		margin-left:0;
+		clear:both;
 	}
 
 	.togglable_area {

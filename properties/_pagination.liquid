@@ -1,5 +1,4 @@
 <div class="pagination pagination-right">
-	<small>{{pagination.total_count}} properties found</small>
 	<ul>
 		<li {% unless pagination.has_prev_page %}class="disabled"{%endunless%}><a href="{{pagination.previous_page_link}}">&laquo;</a></li>
 		{% for_pagination pagination previous: 4 after :4 %}
