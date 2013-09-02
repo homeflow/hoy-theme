@@ -23,6 +23,7 @@
 	.thumbnail {
 		border:none;
 		box-shadow:none;
+		font-size:80%;
 	}
 	
 	.togglable_area {
