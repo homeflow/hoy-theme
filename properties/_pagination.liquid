@@ -1,4 +1,4 @@
-<div class="pagination pagination-right">
+<div class="pagination">
 	<ul>
 		<li {% unless pagination.has_prev_page %}class="disabled"{%endunless%}><a href="{{pagination.previous_page_link}}">Previous</a></li>
 		{% for_pagination pagination previous: 4 after :4 %}
