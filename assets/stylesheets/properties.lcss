@@ -1,33 +1,37 @@
-.thumbnails { 
-	margin-left:0;
-}
+	.thumbnails { 
+		margin-left:0;
+	}
 
-.togglable_area {
-	text-align:center;
-}
+	.togglable_area {
+		text-align:center;
+	}
 
-.pagination-right {
-	text-align:center;
-}
+	.pagination-right {
+		text-align:center;
+	}
 
-.nav {
-	float:left;
-	margin-bottom:10px;
-}
+	.nav {
+		float:left;
+		margin-bottom:10px;
+	}
 
-.nav-tabs {
-	border:none;
-}
+	.nav-tabs {
+		border:none;
+	}
 
-.pagination {
-	float:left;
-	margin:0;
-}
+	.pagination {
+		float:left;
+		margin:0;
+	}
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	border:none;
-}
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+		border:none;
+	}
 
-.nav-tabs>.active>a, .nav-tabs>.active>a:hover {
-	border:none;
-}
+	.nav-tabs>.active>a, .nav-tabs>.active>a:hover {
+		border:none;
+	}
+	
+	.prop-controls p {
+		display:inline;
+	}
