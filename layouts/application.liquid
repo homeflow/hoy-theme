@@ -13,9 +13,10 @@
 	{{ "bootstrap" | theme_stylesheet_link_tag }}
     {{ "hoy" | theme_stylesheet_link_tag }}
 	{{ "forms" | theme_stylesheet_link_tag }}
+	{{ "properties" | theme_stylesheet_link_tag }
     {{ "font-awesome" | stylesheet_link_tag }}
 	
-	 <script>
+	<script>
         Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
         Ctesius.addConfig('branch_map_element', 'map');
     </script>
