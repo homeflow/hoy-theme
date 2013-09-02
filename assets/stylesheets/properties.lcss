@@ -1,5 +1,5 @@
 	.pagination ul>li>a:hover, .pagination ul>.active>a, .pagination ul>.active>span {
-		background-color:none;
+		background-color:#ffffff;
 	}
 	
 	.pagination ul>li>a, .pagination ul>li>span {
