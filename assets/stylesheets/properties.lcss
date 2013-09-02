@@ -31,7 +31,6 @@
 	.thumbnails { 
 		margin-left:0;
 		clear:both;
-		margin-top:20px;
 	}
 	
 	.thumbnails>li {
