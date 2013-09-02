@@ -29,7 +29,7 @@
 
 	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 		border:none;
-		padding:0;
+		padding:0 8px 0 8px;
 		margin:0;
 	}
 
