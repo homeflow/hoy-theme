@@ -1,0 +1,13 @@
+<ul class='thumbnails'> 
+  <li class="span8">
+	<div class="thumbnail row">
+	  <img class='span4' src="{{ property.photos.first | url_for_property_asset : '260x180'}}" alt="">
+	  <div class='span4'>
+		<h4>{{property.display_address}}</h4>
+		<p>{{property.price}}</p>
+		<p>{{property.short_description | truncate : 150}}</p>
+		<p><a href="#">Full details</a> | <a href="#">Save to shortlist</a> or call <a href="#">Agent</a> on 01392 5838473</p>
+	  </div>
+	</div>
+  </li>
+</ul>
