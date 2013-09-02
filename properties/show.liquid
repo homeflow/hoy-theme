@@ -2,14 +2,20 @@
 	<div class="container">
 		<div class="col-lg-12">
 			<h3>{{property.display_address}}, {{property.price}}</h3>
+			<h4>{{property.bedrooms}}</h4>
 		</div>
 	</div>
 </div>
 <div class="container">
-    <div class="col-lg-8">
-		<img src="{{property.photos.first}}" alt="">
-    </div>
-	<div class="col-lg-4">
-		
+	<div class="row">	
+		<div class="col-lg-8">
+			<img src="{{property.photos.first | url_for_property_asset : '260x180'}}" alt="">
+		</div>
+		<div class="col-lg-4">
+			Contact details
+		</div>
+		<div class="col-lg-8">
+			{{property.description}}
+		</div>
 	</div>
 </div>
