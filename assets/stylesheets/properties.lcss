@@ -1,3 +1,15 @@
+	.pagination ul>li>a:hover, .pagination ul>.active>a, .pagination ul>.active>span {
+		background-color:none;
+	}
+	
+	.pagination ul>li>a, .pagination ul>li>span {
+		border:none;
+	}
+	
+	.pagination ul {
+		box-shadow:none;
+	}
+	
 	.thumbnail > img {
 		border: 1px solid #dddddd;
 	}
