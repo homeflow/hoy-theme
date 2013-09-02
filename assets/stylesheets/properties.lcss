@@ -27,8 +27,15 @@
 
 	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 		border:none;
+		padding:0;
+		margin:0;
 	}
 
 	.nav-tabs>.active>a, .nav-tabs>.active>a:hover {
 		border:none;
+	}
+	
+	.nav-tabs > li > a {
+		padding:0;
+		margin:0;
 	}
