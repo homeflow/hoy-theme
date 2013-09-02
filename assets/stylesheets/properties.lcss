@@ -24,7 +24,7 @@
 		box-shadow:none;
 	}
 	
-	.thumbnail > img {
+	.thumbnail img {
 		border: 1px solid #dddddd;
 	}
 	
