@@ -11,7 +11,7 @@
 }
 
 .nav {
-	float: left;
+	float:left;
 	margin-bottom:10px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .pagination {
-	float:right;
+	float:left;
 	margin:0;
 }
 

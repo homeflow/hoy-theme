@@ -1,17 +1,20 @@
 <div class="container">
 	<div class="col-lg-9">	
 		 <h2> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h2>
-		<h4>View type:</h4>
-		<ul class="nav nav-tabs">
-			<li  id='tab_list'  class="active">
-			  <a href="#home">List</a>
-			</li>
-			<li id='tab_map'>
-			  <a href="#map">Map</a>
-			</li>
-		</ul>
-		<div class='togglable_area' id='togglable_list'>
+		<div class="prop-controls">	
+			View type:
+			<ul class="nav nav-tabs">
+				<li  id='tab_list'  class="active">
+				  <a href="#home">List</a>
+				</li>
+				<li id='tab_map'>
+				  <a href="#map">Map</a>
+				</li>
+			</ul>
+			|
 			{% include 'properties/pagination' %}
+		</div>
+		<div class='togglable_area' id='togglable_list'>
 			{% include 'properties/properties_list' %}
 			{% include 'properties/pagination' %}
 		</div>
