@@ -7,15 +7,18 @@
 	</div>
 </div>
 <div class="container">
-	<div class="row">	
-		<div class="col-lg-8">
-			<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
-		</div>
-		<div class="col-lg-4">
-			Contact details
-		</div>
-		<div class="col-lg-8">
-			{{property.description}}
-		</div>
+	<div class="col-lg-8">
+		<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+	</div>
+	<div class="col-lg-4">
+		Contact details
+	</div>
+</div>
+<div class="container">
+	<div class="col-lg-8">
+		{{property.description}}
+	</div>
+	<div class="col-lg-4">
+	
 	</div>
 </div>
