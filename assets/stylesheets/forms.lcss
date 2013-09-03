@@ -47,9 +47,17 @@
 		
 		.propery-form {
 			margin-top:20px;
+			width:340px;
 		}
 		
 		.propery-form label {
-			width:130px;
+			width:110px;
 			float:left;
+		}
+		
+		.propery-form btn {
+			float: right;
+			clear: both;
+			margin-top: 20px;
+			margin-right: 25px;
 		}
