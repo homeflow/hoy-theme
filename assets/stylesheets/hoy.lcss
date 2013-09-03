@@ -241,10 +241,13 @@
 			width:628px;
 		}
 		
-		.photo-reel img {
-			display: inline-block;
+		.photo-slider img {
 			border: 1px solid #dddddd;
-			margin: 5px 5px 0 0p;
+		}
+			
+		.photo-reel img {
+			display: inline-block;	
+			margin: 5px 9px 0 0;
 		}
 		
 		.photo-reel img:last-child {
