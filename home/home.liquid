@@ -74,14 +74,13 @@
 </div>
 <div class="articles container">
 	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam</h3>
-	<h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam..."  <a href="">Find out more</a>
-	</h4>
+	<h4>"Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam..."  <a href="">Find out more</a></h4>
 	{% content_block homepage_content_1 %}
 		{% if content_block_found %}
 			<div class="col-lg-3">
-				<p>
-					{{ content_block }} <a href="">Read more</a>
-				</p>
+				
+				{{ content_block }} <a href="">Read more</a>
+				
 			</div>
 		{% else %}
 			<p>Can't find block</p>
