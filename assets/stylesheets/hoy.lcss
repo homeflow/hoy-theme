@@ -236,11 +236,17 @@
 			font-weight:bold;
 		}
 		
-		.photo-slider {
+		.photo-reel {
 			margin-bottom:20px;
 			width:628px;
 		}
 		
-		.photo-slider img {
+		.photo-reel img {
 			display: inline-block;
+			border: 1px solid #dddddd;
+			margin: 5px 5px 0 0p;
+		}
+		
+		.photo-reel img:last-child {
+			margin-right:0;
 		}
