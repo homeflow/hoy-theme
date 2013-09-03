@@ -7,16 +7,24 @@
 	</div>
 </div>
 <div class="container">
-	<div class="col-lg-7">
-		<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
-	</div>
-	<div class="col-lg-5">
-		<h3>Call us about this property: <br/>
-			01392 182 833
-		</h3>
-		<h3>
-			<a href="#">Request Details</a>
-		</h3>
+	<div class="row">
+		<div class="col-lg-8">
+			<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+			<div class="row">
+				<div class="col-lg-2">Photo</div>
+				<div class="col-lg-2">Photo</div>
+				<div class="col-lg-2">Photo</div>
+				<div class="col-lg-2">Photo</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<h4>Call us about this property:<h4>
+			<h4>01392 182 833</h4>
+			</h3>
+			<h3>
+				<a href="#">Request Details</a>
+			</h3>
+		</div>
 	</div>
 </div>
 <div class="container">
