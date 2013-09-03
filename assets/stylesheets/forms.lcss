@@ -56,5 +56,5 @@
 		}
 		
 		.propery-form .btn {
-			
+			margin-top:20px;
 		}
