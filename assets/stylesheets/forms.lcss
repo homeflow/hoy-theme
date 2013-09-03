@@ -59,11 +59,7 @@
 			margin-top:20px;
 		}
 		
-		.property-form input, textarea, .uneditable-input {
-			width:260px;
-		}
-		
-		.property-form input {
+		.property-form input, textarea, .uneditable-input, input[type="text"] {
 			width:260px;
 		}
 		
