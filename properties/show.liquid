@@ -11,10 +11,10 @@
 		<div class="col-lg-8">
 			<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
 			<div class="photo-slider">
-				<img src="{{property.photos.second}}" />
-				<img src="{{property.photos.third}}" />
-				<img src="{{property.photos.fourth}}" />
-				<img src="{{property.photos.fifth}}" />
+				<img src="{{property.photos.second | url_for_property_asset : '131x87'}}" />
+				<img src="{{property.photos.third | url_for_property_asset : '131x87'}}" />
+				<img src="{{property.photos.fourth | url_for_property_asset : '131x87'}}" />
+				<img src="{{property.photos.fifth | url_for_property_asset : '131x87'}}" />
 			</div>
 		</div>
 		<div class="col-lg-4">
