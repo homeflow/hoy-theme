@@ -73,6 +73,13 @@
 	</div>
 </div>
 <div class="articles container">
+	{% content_block 'Home title' multiple:false %}
+		{% for block in content_blocks limit: 1%}
+			<h3>
+				{{block.content_block}}
+			</h3>
+		{%endfor%}
+	{%endcontent_block%}
 	<h3>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam
 	</h3>

@@ -256,6 +256,7 @@
 		
 		.staff-property img {
 			float:left;
+			margin-right:5px;
 			border: 1px solid #dddddd;
 		}
 		
