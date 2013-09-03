@@ -21,16 +21,11 @@
 		<div class="col-lg-4">
 			<p>Contact our {{ branch.name }} office about this property on 01392 182 833 or fill out the form below.</p>
 			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" id="contact_form" class="propery-form" method="post">
-				<label>First Name</label>
-				<input name="lead_client[first_name]" type="text">
-				<label>Last Name</label>
-				<input name="lead_client[last_name]" type="text">
-				<label>Email</label>
-				<input name="lead_client[email]" type="text">
-				<label>Telephone</label>
-				<input name="lead_client[tel_home]" type="text">
-				<label>Message</label>
-				<textarea name="lead[message]"></textarea>
+				<input name="lead_client[first_name]" type="text" placeholder="First Name">
+				<input name="lead_client[last_name]" type="text" placeholder="Last Name">
+				<input name="lead_client[email]" type="text" placeholder="Email">
+				<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
+				<textarea name="lead[message]" placeholder="Message"></textarea>
 				<input type="submit" value="Contact us" class="btn">
 			</form>
 		</div>
