@@ -258,3 +258,7 @@
 			float:left;
 			border: 1px solid #dddddd;
 		}
+		
+		.staff-property p {
+			font-size:12px;
+		}
