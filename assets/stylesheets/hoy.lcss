@@ -238,4 +238,9 @@
 		
 		.photo-slider {
 			margin-bottom:20px;
+			width:628px;
+		}
+		
+		.photo-slider img {
+			display: inline-block;
 		}
