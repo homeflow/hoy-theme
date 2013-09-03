@@ -56,8 +56,5 @@
 		}
 		
 		.propery-form .btn {
-			float: right;
-			clear: both;
-			margin-top: 20px;
-			margin-right: 25px;
+			
 		}
