@@ -2,6 +2,10 @@
 			width:1170px;
 		}
 		
+		.row {
+			margin-left:0; /* counteracts application css */
+		}
+		
 		.ui-helper-hidden-accessible{
 		  display:none;
 		}
