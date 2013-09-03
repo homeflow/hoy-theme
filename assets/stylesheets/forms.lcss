@@ -45,3 +45,6 @@
 			width:476px;
 		}
 		
+		.propery-form {
+			margin-top:10px;
+		}
