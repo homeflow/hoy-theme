@@ -46,6 +46,7 @@
 		}
 		
 		.propery-form {
+			margin-top:20px;
 			width:340px;
 		}
 		
