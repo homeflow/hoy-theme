@@ -58,3 +58,10 @@
 		.propery-form .btn {
 			margin-top:20px;
 		}
+		
+		.property-form input, textarea, .uneditable-input {
+			width:260px;
+		}
+		
+		.property-form textarea {
+			height:100px;
