@@ -63,6 +63,6 @@
 			width:260px;
 		}
 		
-		.property-form textarea {
+		.property-form input textarea {
 			height:100px;
 		}
