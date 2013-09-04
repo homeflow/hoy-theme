@@ -268,10 +268,16 @@
 			position:absolute;
 			left:0px;
 			background-image:url("../images/black_leftpointing_pointer.png");
+			background-repeat:no-repeat;
+			height:23px;
+			width:25px;
 		}
 		
 		.photo-reel .next {
 			position:absolute;
 			right:0px;
 			background-image:url("../images/black_rightpointing_pointer.png");
+			background-repeat:no-repeat;
+			height:23px;
+			width:25px;
 		}
