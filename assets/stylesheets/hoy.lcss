@@ -54,6 +54,7 @@
 		.nav1 a {
 			padding:0px 10px 0px 10px;
 			color:#ffffff;
+			font-size:14px;
 		}
 		
 		.nav1 a:hover {
