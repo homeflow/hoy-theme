@@ -263,7 +263,7 @@
 			height:17px;
 			width:18px;
 			text-indent: -9999px;
-			top:490px;
+			top:496px;
 		}
 		
 		.photo-reel-dirnav .prev {
@@ -279,6 +279,10 @@
 			right:36px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
+		}
+		
+		.staff-property {
+			height:80px;
 		}
 		
 		.staff-property img {
