@@ -238,7 +238,8 @@
 		
 		.photo-reel {
 			margin-bottom:20px;
-			width:628px;
+			width:640px;
+			text-align:center;
 		}
 		
 		.photo-slider img {
@@ -269,8 +270,8 @@
 			left:0px;
 			background-image:url("../images/black_leftpointing_pointer.png");
 			background-repeat:no-repeat;
-			height:23px;
-			width:25px;
+			height:17px;
+			width:18px;
 		}
 		
 		.photo-reel .next {
@@ -278,6 +279,6 @@
 			right:0px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
-			height:23px;
-			width:25px;
+			height:17px;
+			width:18px;
 		}
