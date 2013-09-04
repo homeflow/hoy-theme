@@ -62,7 +62,3 @@
 		.property-form input, textarea, .uneditable-input, input[type="text"] {
 			width:260px;
 		}
-		
-		.property-form input textarea {
-			height:100px;
-		}

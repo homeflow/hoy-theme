@@ -268,7 +268,7 @@
 		.photo-reel .prev {
 			position:absolute;
 			left:14px;
-			top:463px
+			top:463px;
 			background-image:url("../images/black_leftpointing_pointer.png");
 			background-repeat:no-repeat;
 			height:17px;
@@ -278,7 +278,7 @@
 		.photo-reel .next {
 			position:absolute;
 			right:35px;
-			top:463px
+			top:463px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
 			height:17px;
