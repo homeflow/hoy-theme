@@ -263,12 +263,12 @@
 			height:17px;
 			width:18px;
 			text-indent: -9999px;
-			top:485px;
+			top:490px;
 		}
 		
 		.photo-reel-dirnav .prev {
 			position:absolute;
-			left:14px;
+			left:15px;
 			background-image:url("../images/black_leftpointing_pointer.png");
 			background-repeat:no-repeat;
 			
@@ -276,7 +276,7 @@
 		
 		.photo-reel-dirnav .next {
 			position:absolute;
-			right:35px;
+			right:36px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
 		}
