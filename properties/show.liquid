@@ -68,12 +68,15 @@
 			</form>
 		</div>
 	</div>
-</div>
-<div class="container">
-	<div class="col-lg-8">
-		{{property.description}}
-	</div>
-	<div class="col-lg-4">
-	
+	<div class="row">
+		<div class="col-lg-8">
+			{{property.description}}
+		</div>
+		<div class="col-lg-4">
+			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
+				{% assign staff_list = branch.staff_profiles %}
+				{% include 'sidebar_blocks/staff_list'%}
+			{% endif %}
+		</div>
 	</div>
 </div>

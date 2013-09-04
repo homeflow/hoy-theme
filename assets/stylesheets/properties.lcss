@@ -41,7 +41,7 @@
 	.thumbnail {
 		border:none;
 		box-shadow:none;
-		font-size:80%;
+		font-size:85%;
 	}
 	
 	.thumbnail h4 {
