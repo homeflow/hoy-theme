@@ -291,12 +291,12 @@
 			width:90px;
 			height:90px;
 			float:left;
-			margin-right:5px;
+			margin-right:8px;
 			border: 1px solid #dddddd;
 		}
 		
 		.staff-property p {
 			font-size:12px;
 			float:left;
-			width:150px;
+			width:120px;
 		}
