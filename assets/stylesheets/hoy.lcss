@@ -267,9 +267,13 @@
 		.photo-reel .prev {
 			position:absolute;
 			left:0px;
+			color:#222222;
+			text-decoration:none;
 		}
 		
 		.photo-reel .next {
 			position:absolute;
 			right:0px;
+			color:#222222;
+			text-decoration:none;
 		}
