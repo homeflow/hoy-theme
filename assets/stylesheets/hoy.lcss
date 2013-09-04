@@ -265,22 +265,24 @@
 			font-size:12px;
 		}
 		
-		.photo-reel .prev {
-			position:absolute;
-			left:14px;
-			top:463px;
-			background-image:url("../images/black_leftpointing_pointer.png");
-			background-repeat:no-repeat;
+		.photo-reel-dirnav a {
 			height:17px;
 			width:18px;
+			text-indent: -9999px;
+			top:463px;
 		}
 		
-		.photo-reel .next {
+		.photo-reel-dirnav .prev {
+			position:absolute;
+			left:14px;
+			background-image:url("../images/black_leftpointing_pointer.png");
+			background-repeat:no-repeat;
+			
+		}
+		
+		.photo-reel-dirnav .next {
 			position:absolute;
 			right:35px;
-			top:463px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
-			height:17px;
-			width:18px;
 		}
