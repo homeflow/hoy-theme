@@ -101,3 +101,12 @@
 	.nav-tabs > li:first-child {
 		padding-left:0;
 	}
+	
+	.property-toogles {
+		float:right;
+	}
+	
+	.property-toogles li {
+		display:inline;
+	}
+		
