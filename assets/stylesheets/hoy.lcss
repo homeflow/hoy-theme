@@ -263,3 +263,13 @@
 		.staff-property p {
 			font-size:12px;
 		}
+		
+		.photo-reel .prev {
+			position:absolute;
+			left:0px;
+		}
+		
+		.photo-reel .next {
+			position:absolute;
+			right:0px;
+		}

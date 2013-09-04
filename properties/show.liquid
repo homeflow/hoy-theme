@@ -9,9 +9,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-7">
+			<a href="#">Back to search</a>
 			<div class="photo-slider">
 				<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
 				<div class="photo-reel">
+					<a class="prev">&#9668;</a>
+					<a class="next">&#9668;</a>
 					{% for photo in property.photos %}
 						<img src="{{photo | url_for_property_asset : "110x74" }}">
                     {% endfor %}
