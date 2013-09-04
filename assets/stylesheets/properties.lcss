@@ -26,6 +26,7 @@
 	
 	.thumbnail img {
 		border: 1px solid #dddddd;
+		float:left;
 	}
 	
 	.thumbnails { 
