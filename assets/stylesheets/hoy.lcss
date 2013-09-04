@@ -277,7 +277,7 @@
 		
 		.photo-reel-dirnav .next {
 			position:absolute;
-			right:36px;
+			right:21px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
 		}
