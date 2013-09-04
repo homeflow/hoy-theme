@@ -108,5 +108,14 @@
 	
 	.property-toogles li {
 		display:inline;
+		padding-right:15px;
+	}
+	
+	.property-toogles li:last-child {
+		padding-right:0;
+	}
+	
+	.property-toogles li a {
+		font-size:85%;
 	}
 		
