@@ -97,3 +97,7 @@
 	.nav-tabs > li {
 		padding: 0 5px 0 5px;
 	}
+	
+	.nav-tabs > li:first-child {
+		padding-left:0;
+	}
