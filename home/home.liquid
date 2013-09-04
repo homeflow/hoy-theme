@@ -1,6 +1,6 @@
 <div class="banner">
 	<div class="container">
-		<div class="col-lg-8">
+		<div class="col-lg-7">
 			<div class="gallery-wrapper">
 				<div class="gallery">
 					{% for carousel_item in agency.carousel_items %}
@@ -8,13 +8,13 @@
 					{% endfor %}
 				</div>
 			</div>	
-			<div class="gallery-details">
+			<!--<div class="gallery-details">
 				<h2 class="details"></h2>
 				<p></p>
 				<h3 class="sub_header">View full details</h3>
-			</div>
+			</div>-->
 		</div>
-		<div class="col-lg-4">		  
+		<div class="col-lg-5">		  
 			<div class="propertySearchBox" id="search_form">
 				<div class="title">Property Search</div>
 				  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">
