@@ -236,6 +236,10 @@
 			font-weight:bold;
 		}
 		
+		.photo-slider {
+			margin-top:5px;
+		}
+		
 		.photo-reel {
 			margin-bottom:20px;
 			width:640px;
@@ -253,16 +257,6 @@
 		
 		.photo-reel img:last-child {
 			margin-right:0;
-		}
-		
-		.staff-property img {
-			float:left;
-			margin-right:5px;
-			border: 1px solid #dddddd;
-		}
-		
-		.staff-property p {
-			font-size:12px;
 		}
 		
 		.photo-reel-dirnav a {
@@ -285,4 +279,14 @@
 			right:35px;
 			background-image:url("../images/black_rightpointing_pointer.png");
 			background-repeat:no-repeat;
+		}
+		
+		.staff-property img {
+			float:left;
+			margin-right:5px;
+			border: 1px solid #dddddd;
+		}
+		
+		.staff-property p {
+			font-size:12px;
 		}
