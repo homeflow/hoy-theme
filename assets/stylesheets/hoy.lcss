@@ -267,11 +267,11 @@
 		.photo-reel .prev {
 			position:absolute;
 			left:0px;
-			background-image:url("..assets/images/black_leftpointing_pointer.png");
+			background-image:url("../images/black_leftpointing_pointer.png");
 		}
 		
 		.photo-reel .next {
 			position:absolute;
 			right:0px;
-			background-image:url("..assets/images/black_rightpointing_pointer.png");
+			background-image:url("../images/black_rightpointing_pointer.png");
 		}
