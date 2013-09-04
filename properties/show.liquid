@@ -26,10 +26,17 @@
 		<div class="col-lg-4">
 			<h4>{{ branch.name }} office</h4>
 			<h4>Tel: 01392 8385853</h4>
-			<div class="staff-property">	
-				<img src="" alt="Staff Avatar"/>
-				<p>Talk to name about this property or fill out the form below.</p>
-			</div>
+			{% unless branch.staff_profiles == empty %} 
+			{% assign profile = branch.staff_profiles.first %}
+				<div class="staff-property">
+					<a href="{{profile | url_for_staff_member}}">
+						<img src="{{profile.avatar | url_for_staff_profile_avatar: "105x"}}">
+					</a>
+					<p>Talk to {{profile.name}} about this property or fill out the form below.</p>
+				</div>
+			{% else %}
+				<p>To send us a message about this property, fill out the form below.</p>
+			{% endunless%}
 			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" id="contact_form" class="propery-form" method="post">
 				<input name="lead_client[first_name]" type="text" placeholder="First Name">
 				<input name="lead_client[last_name]" type="text" placeholder="Last Name">
