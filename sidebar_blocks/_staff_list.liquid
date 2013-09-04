@@ -1,6 +1,6 @@
 {% unless staff_list == empty %} 
 	<div id="branch-staff" class="content-block">
-		<h2>{% if staff_member %}Some of my colleagues{% else %}{% if property %}Meet our staff{% else %}Some of our team{% endif %}{% endif %}</h2>
+		<h4>{% if staff_member %}Some of my colleagues{% else %}{% if property %}Meet our staff{% else %}Some of our team{% endif %}{% endif %}</h4>
 		<div class="content clearfix">
 			{% for staff_member in staff_list limit:3 %}
 				{% include "staff/staff_member_small" %}
@@ -11,4 +11,3 @@
 		</div>
 	</div>
 {% endunless %} 
-

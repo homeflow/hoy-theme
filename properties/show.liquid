@@ -43,6 +43,7 @@
                     {% endfor %}
 				</div>
 			</div>
+			{{property.description}}
 		</div>
 		<div class="col-lg-4">
 			<h4>{{ branch.name }} office</h4>
@@ -66,13 +67,6 @@
 				<textarea name="lead[message]" placeholder="Message"></textarea>
 				<input type="submit" value="Send message" class="btn">
 			</form>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-8">
-			{{property.description}}
-		</div>
-		<div class="col-lg-4">
 			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
 				{% assign staff_list = branch.staff_profiles %}
 				{% include 'sidebar_blocks/staff_list'%}
