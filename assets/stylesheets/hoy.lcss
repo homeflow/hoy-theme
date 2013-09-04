@@ -282,7 +282,7 @@
 		}
 		
 		.staff-property img {
-			width:90px
+			width:90px;
 			height:90px;
 			float:left;
 			margin-right:5px;
