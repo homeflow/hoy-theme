@@ -237,7 +237,7 @@
 		}
 		
 		.photo-slider {
-			margin-top:5px;
+			margin-top:10px;
 		}
 		
 		.photo-reel {
@@ -282,6 +282,8 @@
 		}
 		
 		.staff-property img {
+			width:90px
+			height:90px;
 			float:left;
 			margin-right:5px;
 			border: 1px solid #dddddd;
@@ -289,4 +291,6 @@
 		
 		.staff-property p {
 			font-size:12px;
+			float:left;
+			width:150px;
 		}

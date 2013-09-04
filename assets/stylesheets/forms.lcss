@@ -56,7 +56,7 @@
 		}
 		
 		.propery-form .btn {
-			margin-top:20px;
+			margin-top:15px;
 		}
 		
 		.property-form input, textarea, .uneditable-input, input[type="text"] {
