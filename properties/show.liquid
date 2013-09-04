@@ -14,8 +14,8 @@
 				<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
 				<div class="photo-reel">
 					<div class="photo-reel-dirnav">
-						<a class="prev">Prev</a>
-						<a class="next">Next</a>
+						<a href="#" class="prev">Prev</a>
+						<a href="#" class="next">Next</a>
 					</div>
 					{% for photo in property.photos %}
 						<img src="{{photo | url_for_property_asset : "110x74" }}">
