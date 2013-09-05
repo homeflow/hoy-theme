@@ -300,3 +300,12 @@
 			float:left;
 			width:120px;
 		}
+		
+		.mini_staff_member .details img {
+			float:left;
+		}
+		
+		.mini_staff_member .details a {
+			font-size:85%;
+			float:left;
+		}
