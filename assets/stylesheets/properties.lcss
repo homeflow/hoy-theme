@@ -197,3 +197,7 @@
 		height:90px;
 		margin-bottom:5px;
 	}
+	
+	#tab-content {
+		position:relative;
+	}
