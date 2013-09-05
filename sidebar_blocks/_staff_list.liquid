@@ -5,7 +5,7 @@
 			{% include "staff/staff_member_small" %}
 		{% endfor %}
 		{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_branch_pages %}
-			<a href="{{branch | url_for_branch : agency }}#tabs/team" class="more">Meet the whole team</a>
+			<a href="{{branch | url_for_branch : agency }}#tabs/team">Meet the whole team</a>
 		{% endif  %}
 	</div>
 {% endunless %} 
