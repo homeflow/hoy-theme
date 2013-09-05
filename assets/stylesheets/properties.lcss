@@ -121,17 +121,7 @@
 		text-indent: -9999px;
 		top:475px;
 	}
-	
-	.nivo-directionNav a.nivo-prevNav {
-		position:absolute;
-		left:0px;
-	}
-	
-	.nivo-directionNav a.nivo-nextNav {
-		position:absolute;
-		right:6px;
-	}
-	
+
 	.staff-property {
 		height:80px;
 	}
