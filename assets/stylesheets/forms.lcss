@@ -60,5 +60,9 @@
 		}
 		
 		textarea {
-			height:100px;
+			height:91px;
+		}
+		
+		input {
+			font-size:85%;
 		}
