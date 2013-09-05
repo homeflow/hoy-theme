@@ -126,7 +126,17 @@
 	.nivo-directionNav a {
 		top:470px;
 	}
-
+	
+	.nivo-prevNav {
+		background-image:url("../images/black_leftpointing_pointer.png");
+		background-repeat:no-repeat;
+	}
+	
+	.nivo-nextNav {
+		background-image:url("../images/black_rightpointing_pointer.png");
+		background-repeat:no-repeat;
+	}
+	
 	.staff-property {
 		height:80px;
 	}
