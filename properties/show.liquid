@@ -46,13 +46,11 @@ $(window).load(function() {
 				{% endif %}
 			</ul>
 			<div id="tab-content">
-				<div id="togglable_home" class="togglable_area clearfix">
-					<div class="slider-wrap">	
-						<div id="slider" class="nivoSlider">
-							{% for photo in property.photos %}
-								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
-							{% endfor %}
-						</div>
+				<div id="togglable_home" class="togglable_area clearfix">	
+					<div id="slider" class="nivoSlider">
+						{% for photo in property.photos %}
+							<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
+						{% endfor %}
 					</div>
 					{{property.description}}
 				</div>

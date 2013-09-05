@@ -102,8 +102,10 @@
 		padding-left:0;
 	}
 
-	.nivoSlider {
+	#property_slider {
+		height: 430px !important;
 		border: 1px solid #dddddd;
+		overflow: visible;
 	}
 		
 	.nivo-controlNav img {
@@ -113,21 +115,21 @@
 		width: 100px;
 	}
 	
-	.slider-wrap .nivo-directionNav a { 
+	.nivo-directionNav a { 
 		height:17px;
 		width:18px;
 		text-indent: -9999px;
 		top:475px;
 	}
 	
-	.slider-wrap .nivo-directionNav a.nivo-prevNav {
+	.nivo-directionNav a.nivo-prevNav {
 		position:absolute;
 		left:0px;
 		background-image:url("../images/black_leftpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
 	
-	.slider-wrap .nivo-directionNav a.nivo-nextNav {
+	.nivo-directionNav a.nivo-nextNav {
 		position:absolute;
 		right:6px;
 		background-image:url("../images/black_rightpointing_pointer.png");
