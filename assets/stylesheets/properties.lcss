@@ -104,7 +104,6 @@
 
 	#slider {
 		height: 430px !important;
-		border: 1px solid #dddddd;
 		overflow: visible;
 		margin-top:10px;
 	}
