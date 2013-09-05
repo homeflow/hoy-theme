@@ -2,6 +2,13 @@
 $(window).load(function() {
     $('#slider').nivoSlider();
 });
+
+$('#slider').nivoSlider({
+    effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
+    directionNav: true,           // Next & Prev navigation
+    controlNav: false,            // 1,2,3... navigation
+    controlNavThumbs: true,       // Use thumbnails for Control Nav
+});
 </script>
 
 <link rel="stylesheet" href="../assets/stylesheets/nivo-slider.css" type="text/css" />
