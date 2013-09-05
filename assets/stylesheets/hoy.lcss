@@ -301,18 +301,11 @@
 			width:120px;
 		}
 		
-		.mini_staff_member .details {
+		#branch-staff {
 			font-size:85%;
 		}
 		
 		.mini_staff_member .details img {
 			float:left;
 		}
-		
-		.mini_staff_member .details a {
 			
-		}
-		
-		.mini_staff_member .details a.more {
-			
-		}
