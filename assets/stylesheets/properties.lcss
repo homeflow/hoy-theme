@@ -142,6 +142,10 @@
 		background-image:url("../images/black_rightpointing_pointer.png");
 	}
 	
+	.nivo-controlNav a.active img {
+		border: 3px solid #dddddd;
+	}
+	
 	.staff-property {
 		height:80px;
 	}
