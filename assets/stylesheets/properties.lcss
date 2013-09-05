@@ -102,7 +102,7 @@
 		padding-left:0;
 	}
 
-	.nivoSlider img {
+	.nivoSlider {
 		border: 1px solid #dddddd;
 	}
 		
