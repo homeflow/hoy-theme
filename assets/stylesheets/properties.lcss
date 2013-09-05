@@ -121,8 +121,8 @@
 		
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
-		margin-right:3px;
-		margin-left:3px;
+		margin-right:7px;
+		margin-left:7px;
 		height: 75px;
 		width: 100px;
 	}
@@ -182,6 +182,7 @@
 	
 	.toggable-nav {
 		float:right;
+		margin-right:7px;
 	}
 	
 	.toggable-nav li {
