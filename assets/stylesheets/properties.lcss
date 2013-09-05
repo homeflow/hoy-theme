@@ -102,24 +102,10 @@
 		padding-left:0;
 	}
 	
-	.property-toogles {
-		float:right;
-		margin-right:4px;
+	.nav-tabs-blue a {
+		color:#0B8DD8;
 	}
-	
-	.property-toogles li {
-		display:inline;
-		padding-right:15px;
-	}
-	
-	.property-toogles li:last-child {
-		padding-right:0;
-	}
-	
-	.property-toogles li a {
-		font-size:85%;
-	}
-		
+
 	.photo-slider {
 		margin-top:10px;
 	}
