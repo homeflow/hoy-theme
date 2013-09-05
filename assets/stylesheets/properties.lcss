@@ -117,13 +117,10 @@
 		
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
-		margin-right:14px;
+		margin-right:3px;
+		margin-left:3px
 		height: 75px;
 		width: 100px;
-	}
-	
-	.nivo-controlNav img:last-child {
-		margin-right:0;
 	}
 	
 	.nivo-directionNav a {
