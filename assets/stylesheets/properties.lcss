@@ -111,21 +111,21 @@
 		margin: 8px 4px 0 0;
 	}
 	
-	.photo-reel-dirnav a {
+	.nivo-directionNav a { 
 		height:17px;
 		width:18px;
 		text-indent: -9999px;
 		top:475px;
 	}
 	
-	.photo-reel-dirnav .prev {
+	.nivo-directionNav a.nivo-prevNav {
 		position:absolute;
 		left:0px;
 		background-image:url("../images/black_leftpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
 	
-	.photo-reel-dirnav .next {
+	.nivo-directionNav a.nivo-nextNav {
 		position:absolute;
 		right:6px;
 		background-image:url("../images/black_rightpointing_pointer.png");
