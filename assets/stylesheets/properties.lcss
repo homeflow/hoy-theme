@@ -103,7 +103,7 @@
 	}
 
 	#slider {
-		height: 425px;
+		height: 426px;
 		width:638px;
 		overflow: visible;
 		margin-top:10px;
