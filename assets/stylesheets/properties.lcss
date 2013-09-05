@@ -104,7 +104,7 @@
 	
 	.property-toogles {
 		float:right;
-		margin-right:20px;
+		margin-right:4px;
 	}
 	
 	.property-toogles li {
@@ -147,20 +147,19 @@
 		height:17px;
 		width:18px;
 		text-indent: -9999px;
-		top:506px;
+		top:475px;
 	}
 	
 	.photo-reel-dirnav .prev {
 		position:absolute;
-		left:15px;
+		left:0px;
 		background-image:url("../images/black_leftpointing_pointer.png");
 		background-repeat:no-repeat;
-		
 	}
 	
 	.photo-reel-dirnav .next {
 		position:absolute;
-		right:21px;
+		right:6px;
 		background-image:url("../images/black_rightpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
