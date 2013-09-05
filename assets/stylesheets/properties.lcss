@@ -185,7 +185,6 @@
 	
 	.toggable-nav {
 		float:right;
-		margin-right:3px;
 	}
 	
 	.toggable-nav li {
