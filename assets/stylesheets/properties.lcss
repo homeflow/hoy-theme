@@ -102,10 +102,6 @@
 		padding-left:0;
 	}
 	
-	.nav-tabs-blue a {
-		color:#0B8DD8;
-	}
-
 	.photo-slider {
 		margin-top:10px;
 	}
