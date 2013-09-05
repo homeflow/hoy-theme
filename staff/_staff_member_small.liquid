@@ -5,7 +5,7 @@
 		{{staff_member.job_title }}<br />
 		{% unless replace_agency_with_social_icons %}
 			<a href="{{ staff_member.branch | url_for_branch : staff_member.agency}}">{{ staff_member.agency.name }}</a>
-		{% endunless %}
+		{% endunless %}<br />
 		{{staff_member.branch.contact_telephone}}
 		{% if replace_agency_with_social_icons %}
 		  {% if staff_member.agency.agency_portal_preferences.enable_social_media_links %} 

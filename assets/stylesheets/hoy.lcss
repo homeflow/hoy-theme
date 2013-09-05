@@ -307,5 +307,11 @@
 		
 		.mini_staff_member .details img {
 			float:left;
+			border: 1px solid #dddddd;
+			margin-right:8px;
+		}
+		
+		.mini_staff_member .details {
+			height:90px;
 		}
 			
