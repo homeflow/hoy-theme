@@ -31,19 +31,26 @@
 					{% endif %}
 				</ul>
 			</div>	
-			<div class="photo-slider">
-				<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
-				<div class="photo-reel">
-					<div class="photo-reel-dirnav">
-						<a href="#" class="prev">Prev</a>
-						<a href="#" class="next">Next</a>
+			<div id="tab-content">
+				<div id="togglable_home" class="togglable_area clearfix">
+					<div class="photo-slider">
+						<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+						<div class="photo-reel">
+							<div class="photo-reel-dirnav">
+								<a href="#" class="prev">Prev</a>
+								<a href="#" class="next">Next</a>
+							</div>
+							{% for photo in property.photos %}
+								<img src="{{photo | url_for_property_asset : "110x74" }}">
+							{% endfor %}
+						</div>
 					</div>
-					{% for photo in property.photos %}
-						<img src="{{photo | url_for_property_asset : "110x74" }}">
-                    {% endfor %}
+					{{property.description}}
 				</div>
 			</div>
-			{{property.description}}
+			<div id="togglable_details" class="togglable_area hidden">
+				{{property.description}}
+			</div>
 		</div>
 		<div class="col-lg-4">
 			<h4>{{ branch.name }} office</h4>
