@@ -123,14 +123,14 @@
 	.nivo-directionNav a.nivo-prevNav {
 		position:absolute;
 		left:0px;
-		background-image:url("../assets/images/black_leftpointing_pointer.png");
+		background-image:url("/assets/images/black_leftpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
 	
 	.nivo-directionNav a.nivo-nextNav {
 		position:absolute;
 		right:6px;
-		background-image:url("../assets/images/black_rightpointing_pointer.png");
+		background-image:url("/assets/images/black_rightpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
 	
