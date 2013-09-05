@@ -53,8 +53,8 @@ $(window).load(function() {
 								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
 							{% endfor %}
 						</div>
-						{{property.description}}
 					</div>
+					{{property.description}}
 				</div>
 				<div id="togglable_details" class="togglable_area hidden">
 					{{property.description}}
