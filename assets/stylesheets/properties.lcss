@@ -200,6 +200,7 @@
 	
 	.toggable-nav li a {
 		color:#0B8DD8;
+		font-size:85%;
 	}
 	
 	
