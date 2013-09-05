@@ -113,26 +113,26 @@
 		width: 100px;
 	}
 	
-	/*.nivo-directionNav a { 
+	.slider-wrap .nivo-directionNav a { 
 		height:17px;
 		width:18px;
 		text-indent: -9999px;
 		top:475px;
 	}
 	
-	.nivo-directionNav a.nivo-prevNav {
+	.slider-wrap .nivo-directionNav a.nivo-prevNav {
 		position:absolute;
 		left:0px;
 		background-image:url("../images/black_leftpointing_pointer.png");
 		background-repeat:no-repeat;
 	}
 	
-	.nivo-directionNav a.nivo-nextNav {
+	.slider-wrap .nivo-directionNav a.nivo-nextNav {
 		position:absolute;
 		right:6px;
 		background-image:url("../images/black_rightpointing_pointer.png");
 		background-repeat:no-repeat;
-	}*/
+	}
 	
 	.staff-property {
 		height:80px;

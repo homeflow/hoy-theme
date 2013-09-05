@@ -47,14 +47,14 @@ $(window).load(function() {
 			</ul>
 			<div id="tab-content">
 				<div id="togglable_home" class="togglable_area clearfix">
-					
+					<div class="slider-wrap">	
 						<div id="slider" class="nivoSlider">
 							{% for photo in property.photos %}
 								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
 							{% endfor %}
 						</div>
-					
-					{{property.description}}
+						{{property.description}}
+					</div>
 				</div>
 				<div id="togglable_details" class="togglable_area hidden">
 					{{property.description}}
