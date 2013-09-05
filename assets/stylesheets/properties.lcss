@@ -143,7 +143,7 @@
 	}
 	
 	.nivo-controlNav a.active img {
-		border: 3px solid #0B8DD8;;
+		border: 2px solid #0B8DD8;;
 	}
 	
 	.staff-property {

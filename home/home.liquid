@@ -73,17 +73,11 @@
 	</div>
 </div>
 <div class="articles container">
-	{% content_block home_intro %}
-		{% unless content_block == 'No content chunk found: home_intro' %}
+	{% content_block title %}
+		{% unless content_block == 'No content chunk found: home_title' %}
 			{{content_block}}
 		{% endunless %}
 	{% endcontent_block %}
-	<h3>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam
-	</h3>
-	<h4>
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam..."  <a href="">Find out more</a>
-	</h4>
 	{% content_block 'homepage_content_1' multiple:true %}
 		{% for block in content_blocks limit: 4%}
 			<div class="col-lg-3">
