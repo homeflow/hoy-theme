@@ -113,7 +113,7 @@
 		width: 100px;
 	}
 	
-	.nivo-directionNav a { 
+	/*.nivo-directionNav a { 
 		height:17px;
 		width:18px;
 		text-indent: -9999px;
@@ -132,7 +132,7 @@
 		right:6px;
 		background-image:url("../images/black_rightpointing_pointer.png");
 		background-repeat:no-repeat;
-	}
+	}*/
 	
 	.staff-property {
 		height:80px;
