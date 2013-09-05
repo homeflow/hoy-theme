@@ -101,28 +101,14 @@
 	.nav-tabs > li:first-child {
 		padding-left:0;
 	}
-	
-	.photo-slider {
-		margin-top:10px;
-	}
-	
-	.photo-reel {
-		margin-bottom:20px;
-		width:640px;
-		text-align:center;
-	}
-	
-	.photo-slider img {
+
+	.nivoSlider img {
 		border: 1px solid #dddddd;
 	}
 		
 	.photo-reel img {
 		display: inline-block;	
 		margin: 8px 4px 0 0;
-	}
-	
-	.photo-reel img:last-child {
-		margin-right:0;
 	}
 	
 	.photo-reel-dirnav a {
