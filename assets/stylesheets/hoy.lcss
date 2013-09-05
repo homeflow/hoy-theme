@@ -301,7 +301,7 @@
 			width:120px;
 		}
 		
-		#branch-staff {
+		.branch-staff {
 			font-size:85%;
 		}
 		
