@@ -108,12 +108,9 @@
 		
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
-		margin-right:2px;
-	}
-	
-	.nivo-controlNav {
-		height:75px;
-		width:100px;
+		margin-right:14px;
+		height: 75px;
+		width: 100px;
 	}
 	
 	.nivo-directionNav a { 
