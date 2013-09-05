@@ -2,15 +2,11 @@
 $(window).load(function() {
    $('#slider').nivoSlider({
     effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
-    slices: 15,                     // For slice animations
-    boxCols: 8,                     // For box animations
-    boxRows: 4,                     // For box animations
-    animSpeed: 500,                 // Slide transition speed
-    pauseTime: 5000,                // How long each slide will show
-    startSlide: 0,                  // Set starting Slide (0 index)
-    directionNav: true,             // Next & Prev navigation
-    controlNav: false,               // 1,2,3... navigation
-    controlNavThumbs: true       // Use thumbnails for Control Nav
+    animSpeed: 500,               // Slide transition speed
+    pauseTime: 5000,              // How long each slide will show
+    directionNav: true,           // Next & Prev navigation
+    controlNav: false,            // 1,2,3... navigation
+    controlNavThumbs: true,       // Use thumbnails for Control Nav
 	});
 });
 </script>
@@ -54,7 +50,7 @@ $(window).load(function() {
 					<div class="photo-slider">
 						<div id="slider" class="nivoSlider">
 							{% for photo in property.photos %}
-								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo}}">
+								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
 							{% endfor %}
 						</div>
 					</div>
