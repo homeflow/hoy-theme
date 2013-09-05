@@ -131,6 +131,7 @@
 		top:470px;
 		width:18px;
 		height:17px;
+		text-indent: -9999px;
 	}
 	
 	.nivo-directionNav a.nivo-prevNav {
