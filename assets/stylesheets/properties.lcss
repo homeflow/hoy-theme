@@ -133,14 +133,12 @@
 		height:17px;
 	}
 	
-	.nivo-prevNav {
+	.nivo-directionNav a.nivo-prevNav {
 		background-image:url("../images/black_leftpointing_pointer.png");
-		background-repeat:no-repeat;
 	}
 	
-	.nivo-nextNav {
+	.nivo-directionNav a.nivo-nextNav {
 		background-image:url("../images/black_rightpointing_pointer.png");
-		background-repeat:no-repeat;
 	}
 	
 	.staff-property {
