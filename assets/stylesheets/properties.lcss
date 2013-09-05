@@ -185,6 +185,11 @@
 	
 	.toggable-nav {
 		float:right;
+		display:inline;
+	}
+	
+	.toggable-nav li {
+		list-style-type:none;
 	}
 	
 	.toggable-nav li a {
