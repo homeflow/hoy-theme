@@ -310,5 +310,9 @@
 		}
 		
 		.mini_staff_member .details a {
-			float:left;
+			
+		}
+		
+		.mini_staff_member .details a.more {
+			
 		}
