@@ -106,9 +106,14 @@
 		border: 1px solid #dddddd;
 	}
 		
-	.photo-reel img {
-		display: inline-block;	
-		margin: 8px 4px 0 0;
+	.nivo-controlNav img {
+		border: 1px solid #dddddd;
+		margin-right:2px;
+	}
+	
+	.nivo-controlNav {
+		height:75px;
+		width:100px;
 	}
 	
 	.nivo-directionNav a { 
