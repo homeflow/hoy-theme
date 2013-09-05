@@ -182,3 +182,12 @@
 	#tab-content {
 		position:relative;
 	}
+	
+	.toggable-nav {
+		float:right;
+	}
+	
+	.toggable-nav li a {
+		float:right;
+		color:#0B8DD8;
+	}
