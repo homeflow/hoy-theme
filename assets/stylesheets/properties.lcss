@@ -103,12 +103,15 @@
 	}
 
 	#slider {
-		height: 430px !important;
+		height: 425px;
+		width:638px;
 		overflow: visible;
 		margin-top:10px;
 	}
 	
 	.nivoSlider img {
+		height: 425px;
+		width:638px;
 		border: 1px solid #dddddd;
 	}
 		
@@ -117,6 +120,10 @@
 		margin-right:14px;
 		height: 75px;
 		width: 100px;
+	}
+	
+	.nivo-controlNav img:last-child {
+		margin-right:0;
 	}
 	
 	.nivo-directionNav a {
