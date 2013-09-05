@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/stylesheets/nivo-slider.css" type="text/css" />
+<script src="../assets/javascripts/jquery.nivo.slider.pack.js"></script>
 <div class="blue-banner">
 	<div class="container">
 		<div class="col-lg-7">
@@ -32,7 +34,11 @@
 			<div id="tab-content">
 				<div id="togglable_home" class="togglable_area clearfix">
 					<div class="photo-slider">
-						<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+						<div id="slider" class="nivoSlider">
+							{% for photo in property.photos %}
+								<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+							{% endfor %}
+						</div>
 						<div class="photo-reel">
 							<div class="photo-reel-dirnav">
 								<a href="#" class="prev">Prev</a>
