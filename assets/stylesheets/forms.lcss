@@ -59,6 +59,6 @@
 			margin-top:15px;
 		}
 		
-		.property-form textarea {
+		textarea {
 			height:100px;
 		}
