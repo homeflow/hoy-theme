@@ -109,7 +109,7 @@
 		margin-top:10px;
 	}
 	
-	.nivoSlider img {
+	.nivoSlider {
 		height: 425px;
 		width:638px;
 		border: 1px solid #dddddd;
