@@ -114,6 +114,10 @@
 		width:638px;
 		border: 1px solid #dddddd;
 	}
+	
+	.nivo-controlNav {
+		width: 638px;
+	}
 		
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
@@ -125,6 +129,8 @@
 	
 	.nivo-directionNav a {
 		top:470px;
+		width:18px;
+		height:17px;
 	}
 	
 	.nivo-prevNav {
