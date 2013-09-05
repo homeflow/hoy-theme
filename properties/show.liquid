@@ -36,7 +36,7 @@
 					<div class="photo-slider">
 						<div id="slider" class="nivoSlider">
 							{% for photo in property.photos %}
-								<img src="{{property.photos.first | url_for_property_asset : '638x425'}}" alt="">
+								<img src="{{photo | url_for_property_asset : '638x425'}}" alt="">
 							{% endfor %}
 						</div>
 						<div class="photo-reel">
