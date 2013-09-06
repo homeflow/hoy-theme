@@ -213,3 +213,7 @@
 		font-size:85%;
 		float:left;
 	}
+	
+	.property-small-content {
+		float:left;
+	}
