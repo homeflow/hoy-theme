@@ -203,4 +203,6 @@
 		font-size:85%;
 	}
 	
-	
+	.property-small img {
+		float:left;
+	}
