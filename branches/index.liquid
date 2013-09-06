@@ -8,10 +8,11 @@
 <div class="container">
     <div class="col-lg-8">
         <h3>Our Office Locations</h3>
-        <p>Choose an office from the map or from the list below to see the full contact details.</p>
+        <p>Choose an office from the map or from the list across to see the full contact details.</p>
 		<div class="offices-map" id="map"></div>
     </div>
 	<div class="col-lg-4">
+		 <h3>Our Offices</h3>
 	    <ul class="offices-list">
 			{% for branch in agency.branches %}
 				<li><a href="{{branch | url_for_branch}}">{{branch.name}}</a></li>
