@@ -21,7 +21,7 @@
 			<div id="togglable_sales" class="togglable_area clearfix hidden">
 				<h4 class="first">Latest sale listings for {{branch.name}}</h4>
 				<div class="property_list">          
-					{%for property in branch.recent_sales_properties limit:20 %}
+					{%for property in branch.recent_sales_properties limit:2 %}
 					{% include "properties/property_small" %}
 				{%endfor%}
 				</div>
