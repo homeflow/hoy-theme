@@ -211,6 +211,8 @@
 	}
 	
 	.property-small {
+		width:100%;
 		font-size:85%;
 		float:left;
+		margin-bottom:10px;
 	}
