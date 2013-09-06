@@ -12,9 +12,9 @@
 			{{ branch.address }}
 		</strong>
 		<p>
-			{% unless branch.photo == empty %}
+			{% if branch.photo %}
 				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0" />
-			{% endunless %}
+			{% endif %}
 			{{branch.description}}
 		</p>
     </div>
