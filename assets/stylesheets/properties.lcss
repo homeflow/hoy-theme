@@ -215,5 +215,5 @@
 	}
 	
 	.property-small-content {
-		float:left;
+		margin-left:10px;
 	}
