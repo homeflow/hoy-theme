@@ -1,22 +1,13 @@
-<div class="list-row clearfix" id="property_row_{{property.property_id}}">
-  <div class="display-image">
-    <a href="{{property | url_for_property}}">
-      {{ property | photo_overlay }}
-      <img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
-    </a>
-  </div>
-  <div class="details">
-    <a href="{{property | url_for_property}}" class="price">{{property.price}}</a>
-    <h3><a href="{{property | url_for_property}}" class="address">{{property.display_address}}</a></h3>
-    <span class="content">{{property.short_description | truncate:280}}</span>
-    <span class="tools">
-      <span class="links">
-  			<a href="{{property | url_for_property}}">Full details</a> |
-      	<a id="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;"><span>Save to shortlist</span></a>
-  		</span>
-  		or call <a href="{{ property.agency.branch | url_for_branch : property.agency }}">{{property.agency.agency_name}}</a>  {% if property.vox_number %}on <span class="phone_number">{{property.vox_number}} </span>{%endif%}
-    </span>
-  </div>
-</div>
+<a href="{{property | url_for_property}}">
+	{{ property | photo_overlay }}
+	<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
+</a>
+<a href="{{property | url_for_property}}" class="price">{{property.price}}</a>
+<h3>
+	<a href="{{property | url_for_property}}">{{property.display_address}}</a>
+</h3>
+{{property.short_description | truncate:280}}
+<a href="{{property | url_for_property}}">Full details</a> |
+<a id="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;">Save to shortlist</a> or call <a href="{{ property.agency.branch | url_for_branch : property.agency }}">{{property.agency.agency_name}}</a>  {% if property.vox_number %}on {{property.vox_number}} {%endif%}
 {% if property.comment %}<div class="quote">&ldquo;{{ property.comment }}&rdquo;</div>{% endif %}
 <hr>
