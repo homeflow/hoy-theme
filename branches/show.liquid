@@ -13,12 +13,23 @@
 		</strong>
 		<p>
 			{% if branch.photo %}
-				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0" />
+				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0;border: 1px solid #dddddd;" />
 			{% endif %}
 			{{branch.description}}
 		</p>
+		{% if branch.recent_sales_properties != empty%}
+			<div id="togglable_sales" class="togglable_area clearfix hidden">
+				<h4 class="first">Latest sale listings for {{branch.name}}</h4>
+				<div class="property_list">          
+					{%for property in branch.recent_sales_properties limit:20 %}
+					{% include "properties/property_small" %}
+				{%endfor%}
+				</div>
+			</div>
+      {% endif %}
     </div>
 	<div class="col-lg-4">
+		<h4>Find us on a map</h4>
 		<div class="office-map" id="map"></div>
 		{% assign staff_list = branch.staff_profiles %}
 		{% include 'sidebar_blocks/staff_list'%}
