@@ -11,12 +11,12 @@
 		<strong>
 			{{ branch.address }}
 		</strong>
-			<p>
-				{% unless branch.photo == empty %}
-					<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0" />
-				{% endunless %}
-				{{branch.description}}
-			</p>
+		<p>
+			{% unless branch.photo == empty %}
+				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0" />
+			{% endunless %}
+			{{branch.description}}
+		</p>
     </div>
 	<div class="col-lg-4">
 		<div class="office-map" id="map"></div>
