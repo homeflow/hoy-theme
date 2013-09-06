@@ -17,9 +17,9 @@
 			{% endif %}
 			{{branch.description}}
 		</p>
-		<hr />
 		{% if branch.recent_sales_properties != empty%}
-			<h4>Latest sale listings for {{branch.name}}</h4>     
+			<h4>Latest sale listings for {{branch.name}}</h4>   
+			<hr />
 			{%for property in branch.recent_sales_properties limit:2 %}
 				{% include "properties/property_small" %}
 			{%endfor%}
