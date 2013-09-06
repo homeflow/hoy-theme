@@ -20,6 +20,8 @@
     </div>
 	<div class="col-lg-4">
 		<div class="office-map" id="map"></div>
+		{% assign staff_list = branch.staff_profiles %}
+		{% include 'sidebar_blocks/staff_list'%}
 	</div>
 </div>
 

@@ -71,7 +71,7 @@ $(window).load(function() {
 			{% assign profile = branch.staff_profiles.first %}
 				<div class="staff-property">
 					<a href="{{profile | url_for_staff_member}}">
-						<img src="{{profile.avatar | url_for_staff_profile_avatar: "105x"}}">
+						<img src="{{profile.avatar | url_for_staff_profile_avatar}}">
 					</a>
 					<p>Talk to {{profile.name}} about this property or fill out the form below.</p>
 				</div>
