@@ -166,6 +166,7 @@
 	
 	.branch-staff {
 		font-size:85%;
+		margin-top:20px;
 	}
 	
 	.mini_staff_member .details img {
