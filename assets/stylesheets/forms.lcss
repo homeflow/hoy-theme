@@ -45,20 +45,25 @@
 			width:476px;
 		}
 		
-		.propery-form {
+		.property-form {
 			margin-top:20px;
 			width:336px;
 		}
 		
-		.propery-form label {
+		.property-form label {
 			width:110px;
 			float:left;
 		}
 		
-		.propery-form .btn {
+		.property-form .btn {
 			margin-top:15px;
 		}
 		
 		.property-form textarea {
-			height:100px;
+			height:91px;
+			font-size:75%;
+		}
+		
+		.property-form  input[type="text"] {
+			font-size:75%;
 		}

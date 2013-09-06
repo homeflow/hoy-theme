@@ -7,17 +7,29 @@
 </div>
 <div class="container">
     <div class="col-lg-8">
-        <h2>{{branch.name}} Office</h2>
+        <h3>{{branch.name}} Office</h3>
 		<strong>
 			{{ branch.address }}
 		</strong>
-			<p>
-				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0" />
-				{{branch.description}}
-			</p>
+		<p>
+			{% if branch.photo %}
+				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0;border: 1px solid #dddddd;" />
+			{% endif %}
+			{{branch.description}}
+		</p>
+		{% if branch.recent_sales_properties != empty%}
+			<h4>Latest sale listings for {{branch.name}}</h4>   
+			<hr />
+			{%for property in branch.recent_sales_properties limit:2 %}
+				{% include "properties/property_small" %}
+			{%endfor%}
+      {% endif %}
     </div>
 	<div class="col-lg-4">
+		<h4>Find us on a map</h4>
 		<div class="office-map" id="map"></div>
+		{% assign staff_list = branch.staff_profiles %}
+		{% include 'sidebar_blocks/staff_list'%}
 	</div>
 </div>
 
