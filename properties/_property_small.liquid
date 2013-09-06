@@ -2,7 +2,7 @@
 	<a href="{{property | url_for_property}}">
 		<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
 	</a>
-	<div class="property-small-content">
+	
 		<h4>
 			<a href="{{property | url_for_property}}">{{property.display_address}}</a>
 		</h4>
@@ -17,6 +17,6 @@
 		<a href="{{ property.agency.branch | url_for_branch : property.agency }}">{{property.agency.agency_name}}</a>  
 		{% if property.vox_number %}on {{property.vox_number}} {%endif%}
 		{% if property.comment %}<div class="quote">&ldquo;{{ property.comment }}&rdquo;</div>{% endif %}
-	</div>
+	
 </div>
 
