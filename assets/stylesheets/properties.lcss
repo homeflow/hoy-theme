@@ -210,10 +210,3 @@
 		margin-right:10px;
 		border: 1px solid #dddddd;
 	}
-	
-	.property-small {
-		width:100%;
-		font-size:85%;
-		float:left;
-		margin-bottom:10px;
-	}
