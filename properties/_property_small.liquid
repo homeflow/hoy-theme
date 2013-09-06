@@ -1,8 +1,8 @@
-<div class="col-lg-12">
-	<div class="property-small">
-		<a href="{{property | url_for_property}}">
-			<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
-		</a>
+<div class="property-small">
+	<a href="{{property | url_for_property}}">
+		<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
+	</a>
+	<div class="col-lg-12">
 		<h4>
 			<a href="{{property | url_for_property}}">{{property.display_address}}</a>
 		</h4>
