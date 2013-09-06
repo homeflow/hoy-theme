@@ -17,6 +17,7 @@
 			{% endif %}
 			{{branch.description}}
 		</p>
+		<hr />
 		{% if branch.recent_sales_properties != empty%}
 			<h4>Latest sale listings for {{branch.name}}</h4>
 			<div class="property_list">          
@@ -29,6 +30,7 @@
 	<div class="col-lg-4">
 		<h4>Find us on a map</h4>
 		<div class="office-map" id="map"></div>
+		<hr />
 		{% assign staff_list = branch.staff_profiles %}
 		{% include 'sidebar_blocks/staff_list'%}
 	</div>
