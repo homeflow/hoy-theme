@@ -206,7 +206,11 @@
 	
 	.property-small img {
 		float:left;
-		margin-top:12px;
+		margin-top:2px;
 		margin-right:10px;
 		border: 1px solid #dddddd;
+	}
+	
+	.property-small {
+		font-size:85%;
 	}
