@@ -206,3 +206,7 @@
 	.property-small img {
 		float:left;
 	}
+	
+	.property-small {
+		font-size:85%;
+	}
