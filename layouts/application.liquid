@@ -15,12 +15,7 @@
 	{{ "forms" | theme_stylesheet_link_tag }}
 	{{ "properties" | theme_stylesheet_link_tag }}
     {{ "font-awesome" | stylesheet_link_tag }}
-	
-	<script>
-        Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
-        Ctesius.addConfig('branch_map_element', 'map');
-    </script>
-	
+		
 	<script>
 		$(window).load(function(){
 			$('.gallery').cycle({ 
