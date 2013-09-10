@@ -61,9 +61,9 @@
 		
 		.contact-form textarea {
 			height:91px;
-			font-size:75%;
+			font-size:80%;
 		}
 		
 		.contact-form  input[type="text"] {
-			font-size:75%;
+			font-size:80%;
 		}
