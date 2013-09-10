@@ -243,4 +243,5 @@
 		
 		.avatar {
 			border: 1px solid #dddddd;
+			margin-top:14px;
 		}
