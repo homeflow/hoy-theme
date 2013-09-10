@@ -6,6 +6,28 @@
 		</div>
 	</div>
 </div>
+<div class="container">
+	<div class="col-lg-4">
+		{% if staff_member.avatar %}
+			<img id="profile-image" src="{{ staff_member.avatar | url_for_staff_profile_avatar : "_x182" }}" class="avatar" />
+		{% else %}
+			<img id="profile-image" src="http://www.homeflow.co.uk/global/images/admin/no_avatar.jpg" class="avatar" />
+		{% endif %}
+	</div>
+	<div class="col-lg-4">
+		<p>{{staff_member.long_bio | strip_links}}</p>
+	</div>
+	<div class="col-lg-4">
+		<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" id="contact_form" class="contact-form" method="post">
+			<input name="lead_client[first_name]" type="text" placeholder="First Name">
+			<input name="lead_client[last_name]" type="text" placeholder="Last Name">
+			<input name="lead_client[email]" type="text" placeholder="Email">
+			<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
+			<textarea name="lead[message]" placeholder="Message"></textarea>
+			<input type="submit" value="Send message" class="btn">
+		</form>
+	</div>
+</div>
 
 
 
