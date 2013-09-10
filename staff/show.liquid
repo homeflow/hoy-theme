@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="col-lg-3">
 		{% if staff_member.avatar %}
-			<img id="profile-image" src="{{ staff_member.avatar | url_for_staff_profile_avatar : "_x182" }}" class="avatar" />
+			<img id="profile-image" src="{{ staff_member.avatar | url_for_staff_profile_avatar : "_x200" }}" class="avatar" />
 		{% else %}
 			<img id="profile-image" src="http://www.homeflow.co.uk/global/images/admin/no_avatar.jpg" class="avatar" />
 		{% endif %}
