@@ -65,27 +65,7 @@ $(window).load(function() {
 			</div>
 		</div>
 		<div class="col-lg-4">
-			<h4>{{ branch.name }} office</h4>
-			<h4>Tel: 01392 8385853</h4>
-			{% unless branch.staff_profiles == empty %} 
-			{% assign profile = branch.staff_profiles.first %}
-				<div class="staff-property">
-					<a href="{{profile | url_for_staff_member}}">
-						<img src="{{profile.avatar | url_for_staff_profile_avatar}}">
-					</a>
-					<p>Talk to {{profile.name}} about this property or fill out the form below.</p>
-				</div>
-			{% else %}
-				<p>To send us a message about this property, fill out the form below.</p>
-			{% endunless%}
-			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" id="contact_form" class="property-form" method="post">
-				<input name="lead_client[first_name]" type="text" placeholder="First Name">
-				<input name="lead_client[last_name]" type="text" placeholder="Last Name">
-				<input name="lead_client[email]" type="text" placeholder="Email">
-				<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
-				<textarea name="lead[message]" placeholder="Message"></textarea>
-				<input type="submit" value="Send message" class="btn">
-			</form>
+			{% include 'sidebar_blocks/branch_details'%}
 			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
 				{% assign staff_list = branch.staff_profiles %}
 				{% include 'sidebar_blocks/staff_list'%}
