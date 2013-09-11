@@ -219,24 +219,7 @@
 		margin-top:0;
 	}
 	
-	.pagination-bottom {
-		color:#222222;
-	}
-	
-	.pagination-bottom ul {
-		margin:0;
-	}
-	
-	.pagination-bottom ul li {
-		display: inline;
+	.list-nav ul li {
+		display:inline;
 		list-style-type:none;
 	}
-	
-	.pagination-bottom li a {
-		padding: 4px 8px;
-	}
-	
-	.pagination-bottom li a:first-child {
-		padding-left:0;
-	}
-	

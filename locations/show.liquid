@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="col-lg-12">
 			<h3> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposion}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h3>
-			<ul>
+			<ul class="list-nav">
 				<li>View:</li>
 				<li  id='tab_list'  class="active">
 				  <a href="#home">List</a>
@@ -17,7 +17,7 @@
 				</li>
 				<li>|</li>
 			</ul>
-			{% include 'properties/pagination' %}
+			{% include 'properties/pagination_top' %}
 		</div>
 	</div>
 </div>
@@ -38,7 +38,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-lg-12">
-				{% include 'properties/pagination_bottom' %}
+				
 			</div>
 		</div>
 	</div>
