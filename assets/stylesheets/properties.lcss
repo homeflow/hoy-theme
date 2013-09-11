@@ -219,6 +219,10 @@
 		margin-top:0;
 	}
 	
+	.list-nav {
+		margin-left:0;
+	}
+	
 	.list-nav li {
 		display:inline;
 		list-style-type:none;
