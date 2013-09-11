@@ -245,3 +245,7 @@
 			border: 1px solid #dddddd;
 			margin-top:14px;
 		}
+		
+		#draggable_map_view {
+			min-height:323px;
+		}
