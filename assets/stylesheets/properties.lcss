@@ -226,12 +226,9 @@
 	.list-nav li {
 		display:inline;
 		list-style-type:none;
+		padding:0 2px 0 2px;
 	}
 	
 	.list-nav li a {
-		color:#ffffff;
-	}
-	
-	a.white {
 		color:#ffffff;
 	}
