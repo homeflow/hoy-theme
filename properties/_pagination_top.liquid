@@ -1,7 +1,7 @@
 {% if pagination != nil %}
   {% if pagination.total_count != 0 %}
-	  Displaying {{ pagination.from_record}} - {{pagination.to_record}} of {{pagination.total_count}} results
-	  {% if pagination.has_prev_page %}&lt;<a href="{{pagination.previous_page_link}}" class="white">Previous 10</a>{% endif %}
-	  {% if pagination.has_next_page %}<a href="{{pagination.next_page_link}}" class="white">Next 10</a>&gt;{% endif %}
+	  <li>Displaying {{ pagination.from_record}} - {{pagination.to_record}} of {{pagination.total_count}} results</li>
+	  <li>{% if pagination.has_prev_page %}&lt;<a href="{{pagination.previous_page_link}}" class="white">Previous 10</a>{% endif %}</li>
+	  <li>{% if pagination.has_next_page %}<a href="{{pagination.next_page_link}}" class="white">Next 10</a>&gt;{% endif %}</li>
   {% endif %}
 {% endif %}
