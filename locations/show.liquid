@@ -38,7 +38,22 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-lg-12">
-				
+				<ul class="list-nav">
+					<li>View:</li>
+					<li id='tab_list'  class="active">
+					  <a href="#home">List</a>
+					</li>
+					<li style="padding:0">or</li>
+					<li id='tab_map'>
+					  <a href="#map">Map</a>
+					</li>
+					<li>|</li>
+					<li>
+						{{pagination.total_count}} properties found
+					</li>
+					<li>|</li>
+					{% include 'properties/pagination_top' %}
+				</ul>
 			</div>
 		</div>
 	</div>
