@@ -43,7 +43,6 @@
   </head>
   <body>
     {% include 'layouts/js_templates' %}
-	
 	<div class="navbar navbar-inverse">
 		<div class="container">
 			<div class="col-lg-4">
@@ -66,58 +65,13 @@
     <footer>
       	<div class="bottom">
 			<div class="container">
-				<div class="col-lg-4">
-					<div class="bottom-article">
-						<h3>Opening hours...</h3>
-						<dl>
-							<dt>Monday</dt>
-							<dd>10.30am - 7.00pm</dd>
-							<dt>Tuesday</dt>
-							<dd>9:00am - 5:30pm</dd>
-							<dt>Wednesday</dt>
-							<dd>9:00am - 6:00pm</dd>
-							<dt>Thursday</dt>
-							<dd>9:00am - 7:00pm</dd>
-							<dt>Friday</dt>
-							<dd>9:00am - 5:30pm</dd>
-							<dt>Saturday</dt>
-							<dd>9:00am - 4:00pm</dd>
-							<dt>Sunday</dt>
-							<dd>Closed</dd>
-						</dl>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="bottom-article">
-						<h3>Contact us...</h3>
-						<p>
-							108 Fore St <br /> 
-							City Centre, <br /> 
-							Exeter<br /> 
-							EX4 3HY
-						</p>
-						<p>
-							T: 01392 278426<br /> 
-							E: hello@hoy.co.uk
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="bottom-article">
-						<h3>We're social...</h3>
-						<p>
-							<a onmouseover="document.MyImage1.src='http://mr3.homeflow.co.uk/files/site_asset/image/2511/3019/twitter-bird-light-bgs111.png';" onmouseout="document.MyImage1.src='http://mr3.homeflow.co.uk/files/site_asset/image/2508/6243/twitter-bird-light-bgs1.png';" href="https://twitter.com/PaulWattsEstAgt" target="_blank"><img src="http://mr3.homeflow.co.uk/files/site_asset/image/2508/6243/twitter-bird-light-bgs1.png" alt="" name="MyImage1" /></a> <a onmouseover="document.MyImage1.src='http://mr3.homeflow.co.uk/files/site_asset/image/2511/3019/twitter-bird-light-bgs111.png';" onmouseout="document.MyImage1.src='http://mr3.homeflow.co.uk/files/site_asset/image/2508/6243/twitter-bird-light-bgs1.png';" href="https://twitter.com/PaulWattsEstAgt" target="_blank">Follow us on twitter</a>	
-						</p>
-						<p>
-							<a onmouseover="document.MyImage2.src='http://mr0.homeflow.co.uk/files/site_asset/image/2506/5628/facebook_button.png';" onmouseout="document.MyImage2.src='http://mr3.homeflow.co.uk/files/site_asset/image/2508/6239/facebook_buttongs.png';" href="https://www.facebook.com/PaulWattsEstateAgents"><img style="margin-left: -1px; margin-bottom: 5px;" src="http://mr3.homeflow.co.uk/files/site_asset/image/2508/6239/facebook_buttongs.png" alt="" name="MyImage2" /></a> <a onmouseover="document.MyImage2.src='http://mr0.homeflow.co.uk/files/site_asset/image/2506/5628/facebook_button.png';" onmouseout="document.MyImage2.src='http://mr3.homeflow.co.uk/files/site_asset/image/2508/6239/facebook_buttongs.png';" href="https://www.facebook.com/PaulWattsEstateAgent" target="_blank">Like us on Facebook</a>
-						</p>
-						<p>
-							<a onmouseover="document.MyImage3.src='http://mr1.homeflow.co.uk/files/site_asset/image/2516/2209/linked-in__2_.png';" onmouseout="document.MyImage3.src='http://mr2.homeflow.co.uk/files/site_asset/image/2508/6250/linked-ings.png';" href="http://www.linkedin.com/company/3072769?goback=%2Efcs_GLHD_paul+watts_false_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&amp;trk=ncsrch_hits"><img onmouseover="document.MyImage3.src='http://mr1.homeflow.co.uk/files/site_asset/image/2516/2209/linked-in__2_.png';" onmouseout="document.MyImage3.src='http://mr2.homeflow.co.uk/files/site_asset/image/2508/6250/linked-ings.png';" src="http://mr2.homeflow.co.uk/files/site_asset/image/2508/6250/linked-ings.png" alt="" name="MyImage3" style="margin-left:1px"/></a>&nbsp;&nbsp;<a onmouseover="document.MyImage3.src='http://mr1.homeflow.co.uk/files/site_asset/image/2516/2209/linked-in__2_.png';" onmouseout="document.MyImage3.src='http://mr2.homeflow.co.uk/files/site_asset/image/2508/6250/linked-ings.png';" href="http://www.linkedin.com/company/3072769?goback=%2Efcs_GLHD_paul+watts_false_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&amp;trk=ncsrch_hits" target="_blank">Follow us on LinkedIn</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-2">
-				</div>
+				{% content_block site_footer %}
+					{% if content_block == 'No content chunk found: site_footer' %}
+						<p>Couldn't find footer chunk.</p>
+					{% else %}
+						{{ content_block }}
+					{% endif %}
+				{% endcontent_block %}
 			</div>
 		</div>
 		<div class="footer">
@@ -126,7 +80,6 @@
 			</div>
 		</div>
     </footer>
-
     <script type="text/javascript">
       $(document).ready(function(){ 
         Ctesius.init()
