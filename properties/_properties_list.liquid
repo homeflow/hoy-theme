@@ -11,9 +11,11 @@
 					</a>
 					<p>{{property.price}}</p>
 					<p>{{property.short_description | truncate : 150}}</p>
-					<p><a href="{{ property | url_for_property }}">Full details</a> or call <a href="{{ branch | url_for_branch}}">{{branch.name}}</a> on {% if branch and branch.default_vox_number %}{{branch.default_vox_number}}{% endif%}</p>
+					<p><a href="{{ property | url_for_property }}">Full details</a> or call the <a href="{{ branch | url_for_branch }}">{{ branch.name }} office</a> on {% if branch and branch.default_vox_number %}{{branch.default_vox_number}}{% endif%}</p>
 				</div>
 			</div>
 		</li>
 	{%endfor%}
 </ul>
+
+
