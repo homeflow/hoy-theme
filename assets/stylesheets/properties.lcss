@@ -218,3 +218,7 @@
 	.property-small h4{
 		margin-top:0;
 	}
+	
+	.pagination-bottom {
+		color:#222222;
+	}
