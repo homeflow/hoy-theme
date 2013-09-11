@@ -219,7 +219,11 @@
 		margin-top:0;
 	}
 	
-	.list-nav ul li {
+	.list-nav li {
 		display:inline;
 		list-style-type:none;
+	}
+	
+	.list-nav li a {
+		color:#ffffff;
 	}
