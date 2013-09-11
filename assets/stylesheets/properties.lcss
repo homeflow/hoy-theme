@@ -227,3 +227,7 @@
 	.list-nav li a {
 		color:#ffffff;
 	}
+	
+	a.white {
+		color:#ffffff;
+	}
