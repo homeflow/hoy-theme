@@ -32,23 +32,9 @@
 		{% assign staff_list = branch.staff_profiles %}
 		{% include 'sidebar_blocks/staff_list'%}
 		<h4>Send us a message</h4>
-		<form action="" id="contact_form" class="contact-form" method="post">
-			<input name="lead_client[first_name]" type="text" placeholder="First Name">
-			<input name="lead_client[last_name]" type="text" placeholder="Last Name">
-			<input name="lead_client[email]" type="text" placeholder="Email">
-			<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
-			<textarea name="lead[message]" placeholder="Message"></textarea>
-			<input type="submit" value="Send message" class="btn">
-		</form>
+		{% include 'sidebar_blocks/contact_form' %}
 	</div>
 </div>
-
-
-
-
-
-
-
 
 
 
