@@ -29,6 +29,9 @@
 	<div class="col-lg-4">
 		<h4>Find us on a map</h4>
 		<div class="office-map" id="branch_map">
+		 <script language="javascript">
+			{% gmap_for branches as roadmap in branch_map %}    
+		</script>
 		{% assign staff_list = branch.staff_profiles %}
 		{% include 'sidebar_blocks/staff_list'%}
 		<h4>Send us a message</h4>
