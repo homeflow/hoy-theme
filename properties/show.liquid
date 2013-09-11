@@ -11,6 +11,8 @@ $(window).load(function() {
 });
 </script>
 
+{% include 'properties/streetview' %}
+
 <link href="..assets/stylesheets/nivo-slider.css" rel="stylesheet" type="text/css">
 <script src="../assets/javascripts/jquery.nivo.slider.pack.js"></script>
 
@@ -62,6 +64,44 @@ $(window).load(function() {
 				<div id="togglable_details" class="togglable_area hidden">
 					{{property.description}}
 				</div>
+				<div id="togglable_map" class="togglable_area hidden">
+					<div id='single_map' class="google_map_container"></div>
+				</div>
+				<div id="togglable_satellite" class="togglable_area hidden">
+					<div id='streetview' class="google_map_container"></div>
+				</div>
+				<div id="togglable_satellite" class="togglable_area hidden">
+					<div id='satellite' class="google_map_container"></div>
+				</div>
+				{% if property.floorplans.first %}
+					<div id="togglable_floorplan" class="togglable_area hidden">
+						{% for floorplan in property.floorplans %}
+							<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}">
+						{% endfor %}
+					</div>
+				{% endif%}
+				{% if property.epc_charts.first %}
+					<div id="togglable_epc" class="togglable_area hidden">
+					{% for epc_chart in property.epc_charts %}
+						{% if epc_chart.is_pdf? %}
+							<a href="{{epc_chart | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{epc_chart | url_for_property_photo : "200x200R" }}" /> Download PDF EPC</a>
+							{% else %}
+							<img src="{{epc_chart | url_for_property_asset}}">
+						{% endif %}
+					{% endfor %}
+					</div>
+				{% endif %}
+				{% if property.brochures.first %}
+					<div id="togglable_brochure" class="togglable_area hidden">
+					{% for brochure in property.brochures %}
+						{% if brochure.is_pdf? %}
+							<a href="{{brochure | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{brochure | url_for_property_photo : "200x200R" }}" /> Download PDF Brochure</a>
+							{% else %}
+							<img src="{{brochure | url_for_property_asset}}">
+						{% endif %}
+					{% endfor %}
+					</div>
+				{% endif %}
 			</div>
 		</div>
 		<div class="col-lg-4">
