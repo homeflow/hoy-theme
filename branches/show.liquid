@@ -11,11 +11,13 @@
 		<strong>
 			{{ branch.address }}
 		</strong>
-		{% if branch.photo %}
-			<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0;border: 1px solid #dddddd;" />
-		{% endif %}
-		{{branch.description}}
-		<hr />
+		<p>
+			{% if branch.photo %}
+				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 0 0;border: 1px solid #dddddd;" />
+			{% endif %}
+			{{branch.description}}
+			<hr />
+		</p>
 		{% if branch.recent_sales_properties != empty%}
 			<h4>Latest sale listings for {{branch.name}}</h4>   
 			<hr />
