@@ -233,6 +233,6 @@
 		color:#ffffff;
 	}
 	
-	.list-nav li.active {
+	.list-nav li.active a {
 		text-decoration:underline;
 	}
