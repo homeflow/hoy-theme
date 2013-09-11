@@ -187,11 +187,11 @@
 		}
 		
 		dt {
-			float:left;	
+			/* float:left; CRM stripts DT tags! */
 		}
 		
 		dd {
-			margin-left:30%;
+			/*margin-left:30%; */
 		}
 		
 		dl {
