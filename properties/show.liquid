@@ -11,7 +11,21 @@ $(window).load(function() {
 });
 </script>
 
-{% include 'properties/streetview' %}
+Ctesius.registerEvent('render_tab', function(tab_name){
+	switch(tab_name){
+		case 'map':
+			{% gmap_for property as roadmap in single_map %}
+		break;
+		case 'streetview':
+			{% gmap_for property as streetview in streetview %}
+		break;
+		case 'satellite':
+			{% gmap_for property as satellite in satellite %}
+		break;
+	}
+});
+
+Ctesius.addConfig('property_id', '{{property.property_id}}' )
 
 <link href="..assets/stylesheets/nivo-slider.css" rel="stylesheet" type="text/css">
 <script src="../assets/javascripts/jquery.nivo.slider.pack.js"></script>
@@ -106,6 +120,14 @@ $(window).load(function() {
 		</div>
 		<div class="col-lg-4">
 			{% include 'sidebar_blocks/branch_details'%}
+			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" id="contact_form" class="contact-form" method="post">
+				<input name="lead_client[first_name]" type="text" placeholder="First Name">
+				<input name="lead_client[last_name]" type="text" placeholder="Last Name">
+				<input name="lead_client[email]" type="text" placeholder="Email">
+				<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
+				<textarea name="lead[message]" placeholder="Message"></textarea>
+				<input type="submit" value="Send message" class="btn">
+			</form>
 			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
 				{% assign staff_list = branch.staff_profiles %}
 				{% include 'sidebar_blocks/staff_list'%}
