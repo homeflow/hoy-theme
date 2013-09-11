@@ -219,6 +219,10 @@
 		margin-top:0;
 	}
 	
+	.property-small p {
+		width:635px;
+	}
+	
 	.list-nav {
 		margin-left:0;
 	}

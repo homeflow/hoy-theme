@@ -12,11 +12,13 @@
 		<p>
 			{{property.short_description | truncate:100}}
 		</p>
-		<a href="{{property | url_for_property}}">Full details</a> |
-		<a id="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;">Save to shortlist</a> or call 
-		<a href="{{ property.agency.branch | url_for_branch : property.agency }}">{{property.agency.agency_name}}</a>  
-		{% if property.vox_number %}on {{property.vox_number}} {%endif%}
-		{% if property.comment %}<div class="quote">&ldquo;{{ property.comment }}&rdquo;</div>{% endif %}
+		<p>
+			<a href="{{property | url_for_property}}">Full details</a> |
+			<a id="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;">Save to shortlist</a> or call 
+			<a href="{{ property.agency.branch | url_for_branch : property.agency }}">{{property.agency.agency_name}}</a>  
+			{% if property.vox_number %}on {{property.vox_number}} {%endif%}
+			{% if property.comment %}<div class="quote">&ldquo;{{ property.comment }}&rdquo;</div>{% endif %}
+		</p>
 	</div>
 </div>
 <hr />
