@@ -11,9 +11,11 @@
 		<strong>
 			{{ branch.address }}
 		</strong>
-		<strong>
-			{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}
-		</strong>
+		<p>
+			<strong>
+				{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}
+			</strong>
+		</p>
 		<p>
 			{% if branch.photo %}
 				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 1px 0;border: 1px solid #dddddd;" />
@@ -27,7 +29,14 @@
 			{%for property in branch.recent_sales_properties limit:2 %}
 				{% include "properties/property_small" %}
 			{%endfor%}
-      {% endif %}
+		{% endif %}
+		{% if branch.recent_lettings_properties != empty%}    
+			<h4>Some of our lettings properties</h4>
+			<hr />
+			{%for property in branch.recent_lettings_properties limit:2 %}
+				{% include "properties/property_small" %}
+			{%endfor%}
+        {%endif%}
     </div>
 	<div class="col-lg-4">
 		<h4>Find us on a map</h4>
