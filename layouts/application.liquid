@@ -76,7 +76,14 @@
 		</div>
 		<div class="footer">
 			<div class="container">
-				<p><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright &copy; Hoy</a></p>
+				<p>
+					|
+					{% assign footer_menu = 'footer' | site_menu %}
+						{% for menu_item in footer_menu.items %}
+						  <a class="navigation {{menu_item.dom_id}}" data-id="{{menu_item.dom_id}}" href="{{ menu_item.url }}">{{ menu_item.name }}</a> |
+					{% endfor %}
+					Copyright &copy; Hoy
+				</p>
 			</div>
 		</div>
     </footer>
