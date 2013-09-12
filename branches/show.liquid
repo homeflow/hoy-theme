@@ -9,7 +9,8 @@
     <div class="col-lg-8">
         <h3>{{branch.name}} Office</h3>
 		<strong>
-			{{ branch.address }} - {% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}
+			{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}<br />
+			{{ branch.address }}
 		</strong>
 		<p>
 			{% if branch.photo %}
