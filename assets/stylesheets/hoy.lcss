@@ -8,7 +8,7 @@
 		}
 		
 		.ui-helper-hidden-accessible{
-		  display:none;
+		 	 display:none;
 		}
 
 		body {
@@ -43,9 +43,7 @@
 		}
 		
 		.nav1 {
-			padding:63px 0 0 0;
-			text-align:right;
-			width:100%;
+			padding:63px 0 0 8px;
 			color:#333333;
 		}
 		
@@ -64,6 +62,14 @@
 		.nav1 a:hover {
 			padding:0px 8px 0px 8px;
 			color:#0B8DD8;
+		}
+
+		.user_header {
+			font-size:80%;
+			float:right;
+			color:#ffffff;
+			margin-top:50px;
+			text-align:right;
 		}
 		
 		.articles {
@@ -319,5 +325,4 @@
 			font-size:85%;
 		}
 	
-
 		

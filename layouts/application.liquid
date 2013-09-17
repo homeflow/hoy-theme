@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    {{ "application" | javascript_include_tag }}
-    {{ "application" | stylesheet_link_tag }}
+	{{ "application" | javascript_include_tag }}
+	{{ "application" | stylesheet_link_tag }}
 	{{ "bootstrap" | theme_stylesheet_link_tag }}
-    {{ "hoy" | theme_stylesheet_link_tag }}
-	{{ "forms" | theme_stylesheet_link_tag }}
+	{{ "hoy" | theme_stylesheet_link_tag }}
 	{{ "properties" | theme_stylesheet_link_tag }}
-    {{ "font-awesome" | stylesheet_link_tag }}
+	{{ "forms" | theme_stylesheet_link_tag }}
+	{{ "font-awesome" | stylesheet_link_tag }}
 		
 	<script>
 		$(window).load(function(){
@@ -46,6 +46,14 @@
 	   	 	$('#alert_location').html(mess)
 	  	});
 	</script>
+
+	<script type="text/javascript">
+		Ctesius.registerEvent('saved_property_view_rendered', 
+			function(saved_property){
+				$('#saved_properties_view').removeClass("hidden");
+				$("#add_to_shortlist_"+saved_property.id).html("Remove from Shortlist");
+		});
+	</script>
   </head>
   <body>
     {% include 'layouts/js_templates' %}
@@ -57,6 +65,7 @@
 				</a>
 			</div>
 			<div class="col-lg-8">
+				<div id="user_micro_view"></div>
 				<div class="nav1">
 					|
 					{% assign primary_menu = 'primary' | site_menu %}

@@ -1,31 +1,35 @@
 <script type="text/javascript">
-$(window).load(function() {
-   $('#slider').nivoSlider({
-    effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
-    animSpeed: 500,               // Slide transition speed
-    pauseTime: 4000,              // How long each slide will show
-    directionNav: true,           // Next & Prev navigation
-    controlNav: true,            // 1,2,3... navigation
-    controlNavThumbs: true       // Use thumbnails for Control Nav
+	$(window).load(function() {
+	   $('#slider').nivoSlider({
+		    effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
+		    animSpeed: 500,               // Slide transition speed
+		    pauseTime: 4000,              // How long each slide will show
+		    directionNav: true,           // Next & Prev navigation
+		    controlNav: true,            // 1,2,3... navigation
+		    controlNavThumbs: true       // Use thumbnails for Control Nav
+		});
 	});
-});
 </script>
 
-<!--Ctesius.registerEvent('render_tab', function(tab_name){
-	switch(tab_name){
-		case 'map':
-			{% gmap_for property as roadmap in single_map %}
-		break;
-		case 'streetview':
-			{% gmap_for property as streetview in streetview %}
-		break;
-		case 'satellite':
-			{% gmap_for property as satellite in satellite %}
-		break;
-	}
-});
+<script type="text/javascript">
+	Ctesius.registerEvent('render_tab', function(tab_name){
+		switch(tab_name){
+			case 'map':
+				{% gmap_for property as roadmap in single_map %}
+			break;
+			case 'streetview':
+				{% gmap_for property as streetview in streetview %}
+			break;
+			case 'satellite':
+				{% gmap_for property as satellite in satellite %}
+			break;
+		}
+	});
+</script>
 
-Ctesius.addConfig('property_id', '{{property.property_id}}' )-->
+<script type="text/javascript">
+	Ctesius.addConfig('property_id', '{{property.property_id}}')
+</script>
 
 <link href="..assets/stylesheets/nivo-slider.css" rel="stylesheet" type="text/css">
 <script src="../assets/javascripts/jquery.nivo.slider.pack.js"></script>

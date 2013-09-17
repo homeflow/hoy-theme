@@ -43,9 +43,7 @@
 		}
 		
 		.nav1 {
-			padding:63px 0 0 0;
-			text-align:right;
-			width:100%;
+			padding:63px 0 0 8px;
 			color:#333333;
 		}
 		
@@ -64,6 +62,14 @@
 		.nav1 a:hover {
 			padding:0px 8px 0px 8px;
 			color:#0B8DD8;
+		}
+
+		.user_header {
+			font-size:80%;
+			float:right;
+			color:#ffffff;
+			margin-top:50px;
+			text-align:right;
 		}
 		
 		.articles {
@@ -155,7 +161,13 @@
 		.blue-banner h3 {
 			margin-top:20px;
 		}
-		
+
+		.alert {
+			margin-top:15px;
+			padding: 10px 35px 10px 15px;
+			margin-bottom:0;
+		}
+
 		.banner img {
 			border-top:1px solid #abacac;
 			border-right:1px solid #abacac;
@@ -313,5 +325,4 @@
 			font-size:85%;
 		}
 	
-
 		
