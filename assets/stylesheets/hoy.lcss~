@@ -155,13 +155,7 @@
 		.blue-banner h3 {
 			margin-top:20px;
 		}
-
-		.alert {
-			margin-top:15px;
-			padding: 10px 35px 10px 15px;
-			margin-bottom:0;
-		}
-
+		
 		.banner img {
 			border-top:1px solid #abacac;
 			border-right:1px solid #abacac;

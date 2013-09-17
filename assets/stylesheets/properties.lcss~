@@ -164,6 +164,53 @@
 		width:120px;
 	}
 	
+	.branch-staff {
+		font-size:85%;
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+
+	.all-branch-staff {
+		font-size:85%;
+		margin-top:40px;
+		min-height:200px;
+	}
+	
+	.mini_staff_member .details img {
+		float:left;
+		border: 1px solid #dddddd;
+		margin-right:8px;
+	}
+	
+	.mini_staff_member .details {
+		height:90px;
+		margin-bottom:5px;
+	}
+	
+	#tab-content {
+		position:relative;
+	}
+	
+	.toggable-nav {
+		float:right;
+		margin-right:7px;
+	}
+	
+	.toggable-nav li {
+		list-style-type:none;
+		display:inline;
+		padding-right:10px;
+	}
+	
+	.toggable-nav li:last-child {
+		padding-right:0;
+	}
+	
+	.toggable-nav li a {
+		color:#0B8DD8;
+		font-size:85%;
+	}
+	
 	.property-small img {
 		float:left;
 		margin-top:2px;

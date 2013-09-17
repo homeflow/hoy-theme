@@ -61,7 +61,7 @@
 			{% include 'sidebar_blocks/branch_staff_list'%}
 		</div>
 		<h4>Send us a message</h4>
-		{% include 'sidebar_blocks/contact_form' %}
+		{% include 'sidebar_blocks/staff_contact_form' %}
 	</div>
 </div>
 

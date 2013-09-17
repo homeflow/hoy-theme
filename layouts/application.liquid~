@@ -40,12 +40,6 @@
 			});
 		});
 	</script>
-	<script type="text/javascript">
-		Ctesius.registerEvent('redirection_flash_ready', function(message, type){
-	   	 	var mess = '<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a>'+message+'</div>'
-	   	 	$('#alert_location').html(mess)
-	  	});
-	</script>
   </head>
   <body>
     {% include 'layouts/js_templates' %}

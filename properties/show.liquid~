@@ -32,7 +32,7 @@ Ctesius.addConfig('property_id', '{{property.property_id}}' )-->
 
 <div class="blue-banner">
 	<div class="container">	
-		<div class="col-lg-12"><div id='alert_location'></div></div>
+		<div id='alert_location'></div>
 		<div class="col-lg-7">
 			<h3>{{property.display_address}}</h3>
 			<h4>{{property.bedrooms}} bedrooms</h4>
