@@ -40,22 +40,8 @@
 			});
 		});
 	</script>
-	<script type="text/javascript">
-		Ctesius.registerEvent('redirection_flash_ready', function(message, type){
-	   	 	var mess = '<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a>'+message+'</div>'
-	   	 	$('#alert_location').html(mess)
-	  	});
-	</script>
-
-	<script type="text/javascript">
-		Ctesius.registerEvent('saved_property_view_rendered', 
-			function(saved_property){
-				$('#saved_properties_view').removeClass("hidden");
-				$("#add_to_shortlist_"+saved_property.id).html("Remove from Shortlist");
-		});
-	</script>
   </head>
-  <body>
+  <body class="{{page.controller_name}} {{page.action_name}}">
     {% include 'layouts/js_templates' %}
 	<div class="navbar navbar-inverse">
 		<div class="container">
@@ -102,9 +88,23 @@
 		</div>
     </footer>
     <script type="text/javascript">
-      $(document).ready(function(){ 
-        Ctesius.init()
-		Ctesius.addConfig('permit_blank_searches', true);
+	      
+	
+	$(document).ready(function(){ 
+	Ctesius.registerEvent('redirection_flash_ready', function(message, type){
+	   	 	var mess = '<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a>'+message+'</div>'
+	   	 	$('#alert_location').html(mess)
+
+	  	});        
+	
+	Ctesius.registerEvent('saved_property_view_rendered', 
+			function(saved_property){
+				$('#saved_properties_view').removeClass("hidden");
+				$("#add_to_shortlist_"+saved_property.id).html("Remove from Shortlist");
+		});
+        Ctesius.addConfig('enable_user_history',  true);
+	Ctesius.init();
+		
       });
     </script>
   </body>

@@ -10,7 +10,14 @@
 		.ui-helper-hidden-accessible{
 		 	 display:none;
 		}
-
+		
+		.blue-strip {
+			height:50px;
+			background-color:#0B8DD8;
+			box-shadow: 0px 8px 8px -8px #abacac;
+			margin-bottom:20px;
+		}
+		
 		body {
 			font-family: Georgia;
 			font-size:15px;
@@ -142,11 +149,9 @@
 			overflow: hidden; 
 			height:340px; 
 			width:100%;
-			background-color:#222222;
-			border-bottom:1px solid #abacac;
-			box-shadow: 0px 8px 8px -8px #abacac;
 			text-align:left;
-			color:#ffffff;
+			color:#222222;
+			margin-bottom: 20px;
 		}
 		
 		.blue-banner {
@@ -325,4 +330,6 @@
 			font-size:85%;
 		}
 	
-		
+		body.properties.index #search_link {
+			display:none;
+		}		

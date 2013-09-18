@@ -1,0 +1,13 @@
+<ul class="top list-nav">
+	<li>View:</li>
+	<li id='tab_list'  class="active">
+		<a href="#home">List</a>
+	</li>
+	<li style="padding:0">or</li>
+	<li id='tab_map'>
+		<a href="#map">Map</a>
+	</li>
+	<li>|</li>
+	{% include 'properties/pagination' %}
+	<li>| <a href="#user" id="search_link" onClick="Ctesius.Actions.saveCurrentSearch()">Save this search</a></li>
+</ul>
