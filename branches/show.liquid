@@ -14,12 +14,12 @@
 	</div>
 </div>
 <div class="container">
-    <div class="col-lg-8">
-        <h3>{{branch.name}} Office</h3>
-	<ul class="toggable-nav">
-		<li><a href="#tabs/summary" id="tab_summary" class="selected">Summary</a></li>
-		<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
-	</ul>
+	<div class="col-lg-8">
+		<h3>{{branch.name}} Office</h3>
+		<ul class="toggable-nav">
+			<li><a href="#tabs/summary" id="tab_summary" class="selected">Summary</a></li>
+			<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
+		</ul>
 		<strong>
 			{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}} <br />{% endif%}
 			{{ branch.address }}
@@ -27,7 +27,7 @@
 		<div id="togglable_summary" class="togglable_area clearfix">
 			<p>
 				{% if branch.photo %}
-					<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 1px 0;border: 1px solid #dddddd;" />
+				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 1px 0;border: 1px solid #dddddd;" />
 				{% endif %}
 				{{branch.description}}
 			</p>
@@ -35,31 +35,49 @@
 		<div id="togglable_meet_team" class="togglable_area hidden">
 			<div class="all-branch-staff">		
 				{% for staff_member in branch.staff_profiles %}
-					 <div class="col-lg-6">
-						{% include "staff/meet_team" %}
-					</div>
+				<div class="col-lg-6">
+					{% include "staff/meet_team" %}
+				</div>
 				{% endfor %}
 			</div>	
 		</div>
 		<div class="recent-properties">
+			<script>
+			sales_property_for_config = []
+			lettings_property_for_config = []
+			</script>
+
 			<hr />
 			{% if branch.recent_sales_properties != empty%}
-				<h4>Latest sale listings for {{branch.name}}</h4>   
-				<hr />
-				{%for property in branch.recent_sales_properties limit:2 %}
-					{% include "properties/property_small" %}
-				{%endfor%}
+			<h4>Latest sale listings for {{branch.name}}</h4>   
+			<hr />
+
+			<script>
+			{% assign properties = branch.recent_sales_properties %}
+			sales_property_for_config = {% include_as_json properties/properties_list %}.properties
+			</script>
+
+			{%for property in properties limit:2 %}
+				{% include "properties/property_small" %}
+			{% endfor %}
 			{% endif %}
+			
 			{% if branch.recent_lettings_properties != empty%}    
 				<h4>Latest lettings listings for {{branch.name}}</h4>
 				<hr />
-				{%for property in branch.recent_lettings_properties limit:2 %}
+
+				<script>
+					{% assign properties = branch.recent_lettings_properties %}
+					lettings_property_for_config = {% include_as_json properties/properties_list %}.properties
+				</script>
+
+				{% for property in properties limit:2 %}
 					{% include "properties/property_small" %}
-				{%endfor%}
-	       		 {%endif%}
+				{% endfor %}
+			{% endif %}
 		</div>
 		
-    </div>
+	</div>
 	<div class="col-lg-4">
 		<h4>Find us on a map</h4>
 		<div class="office-map" id="branch_map"></div>
@@ -73,10 +91,10 @@
 	</div>
 </div>
 
-
-
-
-
-
-
-
+<script>
+	$(document).ready(function(){
+		properties_for_config = sales_property_for_config.concat(lettings_property_for_config);
+		Ctesius.addConfig('properties', properties_for_config);
+		Ctesius.bootPropertiesCollection(Ctesius.getConfig('properties'));
+	});
+</script>
