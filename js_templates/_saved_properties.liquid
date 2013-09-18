@@ -1,27 +1,4 @@
 {% raw %}
-	<script id="favourite_properties_template" type="text/liquid">
-    	<div style="height: 100%;" id="shortlist" class="block nomargin">
-		<h2>My Property Shortlist</h2>
-		{% for property in properties %}
-			<div id="mini_property_{{property.property_id}}" class="mini_property mini_property_{{property.property_id}}" style="">
-				<div style="position:relative;" class="clearfix">
-					<img src="/liquid_assets/images/delete.png" id="remove_icon_{{property.property_id}}" class="remove_icon" style="display: none;">
-					<a href="/properties/{{property.property_id}}/{{property.channel}}"><img src="{{ property.photo }}"></a>
-					<div id="featured_property_data">
-						<ul>
-							<li>{{ property.bedrooms }} bedrooms</li>
-							<li><strong>{{ property.price }}</strong></li>
-							<li>{{ property.display_address }}</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		{% endfor %}
-    	</div>
-	</script>
-{% endraw %}
-
-<!--{% raw %}
   <script id="saved_properties_template" type="text/liquid">
 	  <div id="property_shortlist" class="content-block">
 		  <h2>My property shortlist</h2>
@@ -46,4 +23,4 @@
       </div>
     </div>
   </script>
-{% endraw %}-->
+{% endraw %}

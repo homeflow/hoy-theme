@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	$(document).ready(function(){ 
+		Ctesius.registerEvent('redirection_flash_ready', function(message, type){
+			var mess = '<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a>'+message+'</div>'
+			$('#alert_location').html(mess)
+
+		});        
+
+		Ctesius.registerEvent('saved_property_view_rendered', 
+			function(saved_property){
+				$('#saved_properties_view').removeClass("hidden");
+				$("#shortlist_link_"+saved_property.id).html("Remove from Shortlist");
+				$("#shortlist_link_"+saved_property.id).attr("onclick", 'Ctesius.Actions.removeSavedProperty('+saved_property.id+'); return false;')
+
+			});
+
+
+		Ctesius.registerEvent('saved_property_removed', function(saved_property, collection){
+			$("#shortlist_link_"+saved_property.id).html("Save to Shortlist")
+			$("#shortlist_link_"+saved_property.id).attr("onclick", 'Ctesius.Actions.addSavedProperty('+saved_property.id+'); return false;')
+			if(collection.size() == 0){
+				$('#saved_properties_view').addClass("hidden");
+			}
+		});
+		
+		Ctesius.addConfig('enable_user_history',  true);
+
+		Ctesius.init();
+	});
+</script>

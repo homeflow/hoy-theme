@@ -1,3 +1,5 @@
 theme:
   name: "hoy"
   type: "agency_theme"
+  sidebars:
+    'properties#index' : 'properties_sidebar'
