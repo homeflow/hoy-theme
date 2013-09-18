@@ -1,3 +1,8 @@
+<script>
+	Ctesius.addConfig('branch_map_element', 'branch_map');
+	Ctesius.addConfig('branches', {% include_as_json branches/branch %});
+</script>
+
 {{ "properties" | theme_stylesheet_link_tag }}
 
 <div class="blue-banner">

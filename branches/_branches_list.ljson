@@ -1,5 +1,5 @@
 branches :
-{% for branch in agency.branches %}
+{% for branch in branches %}
   - 
     lat: {{branch.lat}}
     lng: {{branch.lng}}

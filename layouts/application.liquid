@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+   	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoT2OYrXCnSNn8N8OlndkLA_uw9kODjaQ&libraries=geometry&sensor=false"></script>
+
 	{{ "application" | javascript_include_tag }}
 	{{ "application" | stylesheet_link_tag }}
 	{{ "bootstrap" | theme_stylesheet_link_tag }}
@@ -103,8 +105,9 @@
     </footer>
     <script type="text/javascript">
       $(document).ready(function(){ 
+      	Ctesius.addConfig('permit_blank_searches', true);
+
         Ctesius.init()
-		Ctesius.addConfig('permit_blank_searches', true);
       });
     </script>
   </body>
