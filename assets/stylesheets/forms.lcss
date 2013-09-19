@@ -1,10 +1,10 @@
 
 		input[type="text"] {
-			padding: 13px 0px 13px 5px;
+			height:28px;
 		}
 
 		input[type="password"] {
-			padding: 13px 0px 13px 5px;
+			height:28px;
 		}
 		
 		form {

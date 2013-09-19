@@ -333,3 +333,11 @@
 			width:100%; 
 			height:500px;
 		}
+
+		body.properties.index #search_link {
+			display:none;
+		}
+
+		body.properties.index #search_link {
+			padding-left:10px;
+		}
