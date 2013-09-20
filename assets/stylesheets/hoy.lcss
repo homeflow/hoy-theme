@@ -92,6 +92,29 @@
 			padding-top:15px;
 		}
 		
+		.home_gallery {
+			height:380px;
+			width:633px;
+		}
+
+		.image-caption {
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+			background-color:#222222;
+			opacity:0.80;
+		}
+
+		.image-caption p {
+			color:#ffffff;
+			font-size:80%;
+			opacity:1;
+			padding:20px;
+			margin:0;
+		}
+
+
 		.articles h4 {
 			color:#999999;
 			font-style:italic;
@@ -140,7 +163,7 @@
 		.banner { 
 			position: relative; 
 			overflow: hidden; 
-			height:340px; 
+			height:380px; 
 			width:100%;
 			text-align:left;
 		}
@@ -214,24 +237,6 @@
 			font-weight:bold;
 		}
 		
-		.gallery-wrapper {
-			overflow:hidden;
-			height:333px;
-			border: 1px solid #dddddd;
-		}
-		
-		.image-caption {
-			font-size:80%;
-			width:400px;
-			position:absolute;
-			bottom:100px;
-			left:10px;
-		}
-
-		.image-caption p {
-			color:#ffffff;
-		} 
-
 		footer {
 			margin-top:20px;
 		}
