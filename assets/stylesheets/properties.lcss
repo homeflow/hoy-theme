@@ -47,18 +47,20 @@
 	}
 	
 	.nivo-directionNav a {
-		top:470px;
+		top:461px;
 		width:18px;
-		height:17px;
+		height:37px;
 		text-indent: -9999px;
 	}
 	
 	.nivo-directionNav a.nivo-prevNav {
-		background-image:url("../images/black_leftpointing_pointer.png");
+		background-image:url("../images/left.png");
+		background-repeat:no-repeat;
 	}
 	
 	.nivo-directionNav a.nivo-nextNav {
-		background-image:url("../images/black_rightpointing_pointer.png");
+		background-image:url("../images/right.png");
+		background-repeat:no-repeat;
 	}
 	
 	.nivo-controlNav a.active img {
