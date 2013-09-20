@@ -17,7 +17,7 @@
 		
 		.banner select {
 			margin: 5px 5px 5px 0px;
-			width:150px;
+			width:147px;
 		}
 
 		.banner input {
@@ -64,6 +64,10 @@
 			float:left;
 		}
 		
+		.staff {
+			margin-top:0;
+		}
+
 		.contact-form .btn {
 			margin-top:15px;
 		}
@@ -81,3 +85,16 @@
 			padding:4px 0 2px 8px; 
 			height:28px;
 		}
+
+		.terms_form {
+			font-size:70%;
+			margin-top:15px;
+			width:150px;
+			margin-bottom:30px;
+		}
+
+		.asterisk {
+			margin-left:5px;
+			color:red;
+		}
+	

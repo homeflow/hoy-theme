@@ -1,14 +1,18 @@
 <script type="text/javascript">
-	$(window).load(function() {
-	   $('#slider').nivoSlider({
-		    effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
-		    animSpeed: 500,               // Slide transition speed
-		    pauseTime: 4000,              // How long each slide will show
-		    directionNav: true,           // Next & Prev navigation
-		    controlNav: true,            // 1,2,3... navigation
-		    controlNavThumbs: true       // Use thumbnails for Control Nav
-		});
-	});
+
+  $(window).load(function() {
+     $('#slider').nivoSlider({
+        effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
+        animSpeed: 500,               // Slide transition speed
+        pauseTime: 4000,              // How long each slide will show
+        directionNav: true,           // Next & Prev navigation
+        controlNav: true,            // 1,2,3... navigation
+        controlNavThumbs: true       // Use thumbnails for Control Nav
+    });
+
+    $('#slider').nivoSlider();
+
+  });
 </script>
 
 <script type="text/javascript">
@@ -31,7 +35,18 @@
 	Ctesius.addConfig('property_id', '{{property.property_id}}')
 </script>
 
+<script>
+	$(document).ready(function(){
+		Ctesius.registerEvent('user_logged_in', function(user){
+			$('#lead_client_firstname_autofil').val(user.get('first_name'));
+			$('#lead_client_secondname_autofil').val(user.get('last_name'));
+			$('#lead_client_email_autofil').val(user.get('email'));
+			$('#lead_client_phone_autofil').val(user.get('tel_home'));
+		});
+	});
 
+	$('a.back-to-results').attr('href', document.referrer);
+</script>
 
 <div class="blue-banner">
 	<div class="container">	
@@ -48,7 +63,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8">
-			<a href="#"><small>&lt;&lt; Back to search</small></a>
+		
+			<a class="back-to-results" href=""><small>&lt;&lt; Back to search</small></a>
+			
 			<ul class="toggable-nav">
 				<li><a href="#tabs/home" id="tab_home" class="selected">Photos</a></li>
 				<li><a href="#tabs/details" id="tab_details">Full details</a></li>
@@ -125,13 +142,16 @@
 		<div class="col-lg-4">
 			{% include 'sidebar_blocks/branch_details'%}
 			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" class="contact-form" method="post">
-				<input name="lead_client[first_name]" type="text" class="required" placeholder="First Name">
-				<input name="lead_client[last_name]" type="text" class="required" placeholder="Last Name">
-				<input name="lead_client[email]" type="text" class="required email" placeholder="Email">
+				<input name="lead_client[first_name]" type="text" class="required" placeholder="First Name"><span class="asterisk">*</span>
+				<input name="lead_client[last_name]" type="text" class="required" placeholder="Last Name"><span class="asterisk">*</span>
+				<input name="lead_client[email]" type="text" class="required email" placeholder="Email"><span class="asterisk">*</span>
 				<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
 				<textarea name="lead[message]" placeholder="Message"></textarea>
 				<input type="submit" value="Send message" class="btn">
 			</form>
+			<div class="terms_form">
+				By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a>
+			</div>
 			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
 				{% assign staff_list = branch.staff_profiles %}
 				{% include 'sidebar_blocks/staff_list'%}

@@ -17,31 +17,7 @@
 	{{ "properties" | theme_stylesheet_link_tag }}
 	{{ "forms" | theme_stylesheet_link_tag }}
 	{{ "font-awesome" | stylesheet_link_tag }}
-
-	<script>
-	$(window).load(function(){
-		$('.gallery').cycle({ 
-			fx:     'fade',
-			timeout:   5000,
-			pager:    '#pager',
-			pagerAnchorBuilder: function(idx, slide){
-				return '<a href="#"></a>';
-			},
-			before:    function(idx, slide){
-				var details1 = $(this).attr('data-details1');
-				var details2 = $(this).attr('data-details2');
-				var details3 = $(this).attr('data-details3');
-				var id = $(this).attr('data-id');
-
-				$('.gallery-details h2.details a').html(details1)
-				$('.gallery-details h2.details a').attr('href', details3);
-				$('.gallery-details p').html(details2);
-				$('.gallery-details h3.sub_header a').attr('href', details3);
-			},
-			activePagerClass: 's'
-		});
-	});
-	</script>
+	
 	{% include 'layouts/js_templates' %}
 	{% include 'layouts/js_event_registers' %}
 </head>

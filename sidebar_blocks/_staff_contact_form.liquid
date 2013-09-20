@@ -1,9 +1,9 @@
-<form action="/leads" id="contact_form" class="contact-form" method="post">
+<form action="/leads" id="contact_form" class="staff contact-form" method="post">
 	<input type="hidden" name="lead[agency_employee_id]" value="{{ staff_member.user_id }}">
 	<input type="hidden" name="lead_client[agency_id]" value="{{ agency.agency_id }}">
-	<input name="lead_client[first_name]" class="required" type="text" placeholder="First Name">
-	<input name="lead_client[last_name]" class="required" type="text" placeholder="Last Name">
-	<input name="lead_client[email]" class="required" type="text" placeholder="Email">
+	<input name="lead_client[first_name]" class="required" type="text" placeholder="First Name"><span class="asterisk">*</span>
+	<input name="lead_client[last_name]" class="required" type="text" placeholder="Last Name"><span class="asterisk">*</span>
+	<input name="lead_client[email]" class="required" type="text" placeholder="Email"><span class="asterisk">*</span>
 	<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
 	<textarea name="lead[message]" placeholder="Message"></textarea>
 	<input type="submit" value="Send message" class="btn">

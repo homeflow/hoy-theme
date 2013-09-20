@@ -24,19 +24,18 @@
 
 	#slider {
 		height: 426px;
-		width:638px;
+		width:640px;
 		overflow: visible;
-		margin-top:10px;
 	}
 	
 	.nivoSlider {
 		height: 425px;
-		width:638px;
+		width:640px;
 		border: 1px solid #dddddd;
 	}
-	
+
 	.nivo-controlNav {
-		width: 638px;
+		width: 640px;
 	}
 		
 	.nivo-controlNav img {
@@ -124,4 +123,38 @@
 
 	.recent-properties {
 		clear:both;
+	}
+
+	/** property shortlist sidebar **/
+	#saved_properties_view img {
+		width:  70px;
+		height: 52px;
+		border: 1px solid #bcbcbc;
+		margin: 5px 10px 0px 0px;
+		float: left;
+	}
+	#saved_properties_view .remove_icon {
+		border-width: 0;
+		display: none;
+		height: 20px;
+		position: absolute;
+		right: -10px;
+		top: 0;
+		width: 20px;
+		cursor:pointer;
+		cursor:hand;
+	}
+
+	#saved_properties_view ul {
+		list-style-type: none;
+	}
+	#saved_properties_view a {
+		font-size:78%;
+	}
+	#saved_properties_view a:hover {
+		text-decoration: none;
+	}
+
+	.propertySearchBox {
+		margin-bottom:30px;
 	}

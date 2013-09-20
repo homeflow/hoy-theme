@@ -1,21 +1,38 @@
+<script type="text/javascript">
+
+  $(window).load(function() {
+     $('#slider').nivoSlider({
+        effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
+        animSpeed: 500,               // Slide transition speed
+        pauseTime: 4000,              // How long each slide will show
+        directionNav: true,           // Next & Prev navigation
+        controlNav: true,            // 1,2,3... navigation
+        controlNavThumbs: true       // Use thumbnails for Control Nav
+    });
+
+    $('#slider').nivoSlider();
+
+  });
+</script>
+
 <div class="blue-strip"></div>
 <div class="banner">
 	<div class="container">
-		<div class="col-lg-7">
+		<div class="col-lg-8">
 			<div class="gallery-wrapper">
-				<div class="gallery">
+				<div id="slider" class="nivoSlider" style="border:none;height:333px">
 					{% for carousel_item in agency.carousel_items %}
-						<img src="{{ carousel_item.image | url_for_agency_logo }}" data-details1="{{ carousel_item.title }}" data-details2="{{ carousel_item.standfirst | truncate:300 }}" data-details3="{{ carousel_item.link_url }}" alt="" />
+						<img src="{{ carousel_item.image | url_for_agency_logo }}" title="#htmlcaption"/>
 					{% endfor %}
+				</div>	
+				<div id="htmlcaption" class="nivo-html-caption">		
+					<strong>{{ carousel_item.title }}</strong><br />
+					{{ carousel_item.standfirst | truncate:200 }}
+					<a href="{{ carousel_item.link_url }}">Read more</a>	
 				</div>
 			</div>	
-			<!--<div class="gallery-details">
-				<h2 class="details"></h2>
-				<p></p>
-				<h3 class="sub_header">View full details</h3>
-			</div>-->
 		</div>
-		<div class="col-lg-5">		  
+		<div class="col-lg-4">		  
 			<div class="propertySearchBox" id="search_form">
 				<div class="title">Property Search</div>
 				  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">

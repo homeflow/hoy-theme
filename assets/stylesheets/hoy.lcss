@@ -171,12 +171,6 @@
 			padding: 10px 35px 10px 15px;
 			margin-bottom:0;
 		}
-
-		.banner img {
-			border-top:1px solid #abacac;
-			border-right:1px solid #abacac;
-			border-left:1px solid #abacac;
-		}
 		
 		.bottom {
 			width:100%;
@@ -220,23 +214,24 @@
 			font-weight:bold;
 		}
 		
-		.gallery {
-			position:relative;
-			width:500px;
-			height:360px;
-			overflow:hidden;
-		}
-		
 		.gallery-wrapper {
-			float:left;
-			position:relative;
-			margin-right:20px;
+			overflow:hidden;
+			height:333px;
+			border: 1px solid #dddddd;
 		}
 		
-		.gallery-details {
-			float:left;
+		.image-caption {
+			font-size:80%;
+			width:400px;
+			position:absolute;
+			bottom:100px;
+			left:10px;
 		}
-		
+
+		.image-caption p {
+			color:#ffffff;
+		} 
+
 		footer {
 			margin-top:20px;
 		}
@@ -249,7 +244,8 @@
 		
 		.office-map {
 			height: 250px;
-			width: 330px;
+			width: 256px;
+			margin-bottom:20px;
 		}
 		
 		.sub_header {
@@ -260,6 +256,8 @@
 		.avatar {
 			border: 1px solid #dddddd;
 			margin-top:14px;
+			float:left;
+			margin-right:20px;
 		}
 		
 		#draggable_map_view {
@@ -268,7 +266,6 @@
 
 		.branch-staff {
 			font-size:85%;
-			margin-top:20px;
 			margin-bottom:20px;
 		}
 
@@ -307,6 +304,7 @@
 	
 		#tab-content {
 			position:relative;
+			margin-top:10px;
 		}
 	
 		.toggable-nav {
@@ -340,4 +338,61 @@
 
 		body.properties.index #search_link {
 			padding-left:10px;
+		}
+
+		blockquote {
+			float:right;
+			border-top: 1px solid #222222;
+			border-bottom: 1px solid #222222;
+			border-left:none;
+			width:320px;
+			font-style:italic;
+			font-weight:bold;
+		}
+
+		#profile_tab_saved_properties_content h2 {
+		    font-size: 17px;
+		    margin-top: 0;
+		}
+
+		#profile_tab_saved_properties_content h2 small {
+    		font-size: 15px;
+		}
+
+		#profile_tab_saved_properties_content li {
+			font-size: 12px;	
+		}
+
+		.piped a, .piped span {
+		    border-right: 1px solid #888888;
+		    float: left;
+		    padding: 0 8px 0 0;
+		}
+
+		.piped * {
+		    display: inline;
+		    list-style: none outside none;
+		    margin: 0 8px 0 0;
+		}
+
+		.sp_content {
+			float:left;
+		} 
+
+		.saved_property img {
+			float:left;
+			margin-right:10px;
+		}
+
+		.core .offset1 {
+			margin-left:0;
+		}
+
+		.core .profile_tab_content {
+			margin-left:10px;
+			width:850px;
+		}
+
+		.core #profile_tab_saved_properties_content .saved_property {
+			margin-top:20px;
 		}
