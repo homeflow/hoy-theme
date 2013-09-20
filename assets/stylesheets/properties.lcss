@@ -58,6 +58,10 @@
 		background-repeat:no-repeat;
 	}
 	
+	.nivo-nextNav {
+    	right: -3px;
+	}
+
 	.nivo-directionNav a.nivo-nextNav {
 		background-image:url("../images/right.png");
 		background-repeat:no-repeat;
