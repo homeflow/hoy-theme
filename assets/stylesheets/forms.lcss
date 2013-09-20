@@ -49,6 +49,10 @@
 			font-weight:normal;
 		}
 
+		.banner form {
+			margin-top:20px;
+		}
+
 		.banner input[type="radio"], .banner input[type="checkbox"] {
    			margin: -2px 0 0;
 		}
