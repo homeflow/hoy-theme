@@ -10,7 +10,41 @@
 		form {
 			text-align:left;
 		}
+
+		.btn {
+			border: 1px solid #CCCCCC;
+		}
 		
+		.btn-primary
+		 {
+		    background-color: #F5F5F5;
+		    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+		    background-repeat: repeat-x;
+		    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+		    color: #333333;
+		    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+		    border: 1px solid #CCCCCC;
+		}
+
+		.btn-primary:hover
+		{
+		    border: 1px solid #CCCCCC;
+		    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+		    background-color: #E6E6E6;
+   			color: #333333;
+		}
+
+		.btn-primary:active,
+		.btn-primary:focus,
+		.btn-primary.active
+		{
+			border: 1px solid #CCCCCC;
+		    background-color: #E6E6E6;
+   			color: #333333;
+		    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+   			outline: 0 none;
+		}
+
 		label {
 			font-weight:normal;
 		}

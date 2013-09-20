@@ -62,7 +62,7 @@
 	}
 	
 	.nivo-controlNav a.active img {
-		border: 2px solid #222222;;
+		border: 3px solid #dddddd;
 	}
 	
 	.staff-property {
@@ -118,7 +118,8 @@
 	}
 	
 	.list-nav li.active a {
-		text-decoration:underline;
+		text-decoration:none;
+		font-weight:bold;
 	}
 
 	.recent-properties {

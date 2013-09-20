@@ -23,7 +23,8 @@
 		
 		a.selected {
 			color:#0B8DD8;
-			text-decoration:underline;
+			text-decoration:none;
+			font-weight:bold;
 		}
 		
 		a:hover {
@@ -83,7 +84,7 @@
 		}
 		
 		.articles {
-			padding:10px 0 10px 0;
+			padding:20px 0 10px 0;
 		}
 		
 		.articles a {
@@ -113,7 +114,7 @@
 			left:0;
 			width:100%;
 			background-color: rgb(34, 34, 34);
-			background-color: rgba(0, 0, 0, 0.7);
+			background-color: rgba(34, 34, 34, 0.7);
 			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#22222200, endColorstr=#22222200)";
 			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#22222200, endColorstr=#22222200);
 		}
@@ -170,7 +171,7 @@
 		
 		.articles img {
 			margin-top:30px;
-			border:9px solid #C9C9C9;
+			border:9px solid #dddddd;
 			height: 165px;
    			width: 238px;
 		}
