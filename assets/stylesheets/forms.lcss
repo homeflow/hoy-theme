@@ -29,7 +29,7 @@
 		}
 		
 		.banner input[type="text"] {
-			width:100%;
+			width:98.8%;
 		}
 		
 		.banner .btn {
