@@ -29,7 +29,7 @@ $(document).ready(function(){
 								<p>
 									<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a><br />
 									{{ carousel_item.standfirst | truncate:80 }}
-									<a href="{{ carousel_item.link_url }}">Read more</a>
+									<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
 								</p>
 							</div>
 						</div>
@@ -40,7 +40,7 @@ $(document).ready(function(){
 		</div>
 		<div class="col-lg-4">		  
 			<div class="propertySearchBox" id="search_form">
-				<div class="title">Property Search</div>
+				<h3>Property Search</h3>
 				  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">
 				  <fieldset id="search-fields">
 					<input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' class='search' / >
@@ -89,7 +89,7 @@ $(document).ready(function(){
 					</div>
 				  </fieldset>
 				  <div class="submit">
-					  <button onclick="Ctesius.Actions.submitSearchForm(); return false;" type="submit" class="btn btn-primary">Search</button>
+					  <button onclick="Ctesius.Actions.submitSearchForm(); return false;" type="submit" class="btn">Search</button>
 				  </div>
 				</form>
 			</div>

@@ -17,7 +17,7 @@
 	{{ "properties" | theme_stylesheet_link_tag }}
 	{{ "forms" | theme_stylesheet_link_tag }}
 	{{ "font-awesome" | stylesheet_link_tag }}
-	
+
 	{% include 'layouts/js_templates' %}
 	{% include 'layouts/js_event_registers' %}
 </head>
@@ -57,11 +57,12 @@
 		<div class="footer">
 			<div class="container">
 				<p>
-					|{% assign footer_menu = 'footer' | site_menu %}
+					{% assign footer_menu = 'footer' | site_menu %}
 					{% for menu_item in footer_menu.items %}
 					<a class="navigation {{menu_item.dom_id}}" data-id="{{menu_item.dom_id}}" href="{{ menu_item.url }}">{{ menu_item.name }}</a>|
 					{% endfor %}
-					<span style="color:#ffffff;padding: 0px 10px 0px 10px;">Copyright &copy; {{ agency.name }}</span>
+					<span style="color:#ffffff;padding: 0px 10px 0px 10px;">Copyright &copy; {{ agency.name }}</span>|
+					<span style="color:#ffffff;padding: 0px 10px 0px 10px;">Powered by Homeflow</span>
 				</p>
 			</div>
 		</div>
