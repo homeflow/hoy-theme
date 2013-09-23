@@ -21,22 +21,22 @@
 		}
 		
 		a {
-			color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.accent_text_colour}};
 			text-decoration:none;
 		}
 		
 		a.selected {
-			color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.accent_text_colour}};
 			text-decoration:none;
 			font-weight:bold;
 		}
 
 		p {
-			color: {{ theme_preferences.primary_text_colour }};
+			color: {{theme_preferences.primary_text_colour}};
 		}
 		
 		a:hover {
-			color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.accent_text_colour}};
 		}
 		
 		.logo1 {
@@ -45,7 +45,7 @@
 		
 		h1, h2, h3, h4, h5 {
 			font-family: 'Georgia';
-			color: {{ theme_preferences.primary_colour }};
+			color: {{theme_preferences.primary_colour}};
 		}
 		
 		h1, h2, h3 {	
@@ -54,7 +54,7 @@
 		
 		.nav1 {
 			padding:63px 0 0 8px;
-			color: {{theme_preferences.custom_colour_1 }}; /* Custom colour 1 for pipe colour */
+			color: {{theme_preferences.custom_colour_1}}; /* Custom colour 1 for pipe colour */
 		}
 		
 		.navbar {
