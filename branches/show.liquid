@@ -18,7 +18,9 @@
 		<h3>{{branch.name}} Office</h3>
 		<ul class="toggable-nav">
 			<li><a href="#tabs/summary" id="tab_summary" class="selected">Summary</a></li>
-			<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
+			{% unless branch.staff_profiles == empty %}
+				<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
+			{% endunless %}
 		</ul>
 		<strong>
 			{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}} <br />{% endif%}

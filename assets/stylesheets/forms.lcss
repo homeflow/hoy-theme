@@ -53,7 +53,7 @@
 			margin-top:20px;
 		}
 
-		.banner input[type="radio"], .banner input[type="checkbox"] {
+		input[type="radio"], input[type="checkbox"] {
    			margin: -2px 0 0;
 		}
 		
@@ -139,4 +139,22 @@
 			margin-left:5px;
 			color:red;
 		}
+
+		.hradios {
+			float:left;
+			margin-top:4px;
+			margin-left:12px;
+		}
+
+		.hradios label {
+			margin-right:4px;
+		}
 	
+		input.search {
+			float:left;
+		}
+
+		.h-search-form .row1,
+		.h-search-form .row2 {
+			clear:left;
+		}

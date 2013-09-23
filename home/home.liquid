@@ -22,18 +22,34 @@ $(document).ready(function(){
 		<div class="col-lg-8">
 			<div class="home_gallery">
 				<div style="position: relative; overflow: hidden;border: 1px solid #DDDDDD;" class="gallery">
-					{% for carousel_item in agency.carousel_items %}
+					{% if agency.carousel_items == empty %}
+						<p>Add some carousel items.</p>
+					{% endif %}
+					{% if agency.carousel_items.count == 1 %}
 						<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">
-							<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="380" width="633"/>
+							<img src="{{ agency.carousel_items.first.image | url_for_agency_logo }}" title="" height="380" width="633"/>
 							<div class="image-caption">	
 								<p>
-									<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a><br />
-									{{ carousel_item.standfirst | truncate:80 }}
-									<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
+									<a href="{{ agency.carousel_items.first.link_url }}"><strong>{{ agency.carousel_items.first.title }}</strong></a><br />
+									{{ agency.carousel_items.standfirst | truncate:80 }}
+									<strong><a href="{{ agency.carousel_items.first.link_url }}">Read more</a></strong>
 								</p>
 							</div>
 						</div>
-					{% endfor %}
+					{% else %}
+						{% for carousel_item in agency.carousel_items %}
+							<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">
+								<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="380" width="633"/>
+								<div class="image-caption">	
+									<p>
+										<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a><br />
+										{{ carousel_item.standfirst | truncate:80 }}
+										<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
+									</p>
+								</div>
+							</div>
+						{% endfor %}
+					{% endif %}			
 				</div>
 				<div class="pagination"></div>	
 			</div>

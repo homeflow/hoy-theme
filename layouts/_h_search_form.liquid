@@ -1,33 +1,43 @@
 <form action='/search' id='search' method='get' onsubmit="return false;" class="h-search-form advanced">
 	<fieldset id="search-fields">
-		<input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' class='search' / >  
-		<input data-provide="typeahead" class='search' placeholder='Town or Postcode' type="text" id='location' name="location" value="{{location_field}}" onUnfocus="this.theform.submit()"/><br />
-		<select id="min_beds" class="formelement_bg search" name='min_beds'>
-			<option value="" title="Min beds">Beds min</option>
-			<option value="1" title="1 Bed">1 bed</option>
-			<option value="2" title="2 Beds">2 beds</option>
-			<option value="3" title="3 Beds">3 beds</option>
-			<option value="4" title="4 Beds">4 beds</option>
-			<option value="5" title="5 Beds">5 beds +</option>
-		</select>
-		<select id="max_beds" class="formelement_bg search" name='max_beds'>
-			<option value="" title="Min beds">Beds max</option>
-			<option value="1" title="1 Bed">1 bed</option>
-			<option value="2" title="2 Beds">2 beds</option>
-			<option value="3" title="3 Beds">3 beds</option>
-			<option value="4" title="4 Beds">4 beds</option>
-			<option value="5" title="5 Beds">5 beds +</option>
-		</select>
-		<select id="min_price" class="formelement_bg search" name='min_price'>
-			<option value="" title="Min price">Price min</option>
-		</select> 
-		<select id="max_price" class="formelement_bg search" name='max_price'>
-			<option value="" title="Max price">Price max</option>
-		</select>
-		<select id="type" class="formelement_bg search" name='type'>
-			<option value="" title="Max beds">Property type</option>
-			{{ agency | tag_dropdown_list }}
-		</select>
-		<button onclick="Ctesius.Actions.submitSearchForm(); return false;" type="submit" class="btn">Search</button>
+		<div class="row1">
+			<input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' class='search' / >  
+			<input data-provide="typeahead" class='search' placeholder='Town or Postcode' type="text" id='location' name="location" value="{{location_field}}" onUnfocus="this.theform.submit()"/>
+			<div class="hradios">
+				<input type="radio" name="channel" value="sales" checked id="buy"> 
+				<label>For Sale</label>
+				<input type="radio" name="channel" value="lettings" id="let"> 
+				<label>To Let</label>
+			</div>
+		</div>
+		<div class="row2">
+			<select id="min_beds" class="formelement_bg search" name='min_beds'>
+				<option value="" title="Min beds">Beds min</option>
+				<option value="1" title="1 Bed">1 bed</option>
+				<option value="2" title="2 Beds">2 beds</option>
+				<option value="3" title="3 Beds">3 beds</option>
+				<option value="4" title="4 Beds">4 beds</option>
+				<option value="5" title="5 Beds">5 beds +</option>
+			</select>
+			<select id="max_beds" class="formelement_bg search" name='max_beds'>
+				<option value="" title="Min beds">Beds max</option>
+				<option value="1" title="1 Bed">1 bed</option>
+				<option value="2" title="2 Beds">2 beds</option>
+				<option value="3" title="3 Beds">3 beds</option>
+				<option value="4" title="4 Beds">4 beds</option>
+				<option value="5" title="5 Beds">5 beds +</option>
+			</select>
+			<select id="min_price" class="formelement_bg search" name='min_price'>
+				<option value="" title="Min price">Price min</option>
+			</select> 
+			<select id="max_price" class="formelement_bg search" name='max_price'>
+				<option value="" title="Max price">Price max</option>
+			</select>
+			<select id="type" class="formelement_bg search" name='type'>
+				<option value="" title="Max beds">Property type</option>
+				{{ agency | tag_dropdown_list }}
+			</select>
+			<button onclick="Ctesius.Actions.submitSearchForm(); return false;" type="submit" class="btn">Search</button>
+		</div>
 	</fieldset>
 </form>
