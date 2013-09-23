@@ -19,7 +19,7 @@
 	<div class="col-lg-4">
 		<h4><a href="{{branch | url_for_branch}}">{{ branch.name }} office</a></h4>
 		<h4>{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}</h4>
-		<p>To send me a message, fill out the form below.</p>
+		<p>To send me a message, fill<br /> out the form below.</p>
 		{% include 'sidebar_blocks/staff_contact_form' %}
 		<div class="terms_form">
 			By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a>
