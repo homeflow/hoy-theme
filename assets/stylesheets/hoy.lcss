@@ -272,7 +272,7 @@
 		}
 		
 		.bottom a {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{ theme_preferences.on_footer_text_colour }};
 		}
 		
 		.bottom a:hover {
