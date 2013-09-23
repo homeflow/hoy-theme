@@ -389,7 +389,7 @@
 		}
 	
 		.toggable-nav li a {
-			color:#0B8DD8;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 			font-size:85%;
 		}
 	
