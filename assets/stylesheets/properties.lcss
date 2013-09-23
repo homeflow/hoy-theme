@@ -62,7 +62,7 @@
 	}
 	
 	.nivo-nextNav {
-    	hright: -3px;
+    	height: -3px;
 	}
 
 	.nivo-directionNav a.nivo-nextNav {
