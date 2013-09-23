@@ -25,7 +25,7 @@
 	<div class="navbar navbar-inverse">
 		<div class="container">
 			<div class="col-lg-4">
-				<a href="http://xradarhomes-holding.agent.staging.homeflow.co.uk/">
+				<a href="/">
 					<img src="{{'hoy.png' | theme_image_url}}" class="logo1">
 				</a>
 			</div>
@@ -46,11 +46,11 @@
 		<div class="bottom">
 			<div class="container">
 				{% content_block site_footer %}
-				{% if content_block == 'No content chunk found: site_footer' %}
-				<p>Couldn't find footer chunk.</p>
-				{% else %}
-				{{ content_block }}
-				{% endif %}
+					{% if content_block == 'No content chunk found: site_footer' %}
+						<p>Couldn't find footer chunk.</p>
+					{% else %}
+						{{ content_block }}
+					{% endif %}
 				{% endcontent_block %}
 			</div>
 		</div>

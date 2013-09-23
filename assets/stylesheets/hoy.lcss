@@ -105,7 +105,6 @@
 		.home_gallery {
 			height:380px;
 			width:633px;
-			border: 1px solid #dddddd;
 		}
 
 		.image-caption {
@@ -144,6 +143,13 @@
 		    height: 8px;
 		    margin-right: 4px;
 		    width: 8px;
+		}
+
+		.home_gallery .pagination a:hover,
+		.home_gallery .pagination a:active,
+		.home_gallery .pagination a.active,
+		.home_gallery .pagination a:focus {
+			text-decoration:none;
 		}
 
 		.home_gallery .pagination a.s {
@@ -279,7 +285,7 @@
 		}
 		
 		.offices-map {
-			width: 520px;
+			width: 540px;
 			height: 295px;
 			margin: 10px 0 10px 0px;
 		}
@@ -437,4 +443,16 @@
 
 		.core #profile_tab_saved_properties_content .saved_property {
 			margin-top:20px;
+		}
+
+		.leaflet-popup-content h1 {
+			font-size:24px;
+		}
+
+		.leaflet-container a.leaflet-popup-close-button {
+			padding:10px 25px 0 0;
+		}
+
+		.leaflet-popup-content p {
+			margin: 10px 0;
 		}

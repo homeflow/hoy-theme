@@ -21,7 +21,7 @@ $(document).ready(function(){
 	<div class="container">
 		<div class="col-lg-8">
 			<div class="home_gallery">
-				<div style="position: relative; overflow: hidden;" class="gallery">
+				<div style="position: relative; overflow: hidden;border: 1px solid #DDDDDD;" class="gallery">
 					{% for carousel_item in agency.carousel_items %}
 						<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">
 							<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="380" width="633"/>
