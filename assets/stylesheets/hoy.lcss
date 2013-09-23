@@ -71,7 +71,7 @@
 		
 		.nav1 a:hover {
 			padding:0px 8px 0px 8px;
-			color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.on_navigation_primary_tint_text_colour}};
 		}
 
 		.user_header {
