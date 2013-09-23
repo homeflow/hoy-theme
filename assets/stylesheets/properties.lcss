@@ -36,6 +36,9 @@
 
 	.nivo-controlNav {
 		width: 640px;
+		height:90px;
+		overflow:hidden;
+		margin-bottom:15px;
 	}
 		
 	.nivo-controlNav img {
@@ -59,7 +62,7 @@
 	}
 	
 	.nivo-nextNav {
-    	right: -3px;
+    	hright: -3px;
 	}
 
 	.nivo-directionNav a.nivo-nextNav {

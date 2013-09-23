@@ -2,13 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	{% if agency.mobile_site_enabled %}
+	<script src='http://h.mobile.homeflow.co.uk/redirect?name={{agency.subdomain}}' type='text/javascript'></script>
+	{% endif %}
+
 	<meta charset="utf-8">
-	<title>Hoy</title>
+	<title>{{page.page_title}}</title>
+	<meta name="description" content="{{page.page_description}}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoT2OYrXCnSNn8N8OlndkLA_uw9kODjaQ&libraries=geometry&sensor=false"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoT2OYrXCnSNn8N8OlndkLA_uw9kODjaQ&libraries=geometry&sensor=false">
+	</script>
 
 	{{ "application" | javascript_include_tag }}
 	{{ "application" | stylesheet_link_tag }}
