@@ -31,7 +31,7 @@ $(document).ready(function(){
 							<div class="image-caption">	
 								<p>
 									<a href="{{ agency.carousel_items.first.link_url }}"><strong>{{ agency.carousel_items.first.title }}</strong></a><br />
-									{{ agency.carousel_items.standfirst | truncate:80 }}
+									{{ agency.carousel_items.first.standfirst | truncate:80 }}
 									<strong><a href="{{ agency.carousel_items.first.link_url }}">Read more</a></strong>
 								</p>
 							</div>
