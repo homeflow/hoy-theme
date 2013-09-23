@@ -2,6 +2,10 @@
 			width:1000px;
 			max-width:1000px;
 		}
+
+		.navbar-inverse {
+			background-color: {{theme_preferences.header_background_colour}};
+		}
 		
 		.row {
 			margin-left:0; /* counteracts application css */
@@ -17,26 +21,31 @@
 		}
 		
 		a {
-			color:#0B8DD8;
+			color: {{theme_preferences.accent_colour}};
 			text-decoration:none;
 		}
 		
 		a.selected {
-			color:#0B8DD8;
+			color: {{theme_preferences.accent_colour}};
 			text-decoration:none;
 			font-weight:bold;
 		}
+
+		p {
+			color: {{ theme_preferences.primary_text_colour }};
+		}
 		
 		a:hover {
-			color:#0B8DD8;
+			color: {{theme_preferences.accent_colour}};
 		}
 		
 		.logo1 {
-			margin-top:65px;
+			margin-top:22px;
 		}
 		
 		h1, h2, h3, h4, h5 {
 			font-family: 'Georgia';
+			color: {{ theme_preferences.primary_colour }};
 		}
 		
 		h1, h2, h3 {	
@@ -45,7 +54,7 @@
 		
 		.nav1 {
 			padding:63px 0 0 8px;
-			color:#333333;
+			color: {{theme_preferences.custom_colour_1 }}; /* For pipe colour */
 		}
 		
 		.navbar {
@@ -56,21 +65,24 @@
 		
 		.nav1 a {
 			padding:0px 8px 0px 8px;
-			color:#FDFDFD;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 			font-size:13px;
 		}
 		
 		.nav1 a:hover {
 			padding:0px 8px 0px 8px;
-			color:#0B8DD8;
+			color: {{theme_preferences.accent_colour}};
 		}
 
 		.user_header {
 			font-size:80%;
 			float:right;
-			color:#FDFDFD;
 			margin-top:50px;
 			text-align:right;
+		}
+
+		.user_header p {
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 
 		.user_header a, 
@@ -80,7 +92,7 @@
 		.home_gallery a:active,
 		.home_gallery a:hover
 		{
-			color:#ffffff;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
 		.articles {
@@ -88,13 +100,12 @@
 		}
 		
 		.articles a {
-			color:#0B8DD8;
 			font-style:normal;
 			font-weight:bold;
 		}
 		
-		.articles, .contact h3 {
-			color:#222222;
+		.articles, 
+		.contact h3 {
 			text-align:center;
 		}
 		
@@ -119,7 +130,7 @@
 		}
 
 		.image-caption p {
-			color:#ffffff;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 			font-size:80%;
 			opacity:1;
 			padding:20px;
@@ -153,7 +164,7 @@
 		}
 
 		.home_gallery .pagination a.s {
-		    background-color: #0B8DD8;
+		    background-color: {{theme_preferences.accent_colour}};
 		}
 
 		.articles h4 {
@@ -163,7 +174,6 @@
 		}
 		
 		.articles h5 {
-			color:#222222;
 			font-size:16px;
 			text-align:center;
 		}
@@ -171,7 +181,6 @@
 		.articles p {
 			padding:15px 0 0 0;
 			font-size:80%;
-			color:#222222;
 			text-align:left;
 		}
 		
@@ -184,8 +193,8 @@
 		
 		.footer {
 			clear:both;
-			background-color:#0B8DD8;
-			color:#333333;
+			background-color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.custom_colour_1 }}; /* For pipe colour */
 			padding:20px 10px 12px 10px;
 		}
 		
@@ -196,12 +205,8 @@
 		
 		.footer a {
 			padding:0px 10px 0px 10px;
-			color:#ffffff;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
-		
-		/*.footer a:hover {
-			color:#0B8DD8;
-		}*/
 		
 		.banner { 
 			position: relative; 
@@ -212,7 +217,7 @@
 		}
 
 		.blue-strip {
-			background-color:#0B8DD8;
+			background-color: {{theme_preferences.accent_colour}};
 			border-bottom:1px solid #abacac;
 			box-shadow: 0px 8px 8px -8px #abacac;
 			height:50px;
@@ -222,7 +227,7 @@
 		.blue-banner {
 			min-height:100px; 
 			width:100%;
-			background-color:#0B8DD8;
+			background-color: {{theme_preferences.accent_colour}};
 			box-shadow: 0px 8px 8px -8px #abacac;
 			color:#ffffff;
 			margin-bottom:20px;
@@ -241,13 +246,21 @@
 		.bottom {
 			width:100%;
 			min-height:270px;
-			background-color:#222222;
+			background-color: {{ theme_preferences.primary_colour }};
 			box-shadow: 0px -7px 7px -7px #abacac;
 			border-top:1px solid #abacac;
 			clear:both;
-			color:#FDFDFD;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
+		}
+
+		.bottom p {
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
+		.bottom h3 {
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
+		}
+
 		.bottom-article {
 			margin-top:30px;
 			text-align:left;
@@ -255,11 +268,11 @@
 		}
 		
 		.bottom a {
-			color:#ffffff;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
 		.bottom a:hover {
-			color:#ffffff;
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
 		dt {

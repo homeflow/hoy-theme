@@ -1,0 +1,6 @@
+{%content_block custom_styles %}
+	{% if content_block == 'No content chunk found: custom_styles' %}
+	{% else %}
+		{{content_block}}
+	{% endif %}
+{%endcontent_block%}
