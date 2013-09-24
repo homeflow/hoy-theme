@@ -35,16 +35,17 @@
 	}
 
 	.nivo-controlNav {
-		width: 640px;
-		height:90px;
+		width: 590px;
+		height: 90px;
 		overflow:hidden;
-		margin-bottom:15px;
+		margin: 0 0 15px 23px;
+		white-space: nowrap;
+		position: relative;
 	}
 		
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
-		margin-right:10px;
-		margin-left:10px;
+		margin: 0 9px;
 		height: 75px;
 		width: 100px;
 	}
@@ -54,7 +55,7 @@
 		width:18px;
 		height:37px;
 		text-indent: -9999px;
-	}
+	}	
 	
 	.nivo-directionNav a.nivo-prevNav {
 		background-image:url("../images/left.png");
@@ -62,7 +63,7 @@
 	}
 	
 	.nivo-nextNav {
-    	height: -3px;
+		height: -3px;
 	}
 
 	.nivo-directionNav a.nivo-nextNav {
