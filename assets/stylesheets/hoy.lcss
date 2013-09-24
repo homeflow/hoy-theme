@@ -45,7 +45,6 @@
 		
 		h1, h2, h3, h4, h5 {
 			font-family: 'Georgia';
-			color: {{theme_preferences.primary_colour}};
 		}
 		
 		h1, h2, h3 {	
@@ -398,7 +397,7 @@
 		}
 	
 		.toggable-nav li a {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.accent_colour}};
 			font-size:85%;
 		}
 	

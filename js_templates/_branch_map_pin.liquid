@@ -1,7 +1,7 @@
 <!-- Branch map pin view -->
 {%raw%}
 <script id="branch_map_pin_template" type="text/liquid">
-  <h1>{{branch.name}}</h1>
+  <h1><a href="{{ branch.branch_url }}">{{branch.name}}</a></h1>
   <div id="contact_details" class="gomapMarker">
     <p>{{branch.address}}</p>
     <p><a target='_blank' href='https://maps.google.com/maps?saddr=&daddr={{branch.lat}},{{branch.lng}}'>Directions ><a></p>

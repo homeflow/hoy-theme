@@ -1,3 +1,4 @@
+{% if pagination.total_count != 0 %}
 <ul class='thumbnails'>
 	{%for property in properties %}
 		<li>
@@ -24,3 +25,7 @@
 		</li>
 	{%endfor%}
 </ul>
+{% else %}
+<h4>Sorry, we couldn't find any properties for this search.</h4>
+<p>Try refining or changing your search using the form on the right.</p>
+{% endif %}
