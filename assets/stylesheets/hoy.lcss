@@ -220,7 +220,7 @@
 			background-color: {{theme_preferences.accent_colour}};
 			border-bottom:1px solid #abacac;
 			box-shadow: 0px 8px 8px -8px #abacac;
-			height:50px;
+			min-height:50px;
 			margin-bottom:30px;
 		}
 		
@@ -245,7 +245,7 @@
 		.alert {
 			margin-top:15px;
 			padding: 10px 35px 10px 15px;
-			margin-bottom:0;
+			margin-bottom:15px;
 		}
 		
 		.bottom {

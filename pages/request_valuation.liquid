@@ -1,53 +1,46 @@
-<div class="main-wrapper clearfix generic">
-    
-    <div class="content-left">
-        {% include 'search/form' %}
-        {% include 'sidebars/valuation_sidebar' %}
-        {% include 'user/login_info' %}
-        <div id="user_micro_view"></div>
+<div class="accent-strip">
+    <div class="container">
+        <div class="col-lg-12"><div id='alert_location'></div></div>
+        <div class="col-lg-12"><div id='form_error'></div></div>
     </div>
-
-    <div class="content-right">
-        <div id="alert_location"></div>
-            <h2>Request a Valuation</h2>
-            {% content_block valuation_intro %}
-                {% unless content_block == 'No content chunk found: valuation_intro' %}
-                    <p>{{content_block}}</p>
-                {% endunless %}
-            {% endcontent_block %}
-            <form method="post" action="/leads" class="generic clearfix">
-                <div class="left-col">
-                    <label><span>Title</span><input type="text" name="lead_client[title]"></label>
-                    <label><span>First Name</span><input type="text" name="lead_client[first_name]"></label>
-                    <label><span>Last Name</span><input type="text" name="lead_client[last_name]"></label>
-                    <label><span>Email</span><input type="text" name="lead_client[email]"></label>
-                    <label><span>Mobile</span><input type="text" name="lead_client[tel_mobile]"></label>
-                    <label><span>Home Telephone</span><input type="text" name="lead_client[tel_home]"></label>
-                    <label class="radio" style="margin-top:0;width:140px;">
-                        <input type="radio" name="lead[valuation_reason]" value="sales"> <strong>Sales Appraisal</strong>
-                    </label>
-                    <label class="radio" style="margin-top:0;width:140px;">
-                        <input type="radio" name="lead[valuation_reason]" value="lettings"> <strong>Lettings Appraisal</strong>
-                    </label>
-                    <label class="radio" style="margin-top:0;width:140px;">
-                        <input type="radio" name="lead[valuation_reason]" value="other"> <strong>Other purposes</strong>
-                    </label>
-                </div>
-                <div class="right-col">
-                    <strong style="margin-bottom:11px;display:inline-block;">Address of property to be valued</strong>
-                    <label><span>Street Address / House Name</span><input name="lead_client[street_address]" type="text"></label>
-                    <label><span>Town</span><input type="text" name="lead_client[town]"></label>
-                    <label><span>County</span><input type="text" name="lead_client[county]"></label>
-                    <label><span>Postcode</span><input type="text" name="lead_client[postcode]"></label>
-                    <label style="margin-bottom:0;"><span>Additional Information</span><textarea name="lead[message]"></textarea></label>
-                    <label><span>Preferred Time for Valuation</span><input type="text" name="lead[valuation_time]" style="width:6em;"></label>
-                    <label>How would you like to be contacted</label>
-                    <label class="three-in-row radio"><input type="radio" name="lead_client[contact_by_email]"> Email</label>
-                    <label class="three-in-row radio"><input type="radio" name="lead_client[contact_by_phone]"> Telephone</label>
-                </div>
-                <p class="small-print">By submitting this form, you are agreeing to our website <a href="/pages/terms-of-use">terms and conditions</a>, and consenting to <a href="/pages/cookies">cookies</a> being stored on your computer.</p>
-                <input type="hidden" name="lead[is_valuation_request]" value="1"/>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
 </div>
+<div class="container">
+    <div class="col-lg-12">
+        <h3>Request a free valuation</h3>      
+        <form action="/leads" method="post" id="contact_form" class="request-valuation">
+            <div class="row1 control-group">
+                <label for="firstname">First name</label>
+                <input id="firstname" class="required" name="lead_client[first_name]" type="text">
+                <label for="surname">Last name</label>
+                <input id="surname" class="required" name="lead_client[last_name]" type="text">
+            </div>
+            <div class="control-group">
+                <label for="email">Email</label>
+                <input id="email" class="required" name="lead_client[email]" type="email">
+            </div>
+            <div class="control-group">  
+                <label for="telephone">Telephone</label>
+                <input id="telephone" name="lead_client[tel_home]" type="text">
+            </div>
+            <div class="control-group">
+                <label for="is_sales_valuation">Valuation</label>
+                <span>For sale</span>
+                <input id="is_sales_valuation" name="lead[valuation_reason]" type="checkbox" value="sales">
+                <span>To let</span>
+                <input id="is_lettings_valuation" name="lead[valuation_reason]" type="checkbox" value="lettings">
+            </div>
+            <div class="control-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="lead[message]" rows="5"></textarea>
+            </div>
+            <input type="hidden" name="lead[is_valuation_request]" value="1"/>
+            <div class="submits">
+                <input type="submit" value="Submit" class="btn">
+                    <div class="terms_form">
+                    <p>By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a></p>
+                </div> 
+            </div>
+        </form>                
+    </div>
+</div>
+ 
