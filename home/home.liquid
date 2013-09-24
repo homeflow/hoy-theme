@@ -16,7 +16,7 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="blue-strip"></div>
+<div class="accent-strip"></div>
 <div class="banner">
 	<div class="container">
 		<div class="col-lg-8">
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
-<div class="articles container">
+<div class="home-articles container">
 	{% content_block home_title %}
 		{% unless content_block == 'No content chunk found: home_title' %}
 			{{content_block}}
@@ -108,7 +108,7 @@ $(document).ready(function(){
 	{% content_block 'homepage_content_1' multiple:true %}
 		{% for block in content_blocks limit: 4%}
 			<div class="col-lg-3">
-				{{block.content_block}}
+					{{block.content_block}}
 			</div>
 		{%endfor%}
 	{%endcontent_block%}

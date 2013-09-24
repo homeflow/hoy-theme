@@ -1,0 +1,30 @@
+<div class="secondary-banner">
+	<div class="container">	
+		<div class="col-lg-12">
+			<h3>Latest News</h3>
+		</div>
+	</div>
+</div>
+<div class="container">	
+	{% for news_article in articles %}
+		<div class="row">
+			<div class="articles col-lg-8">
+				{% if news_article.promo_image %}
+					<a href="/articles/{{news_article.slug}}">
+						<img src="{{news_article.promo_image | url_for_generic_image : "67x66"}}" class="articles-img" style="margin-top:10px;"/>
+					</a>
+				{% endif %}
+				<h4>
+					<a href="/articles/{{news_article.slug}}">{{ news_article.title }}</a>
+				</h4>
+				<p>
+					{{ news_article.promo | truncate :200 }} 
+					<br />
+					<a href="/articles/{{ news_article.slug }}" style="font-size:small">Read more</a>
+				</p>
+				<hr />
+			</div>
+		</div>
+	{% endfor %}
+	<div class="col-lg-4"></div>
+</div>

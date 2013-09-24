@@ -95,20 +95,6 @@
 			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
-		.articles {
-			padding:35px 0 10px 0;
-		}
-		
-		.articles a {
-			font-style:normal;
-			font-weight:bold;
-		}
-		
-		.articles, 
-		.contact h3 {
-			text-align:center;
-		}
-		
 		.banner h4 {
 			padding-top:15px;
 		}
@@ -167,28 +153,51 @@
 		    background-color: {{theme_preferences.accent_colour}};
 		}
 
-		.articles h4 {
+		.home-articles h4 {
 			color:#999999;
 			font-style:italic;
 			text-align:center;
 		}
 		
-		.articles h5 {
+		.home-articles h5 {
 			font-size:16px;
 			text-align:center;
 		}
 		
-		.articles p {
+		.home-articles p {
 			padding:15px 0 0 0;
 			font-size:80%;
 			text-align:left;
 		}
 		
-		.articles img {
+		.home-articles img {
 			margin-top:30px;
 			border:9px solid #dddddd;
-			height: 165px;
+			height: 168px;
    			width: 238px;
+		}
+
+		.home-articles {
+			padding:35px 0 10px 0;
+		}
+
+		
+		.home-articles .words {
+			min-height:172px;
+		}
+		
+		.home-articles a.chunk_links {
+			font-style:normal;
+			font-weight:bold;
+			font-size:80%;
+			position:absolute;
+			left:14px;
+			bottom:0;
+		}
+		
+		.home-articles , 
+		.contact h3 {
+			text-align:center;
 		}
 		
 		.footer {
@@ -216,15 +225,15 @@
 			text-align:left;
 		}
 
-		.blue-strip {
+		.accent-strip {
 			background-color: {{theme_preferences.accent_colour}};
 			border-bottom:1px solid #abacac;
 			box-shadow: 0px 8px 8px -8px #abacac;
-			height:50px;
+			min-height:50px;
 			margin-bottom:30px;
 		}
 		
-		.blue-banner {
+		.secondary-banner {
 			min-height:100px; 
 			width:100%;
 			background-color: {{theme_preferences.accent_colour}};
@@ -233,19 +242,19 @@
 			margin-bottom:20px;
 		}
 		
-		.blue-banner h3 {
+		.secondary-banner h3 {
 			margin-top:20px;
 			color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
 		}
 
-		.blue-banner h4 {
+		.secondary-banner h4 {
 			color: color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
 		}
 
 		.alert {
 			margin-top:15px;
 			padding: 10px 35px 10px 15px;
-			margin-bottom:0;
+			margin-bottom:15px;
 		}
 		
 		.bottom {
@@ -473,4 +482,14 @@
 
 		.leaflet-popup-content p {
 			margin: 10px 0;
+		}
+
+		.articles-img {
+			float:right;
+			border:1px solid #dddddd;
+			margin-left:20px;
+		}
+
+		.articles hr {
+			clear:both;
 		}

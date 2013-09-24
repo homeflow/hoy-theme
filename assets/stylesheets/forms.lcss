@@ -53,6 +53,10 @@
 			margin-top:20px;
 		}
 
+		.banner .btn {
+			padding: 6px 27px;
+		}
+		
 		input[type="radio"], input[type="checkbox"] {
    			margin: -2px 0 0;
 		}
@@ -157,4 +161,45 @@
 		.h-search-form .row1,
 		.h-search-form .row2 {
 			clear:left;
+		}
+
+		.request-valuation label {
+			float:left;
+			width:132px;
+			text-align:right;
+			margin-right:30px;
+			font-size:small;
+		}
+
+		.request-valuation {
+			width:800px;
+			margin-top:30px;
+		}
+
+		.request-valuation input[type="email"] {
+			height:28px;
+		}
+
+		.request-valuation textarea {
+			width:638px;
+		}
+
+		.request-valuation .submits {
+			float:right;
+			text-align: right;
+		}
+
+		.request-valuation span {
+			font-size:small;
+		}
+
+		.request-valuation .row1 label,
+		.request-valuation .row1 input {
+			float:left;
+		}
+
+		.request-valuation .btn {
+			margin-top:10px;
+			padding-left:30px;
+			padding-right:30px;
 		}
