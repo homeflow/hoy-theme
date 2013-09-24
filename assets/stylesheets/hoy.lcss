@@ -229,17 +229,17 @@
 			width:100%;
 			background-color: {{theme_preferences.accent_colour}};
 			box-shadow: 0px 8px 8px -8px #abacac;
-			color: {{theme_preferences.custom_colour_2}}; /* Used when lighter secondary colour for text to contrast better */
+			color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
 			margin-bottom:20px;
 		}
 		
 		.blue-banner h3 {
 			margin-top:20px;
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
 		}
 
 		.blue-banner h4 {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
 		}
 
 		.alert {
