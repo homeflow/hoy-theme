@@ -7,10 +7,28 @@
         pauseTime: 4000,              // How long each slide will show
         directionNav: true,           // Next & Prev navigation
         controlNav: true,            // 1,2,3... navigation
-        controlNavThumbs: true       // Use thumbnails for Control Nav
+        controlNavThumbs: true,       // Use thumbnails for Control Nav
+        afterChange: function(){
+          var pos = parseInt($('.nivo-controlNav .active').attr('rel')) 
+          var total_count = {{property.photos.size}};
+          var number_of_thumbnails = 5;
+//alert("total_count = " + total_count + "\nnumber_of_thumbnails = " + number_of_thumbnails + "\npos = " + pos + "\ntotal_count - number_of_thumbnails = " + (total_count - number_of_thumbnails) + "\npos - 2 = " + (pos-2) + "\nEnd result = " + (Math.max(0, Math.min(pos - 2,  total_count - number_of_thumbnails))));
+          set_thumb_range(Math.max(0, Math.min(pos - 2,  total_count - number_of_thumbnails)));
+        }
     });
 
-    $('#slider').nivoSlider();
+    function set_thumb_range(min){
+      $('.nivo-control:first').stop();
+      $('.nivo-control:first').animate({
+        left: -min * 118
+			}, {
+				duration: 1000,
+        step: function(now, fx){
+          $('.nivo-control:gt(0)').css ("left", now);
+				}
+			});
+    }
+
 
   });
 </script>
