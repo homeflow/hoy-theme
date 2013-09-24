@@ -53,6 +53,10 @@
 			margin-top:20px;
 		}
 
+		.banner .btn {
+			padding: 6px 27px;
+		}
+		
 		input[type="radio"], input[type="checkbox"] {
    			margin: -2px 0 0;
 		}
