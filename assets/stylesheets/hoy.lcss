@@ -229,7 +229,7 @@
 			width:100%;
 			background-color: {{theme_preferences.accent_colour}};
 			box-shadow: 0px 8px 8px -8px #abacac;
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.custom_colour_2}}; /* Used when lighter secondary colour for text to contrast better */
 			margin-bottom:20px;
 		}
 		
