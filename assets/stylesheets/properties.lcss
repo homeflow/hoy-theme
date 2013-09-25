@@ -43,6 +43,9 @@
 		position: relative;
 	}
 		
+	.nivo-controlNav a {
+		position: relative;
+	}
 	.nivo-controlNav img {
 		border: 1px solid #dddddd;
 		margin: 0 9px;
