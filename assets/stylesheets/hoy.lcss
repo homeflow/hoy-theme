@@ -177,7 +177,7 @@
 		}
 
 		.home-articles {
-			padding:35px 0 10px 0;
+			padding:30px 0 10px 0;
 		}
 
 		
@@ -493,10 +493,13 @@
 			clear:both;
 		}
 
+		.article-container {
+			min-height: 330px;
+		}
 
 		.ui-effects-transfer { 
 			border: 3px dotted #bcbcbc;
 			padding: 8px 3px;
-		margin: -8px -3px;
+			margin: -8px -3px;
 		}
 

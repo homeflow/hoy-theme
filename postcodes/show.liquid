@@ -1,13 +1,13 @@
 <div class="secondary-banner">
 	<div class="container">
 		<div class="col-lg-12">
-			<h3>All {{current_channel.dictionary.general_collective}}  {{current_channel.dictionary.preposition}} {{search.geospacial_description}}</h3>
+			<h3> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposition}} {{search.geospacial_description}} <span> {{ location.name }}, {{ county.name }} </span> </h3>
 			{% include 'common_chunks/list_nav' %}
 		</div>
 	</div>
 </div>
 <div class="container">
-	<div class="col-lg-8">		
+	<div class="col-lg-8">			
 		<div class='togglable_area' id='togglable_list'>
 			{% include 'properties/properties_list' %}
 		</div>
@@ -19,12 +19,11 @@
 	</div>
 	<div class="col-lg-4">	
 		{% include 'layouts/search_form' %}
-		<div id="saved_properties_view" class="hidden"></div>
 	</div>
 	<div class="row">
 		<div class="container">
 			<div class="col-lg-8">
-				<hr style="margin-top:0"/>
+				<hr />
 				{% include 'common_chunks/bottom_list_nav' %}
 			</div>
 			<div class="col-lg-4">
@@ -32,3 +31,5 @@
 		</div>
 	</div>
 </div>
+
+	

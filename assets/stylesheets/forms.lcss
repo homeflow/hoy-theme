@@ -70,7 +70,8 @@
 			color:#222222;
 		}
 		
-		.banner input[type="text"] {
+		.banner input[type="text"],
+		.banner #location {
 			width:98.8%;
 		}
 		
@@ -79,7 +80,7 @@
 		}
 		
 		.refine_form select {
-			width:206px;
+			width:240px;
 			margin-bottom: 10px;
 		}
 		
@@ -98,6 +99,10 @@
 		
 		.h-search-form input[type="text"] {
 			width:476px;
+		}
+
+		.h-search-form #location {
+			width:311px;
 		}
 		
 		.contact-form {
@@ -130,6 +135,7 @@
 		#location {
 			padding:4px 0 2px 8px; 
 			height:28px;
+			width:240px;
 		}
 
 		.terms_form {
