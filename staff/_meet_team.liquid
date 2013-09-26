@@ -1,11 +1,8 @@
 <div class="meet_staff_member">
 	<div class="details">
-		<a href="{{ staff_member | url_for_staff_member : staff_member.agency }}"><img src="{{ staff_member.avatar | url_for_staff_profile_avatar : "82x82" }}"></a>
-		<a href="{{ staff_member | url_for_staff_member : staff_member.agency }}">{{staff_member.name}}</a><br />
+		<a href="{{ staff_member | url_for_staff_member }}"><img src="{{ staff_member.avatar | url_for_staff_profile_avatar : "82x82" }}"></a>
+		<a href="{{ staff_member | url_for_staff_member }}">{{staff_member.name}}</a><br />
 		{{staff_member.job_title }}<br />
-		{% unless replace_agency_with_social_icons %}
-			<a href="{{ staff_member.branch | url_for_branch : staff_member.agency}}">{{ staff_member.agency.name }}</a>
-		{% endunless %}<br />
 		{{staff_member.branch.contact_telephone}}
 		{% if replace_agency_with_social_icons %}
 		  {% if staff_member.agency.agency_portal_preferences.enable_social_media_links %} 
@@ -22,7 +19,7 @@
 		<div class="staff_bio">
 			<p>
 				{{ staff_member.short_bio | truncatewords: 30, "" }} <br />
-				<small><a href="{{ staff_member | url_for_staff_member : branch.agency }}">Read more</a></small>
+				<small><a href="{{ staff_member | url_for_staff_member }}">Read more</a></small>
 			</p>
 		</div>
 	</div>	
