@@ -1,4 +1,4 @@
-<h4>Our Offices</h4>
+<h4 class="sidebar">Our Offices</h4>
 <ul class="offices-list">
 	{% for branch in agency.branches %}
 		<li><a href="{{branch | url_for_branch}}">{{branch.name}}</a></li>

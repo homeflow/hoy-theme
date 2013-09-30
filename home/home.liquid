@@ -19,7 +19,7 @@ $(document).ready(function(){
 <div class="home_gallery">
 	<div style="position: relative; overflow: hidden;border: 1px solid #DDDDDD;" class="gallery">
 		{% if agency.carousel_items == empty or agency.carousel_items < 2 %}
-			<p>Add at least two carousel items or select auto fill sales or lettings <a href="http://{{agency.name}}.homeflow.co.uk/configure/website/carousel_items"</p>
+			<p>Add at least two carousel items or <a href="http://{{agency.name}}.homeflow.co.uk/configure/website/carousel_items">click here</a> to select auto fill sales or lettings.</p>
 		{% endif %}
 		{% for carousel_item in agency.carousel_items %}
 			<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">

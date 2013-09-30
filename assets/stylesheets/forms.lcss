@@ -106,7 +106,6 @@
 		}
 		
 		.contact-form {
-			margin-top:20px;
 			width:336px;
 		}
 		
@@ -142,7 +141,6 @@
 			font-size:70%;
 			margin-top:15px;
 			width:150px;
-			margin-bottom:20px;
 		}
 
 		.asterisk {

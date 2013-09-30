@@ -9,3 +9,4 @@ theme:
     'branches#index' : 'our_offices_sidebar'
     'pages#show' : 'cms_page_sidebar'
     'home#home' : 'homepage_sidebar'
+    'staff#show' : 'staff_show_sidebar'

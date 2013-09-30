@@ -1,7 +1,11 @@
-<div style="margin-top:20px">
-	<div class="fb-send" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}"></div>
+{% if branch %}
+	{% if agency.facebook_uri %}
+		<div class="fb-like" data-href="{{agency.facebook_uri}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+	{% endif %}
+{% else %}
+	<div class="fb-like" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+{% endif %}
 
-	<a href="{{agency || url_for_agency}}/{{page | url_for_page}}" class="twitter-share-button" data-lang="en">Tweet</a>    
+<a href="{{agency || url_for_agency}}/{{page | url_for_page}}" class="twitter-share-button" data-lang="en">Tweet</a>    
 
-	<div class="g-plus" data-action="share" data-annotation="bubble" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}"></div>
-</div>
+<div class="g-plus" data-action="share" data-annotation="bubble" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}"></div>
