@@ -5,81 +5,75 @@
 
 {{ "properties" | theme_stylesheet_link_tag }}
 
-<div class="secondary-banner">
-	<div class="container">
-		<div class="col-lg-12">
-			<div id='alert_location'></div>
-			{% include 'layouts/h_search_form' %}
-		</div>
+{% push_to_header %}
+	<div class="col-lg-12">
+		{% include 'layouts/h_search_form' %}
 	</div>
+{% endpush_to_header %}
+
+<h3>{{branch.name}} Office</h3>
+<ul class="toggable-nav">
+	<li><a href="#tabs/summary" id="tab_summary" class="selected">Summary</a></li>
+	{% unless branch.staff_profiles == empty %}
+		<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
+	{% endunless %}
+</ul>
+<strong>
+	{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}} <br />{% endif%}
+	{{ branch.address }}
+</strong>
+<div id="togglable_summary" class="togglable_area clearfix">
+	<p>
+		{% if branch.photo %}
+		<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 1px 0;border: 1px solid #dddddd;" />
+		{% endif %}
+		{{branch.description}}
+	</p>
 </div>
+<div id="togglable_meet_team" class="togglable_area hidden">
+	<div class="all-branch-staff">		
+		{% for staff_member in branch.staff_profiles %}
+			<div class="col-lg-6">
+				{% include "staff/meet_team" %}
+			</div>
+		{% endfor %}
+	</div>	
+</div>
+<div class="recent-properties">
+	<script>
+		sales_property_for_config = []
+		lettings_property_for_config = []
+	</script>
 
-	<div class="col-lg-8">
-		<h3>{{branch.name}} Office</h3>
-		<ul class="toggable-nav">
-			<li><a href="#tabs/summary" id="tab_summary" class="selected">Summary</a></li>
-			{% unless branch.staff_profiles == empty %}
-				<li><a href="#tabs/meet_team" id="tab_meet_team">Meet the team</a></li>
-			{% endunless %}
-		</ul>
-		<strong>
-			{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}} <br />{% endif%}
-			{{ branch.address }}
-		</strong>
-		<div id="togglable_summary" class="togglable_area clearfix">
-			<p>
-				{% if branch.photo %}
-				<img src="{{branch.photo | url_for_generic_image}}" alt="{{branch.name}} office" style="width:223px;float:left;margin:15px 15px 1px 0;border: 1px solid #dddddd;" />
-				{% endif %}
-				{{branch.description}}
-			</p>
-		</div>
-		<div id="togglable_meet_team" class="togglable_area hidden">
-			<div class="all-branch-staff">		
-				{% for staff_member in branch.staff_profiles %}
-				<div class="col-lg-6">
-					{% include "staff/meet_team" %}
-				</div>
-				{% endfor %}
-			</div>	
-		</div>
-		<div class="recent-properties">
-			<script>
-			sales_property_for_config = []
-			lettings_property_for_config = []
-			</script>
+	<hr />
+	{% if branch.recent_sales_properties != empty%}
+		<h4>Latest sale listings for {{branch.name}}</h4>   
+		<hr />
 
-			<hr />
-			{% if branch.recent_sales_properties != empty%}
-			<h4>Latest sale listings for {{branch.name}}</h4>   
-			<hr />
-
-			<script>
+		<script>
 			{% assign properties = branch.recent_sales_properties %}
 			sales_property_for_config = {% include_as_json properties/properties_list %}.properties
-			</script>
+		</script>
 
-			{%for property in properties limit:2 %}
-				{% include "properties/property_small" %}
-			{% endfor %}
-			{% endif %}
-			
-			{% if branch.recent_lettings_properties != empty%}    
-				<h4>Latest lettings listings for {{branch.name}}</h4>
-				<hr />
+		{%for property in properties limit:2 %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% endif %}
+	
+	{% if branch.recent_lettings_properties != empty%}    
+		<h4>Latest lettings listings for {{branch.name}}</h4>
+		<hr />
 
-				<script>
-					{% assign properties = branch.recent_lettings_properties %}
-					lettings_property_for_config = {% include_as_json properties/properties_list %}.properties
-				</script>
+		<script>
+			{% assign properties = branch.recent_lettings_properties %}
+			lettings_property_for_config = {% include_as_json properties/properties_list %}.properties
+		</script>
 
-				{% for property in properties limit:2 %}
-					{% include "properties/property_small" %}
-				{% endfor %}
-			{% endif %}
-		</div>
-	</div>
-
+		{% for property in properties limit:2 %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% endif %}
+</div>
 
 <script>
 	$(document).ready(function(){

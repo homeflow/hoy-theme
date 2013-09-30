@@ -519,3 +519,7 @@
 			margin-right: 13px;
 			vertical-align: top;
 		}
+
+		.offices-list {
+			margin-bottom:15px;
+		}

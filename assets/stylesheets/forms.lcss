@@ -102,7 +102,7 @@
 		}
 
 		.h-search-form #location {
-			width:311px;
+			width:471px;
 		}
 		
 		.contact-form {

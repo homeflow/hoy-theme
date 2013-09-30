@@ -6,3 +6,5 @@ theme:
     'properties#index' : 'properties_results_sidebar'
     'properties#show' : 'properties_show_sidebar'
     'branches#show' : 'branches_show_sidebar'
+    'branches#index' : 'our_offices_sidebar'
+    'pages#show' : 'cms_page_sidebar'

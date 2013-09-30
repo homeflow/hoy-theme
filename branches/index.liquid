@@ -2,27 +2,16 @@
 	Ctesius.addConfig('branches', {% include_as_json branches/branches_list %});
 	Ctesius.addConfig('branch_map_element', 'map');
 </script>
-<div class="secondary-banner">
-	<div class="container">
-		<div class="col-lg-12">
-			{% include 'layouts/h_search_form' %}
-		</div>
+
+{% push_to_header %}
+	<div class="col-lg-12">
+		{% include 'layouts/h_search_form' %}
 	</div>
+{% endpush_to_header %}
+
+<h3>Our Office Locations</h3>
+<p>Choose an office from the map or from the list across to see the full details.</p>
+<div class="col-lg-8" style="padding-left:0">
+	<div class="offices-map" id="map"></div>
 </div>
-<div class="container">
-    <div class="col-lg-12">
-        <h3>Our Office Locations</h3>
-        <p>Choose an office from the map or from the list across to see the full details.</p>
-		<div class="col-lg-7" style="padding-left:0">
-			<div class="offices-map" id="map"></div>
-		</div>
-		<div class="col-lg-5">
-			<h4>Our Offices</h4>
-		    <ul class="offices-list">
-				{% for branch in agency.branches %}
-					<li><a href="{{branch | url_for_branch}}">{{branch.name}}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-</div>
+	

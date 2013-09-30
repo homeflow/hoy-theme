@@ -172,7 +172,8 @@
 	}
 
 	.propertySearchBox {
-		margin-bottom:30px;
+		margin-bottom:20px;
+		margin-top:20px;
 	}
 
 	#favourite_property_list {
