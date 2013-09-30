@@ -94,10 +94,6 @@
 			color: {{theme_preferences.on_navigation_primary_text_colour}};
 		}
 		
-		.banner h4 {
-			padding-top:15px;
-		}
-		
 		.home_gallery {
 			height:380px;
 			width:633px;
@@ -214,14 +210,6 @@
 		.footer a {
 			padding:0px 2px 0px 2px;
 			color: {{theme_preferences.on_footer_text_colour}};
-		}
-		
-		.banner { 
-			position: relative; 
-			overflow: hidden; 
-			height:380px; 
-			width:100%;
-			text-align:left;
 		}
 
 		.accent-strip {

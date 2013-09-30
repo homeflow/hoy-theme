@@ -50,11 +50,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 	{% if page.controller_name == 'home' %}
-
-Dog
+		<div class="accent-strip"></div>
 	{% else %}
 		<div class="secondary-banner">
 			<div class="container">
@@ -74,6 +72,23 @@ Dog
 			{{page.sidebar}}
 		</div>
 	</div>
+
+	{% if page.controller_name == 'home' %}
+		<div class="home-articles container">
+			{% content_block home_title %}
+				{% unless content_block == 'No content chunk found: home_title' %}
+					{{content_block}}
+				{% endunless %}
+			{% endcontent_block %}
+			{% content_block 'homepage_content_1' multiple:true %}
+				{% for block in content_blocks limit: 4%}
+					<div class="col-lg-3">
+						{{block.content_block}}
+					</div>
+				{%endfor%}
+			{% endcontent_block %}
+		</div>
+	{% endif %}
 	
 	<footer>
 		<div class="bottom">

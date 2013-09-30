@@ -16,43 +16,23 @@ $(document).ready(function(){
 });
 </script>
 
-<div class="banner">
-	<div class="container">
-		<div class="col-lg-8">
-			<div class="home_gallery">
-				<div style="position: relative; overflow: hidden;border: 1px solid #DDDDDD;" class="gallery">
-					{% if agency.carousel_items == empty or agency.carousel_items < 2 %}
-						<p>Add at least two carousel items or select auto fill sales or lettings <a href="http://{{agency.name}}.homeflow.co.uk/configure/website/carousel_items"</p>
-					{% endif %}
-					{% for carousel_item in agency.carousel_items %}
-						<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">
-							<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="380" width="633"/>
-							<div class="image-caption">	
-								<p>
-									<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a><br />
-									{{ carousel_item.standfirst | truncate:80 }}
-									<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
-								</p>
-							</div>
-						</div>
-					{% endfor %}			
+<div class="home_gallery">
+	<div style="position: relative; overflow: hidden;border: 1px solid #DDDDDD;" class="gallery">
+		{% if agency.carousel_items == empty or agency.carousel_items < 2 %}
+			<p>Add at least two carousel items or select auto fill sales or lettings <a href="http://{{agency.name}}.homeflow.co.uk/configure/website/carousel_items"</p>
+		{% endif %}
+		{% for carousel_item in agency.carousel_items %}
+			<div style="position: absolute; top: 0px; left: -633px; display: none; z-index: 2; opacity: 1; width: 633px; height: 380px;" class="img">
+				<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="380" width="633"/>
+				<div class="image-caption">	
+					<p>
+						<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a><br />
+						{{ carousel_item.standfirst | truncate:80 }}
+						<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
+					</p>
 				</div>
-				<div class="pagination"></div>	
 			</div>
-		</div>
+		{% endfor %}			
 	</div>
-</div>
-<div class="home-articles container">
-	{% content_block home_title %}
-		{% unless content_block == 'No content chunk found: home_title' %}
-			{{content_block}}
-		{% endunless %}
-	{% endcontent_block %}
-	{% content_block 'homepage_content_1' multiple:true %}
-		{% for block in content_blocks limit: 4%}
-			<div class="col-lg-3">
-				{{block.content_block}}
-			</div>
-		{%endfor%}
-	{%endcontent_block%}
+	<div class="pagination"></div>	
 </div>
