@@ -1,0 +1,21 @@
+{% include 'sidebar_blocks/branch_details'%}
+<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" class="contact-form" method="post">
+	<input name="lead_client[first_name]" type="text" class="required" placeholder="First Name"><span class="asterisk">*</span>
+	<input name="lead_client[last_name]" type="text" class="required" placeholder="Last Name"><span class="asterisk">*</span>
+	<input name="lead_client[email]" type="text" class="required email" placeholder="Email"><span class="asterisk">*</span>
+	<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
+	<textarea name="lead[message]" placeholder="Message"></textarea>
+	<input type="submit" value="Send message" class="btn">
+</form>
+<div class="terms_form">
+	By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a>
+</div>
+{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
+	{% assign staff_list = branch.staff_profiles %}
+	{% include 'sidebar_blocks/staff_list'%}
+{% endif %}
+
+{% include 'common_chunks/social' %}
+<h4>Share this property...</h4>
+{% include 'sidebar_blocks/social_block' %}
+

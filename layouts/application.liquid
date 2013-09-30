@@ -28,6 +28,7 @@
 
 	{% include 'layouts/js_templates' %}
 	{% include 'layouts/js_event_registers' %}
+
 </head>
 <body class="{{page.controller_name}} {{page.action_name}}">
 	<div class="navbar navbar-inverse">
@@ -49,7 +50,18 @@
 			</div>
 		</div>
 	</div>
-	{{ content_for_layout }}
+	
+
+	
+	<div class="container">
+		<div class="col-lg-8">
+			{{ content_for_layout }}
+		</div>
+		<div class="col-lg-4">
+			{{page.sidebar}}
+		</div>
+	</div>
+	
 	<footer>
 		<div class="bottom">
 			<div class="container">
@@ -64,19 +76,21 @@
 		</div>
 		<div class="footer">
 			<div class="container">
-				<p>
-					{% assign footer_menu = 'footer' | site_menu %}
-					{% for menu_item in footer_menu.items %}
-						<a class="navigation {{menu_item.dom_id}}" data-id="{{menu_item.dom_id}}" href="{{ menu_item.url }}">{{ menu_item.name }}</a>
+				<div class="col-lg-12">
+					<p>
+						{% assign footer_menu = 'footer' | site_menu %}
+						{% for menu_item in footer_menu.items %}
+							<a class="navigation {{menu_item.dom_id}}" data-id="{{menu_item.dom_id}}" href="{{ menu_item.url }}">{{ menu_item.name }}</a>
+							<span style="padding-left:2px">|</span>
+						{% endfor %}
+						<span style="color:{{ theme_preferences.on_footer_text_colour }};padding: 0px 2px 0px 2px;">
+							Copyright &copy; {{ agency.name }}
+						</span>
 						<span style="padding-left:2px">|</span>
-					{% endfor %}
-					<span style="color:{{ theme_preferences.on_footer_text_colour }};padding: 0px 2px 0px 2px;">
-						Copyright &copy; {{ agency.name }}
-					</span>
-					<span style="padding-left:2px">|</span>
-					<span style="color:{{ theme_preferences.on_footer_text_colour }};padding: 0px 2px 0px 2px;">Powered by Homeflow</span>
-					<img src="liquid_assets/images/hf.png" height="10" width="80" />
-				</p>
+						<span style="color:{{ theme_preferences.on_footer_text_colour }};padding: 0px 2px 0px 2px;">Powered by Homeflow</span>
+						<img src="liquid_assets/images/hf.png" height="10" width="80" />
+					</p>
+				</div>
 			</div>
 		</div>
 	</footer>

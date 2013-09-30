@@ -4,8 +4,8 @@
 		<a href="{{ staff_member | url_for_staff_member }}">{{staff_member.name}}</a><br />
 		{{staff_member.job_title }}<br />
 		{{staff_member.branch.contact_telephone}}
-		{% if replace_agency_with_social_icons %}
-		  {% if staff_member.agency.agency_portal_preferences.enable_social_media_links %} 
+		
+		{% if staff_member.agency.agency_portal_preferences.enable_social_media_links %} 
 			{% if staff_member.has_social_links %}
 			  <div class="social_icons">
 				{% if staff_member.facebook_uri %}<a href="{{staff_member.facebook_uri}}" target="_blank"><img src="{{ 'icon-facebook' | theme_image_url }}" width="20" height="20" style='width:20px;height:20px;'></a>{%endif%}
@@ -14,8 +14,8 @@
 				{% if staff_member.googleplus_uri %}<a href="{{staff_member.googleplus_uri}}" target="_blank"><img src="{{ 'icon-google-plus' | theme_image_url }}" width="20" height="20" style='width:20px;height:20px;' ></a>{%endif%}
 			  </div>
 			{% endif %}
-		  {% endif %}
 		{% endif %}
+		
 	</div>
 </div>    
 

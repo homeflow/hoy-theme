@@ -28,8 +28,6 @@
 				}
 			});
     }
-
-
   });
 </script>
 
@@ -79,102 +77,77 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8">
-		
-			<a onclick="window.history.back();" style="cursor:pointer"><small>&lt;&lt; Back to search</small></a>
-			
-			<ul class="toggable-nav">
-				<li><a href="#tabs/home" id="tab_home" class="selected">Photos</a></li>
-				<li><a href="#tabs/details" id="tab_details">Full details</a></li>
-				<li><a href="#tabs/map" id="tab_map">Map</a></li>
-				<li><a href="#tabs/satellite" id="tab_satellite">Satellite</a></li>
-				<li><a href="#tabs/streetview" id="tab_streetview">Streetview</a></li>
-				{% if property.floorplans.first %}
-					<li><a href="#tabs/floorplan" id="tab_floorplan">Floorplan</a></li>
-				{% endif %}
-				{% if property.epc_charts.first %}
-					<li><a href="#tabs/epc" id="tab_epc">EPC</a></li>
-				{% endif %}
-				{% if property.brochures.first %}
-					<li><a href="#tabs/brochure" id="tab_brochure">Brochure</a></li>
-				{% endif %}
-			</ul>
-			<div id="tab-content">
-				<div id="togglable_home" class="togglable_area clearfix">	
-					<div id="slider" class="nivoSlider">
-						{% for photo in property.photos %}
-							<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
-						{% endfor %}
-					</div>
-					{% if property.sanitized_short_description == "<span></span>" %}
-						{{property.description || truncate : 300}}
-					{% else %}
-						{{property.sanitized_short_description}}
-					{% endif%}
-					<a href="#tabs/details">Read more</a>
-				</div>
-				<div id="togglable_details" class="togglable_area hidden">
-					{{property.description}}
-				</div>
-				<div id="togglable_map" class="togglable_area hidden">
-					<div id='single_map' class="google_map_container"></div>
-				</div>
-				<div id="togglable_streetview" class="togglable_area hidden">
-					<div id='streetview' class="google_map_container"></div>
-				</div>
-				<div id="togglable_satellite" class="togglable_area hidden">
-					<div id='satellite' class="google_map_container"></div>
-				</div>
-				{% if property.floorplans.first %}
-					<div id="togglable_floorplan" class="togglable_area hidden">
-						{% for floorplan in property.floorplans %}
-							<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}">
-						{% endfor %}
-					</div>
-				{% endif%}
-				{% if property.epc_charts.first %}
-					<div id="togglable_epc" class="togglable_area hidden">
-					{% for epc_chart in property.epc_charts %}
-						{% if epc_chart.is_pdf? %}
-							<a href="{{epc_chart | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{epc_chart | url_for_property_photo : "200x200R" }}" /> Download PDF EPC</a>
-							{% else %}
-							<img src="{{epc_chart | url_for_property_asset}}">
-						{% endif %}
-					{% endfor %}
-					</div>
-				{% endif %}
-				{% if property.brochures.first %}
-					<div id="togglable_brochure" class="togglable_area hidden">
-					{% for brochure in property.brochures %}
-						{% if brochure.is_pdf? %}
-							<a href="{{brochure | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{brochure | url_for_property_photo : "200x200R" }}" /> Download PDF Brochure</a>
-							{% else %}
-							<img src="{{brochure | url_for_property_asset}}">
-						{% endif %}
-					{% endfor %}
-					</div>
-				{% endif %}
-			</div>
+<a onclick="window.history.back();" style="cursor:pointer"><small>&lt;&lt; Back to search</small></a>
+
+<ul class="toggable-nav">
+	<li><a href="#tabs/home" id="tab_home" class="selected">Photos</a></li>
+	<li><a href="#tabs/details" id="tab_details">Full details</a></li>
+	<li><a href="#tabs/map" id="tab_map">Map</a></li>
+	<li><a href="#tabs/satellite" id="tab_satellite">Satellite</a></li>
+	<li><a href="#tabs/streetview" id="tab_streetview">Streetview</a></li>
+	{% if property.floorplans.first %}
+		<li><a href="#tabs/floorplan" id="tab_floorplan">Floorplan</a></li>
+	{% endif %}
+	{% if property.epc_charts.first %}
+		<li><a href="#tabs/epc" id="tab_epc">EPC</a></li>
+	{% endif %}
+	{% if property.brochures.first %}
+		<li><a href="#tabs/brochure" id="tab_brochure">Brochure</a></li>
+	{% endif %}
+</ul>
+<div id="tab-content">
+	<div id="togglable_home" class="togglable_area clearfix">	
+		<div id="slider" class="nivoSlider">
+			{% for photo in property.photos %}
+				<img src="{{photo | url_for_property_asset : '638x425'}}" alt="" data-thumb="{{photo | url_for_property_asset}}">
+			{% endfor %}
 		</div>
-		<div class="col-lg-4">
-			{% include 'sidebar_blocks/branch_details'%}
-			<form action="/properties/{{property.property_id}}/{{property.primary_channel}}/leads" class="contact-form" method="post">
-				<input name="lead_client[first_name]" type="text" class="required" placeholder="First Name"><span class="asterisk">*</span>
-				<input name="lead_client[last_name]" type="text" class="required" placeholder="Last Name"><span class="asterisk">*</span>
-				<input name="lead_client[email]" type="text" class="required email" placeholder="Email"><span class="asterisk">*</span>
-				<input name="lead_client[tel_home]" type="text" placeholder="Telephone">
-				<textarea name="lead[message]" placeholder="Message"></textarea>
-				<input type="submit" value="Send message" class="btn">
-			</form>
-			<div class="terms_form">
-				By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a>
-			</div>
-			{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_property_pages %}
-				{% assign staff_list = branch.staff_profiles %}
-				{% include 'sidebar_blocks/staff_list'%}
-			{% endif %}
-		</div>
+		{% if property.sanitized_short_description == "<span></span>" %}
+			{{property.description || truncate : 300}}
+		{% else %}
+			{{property.sanitized_short_description}}
+		{% endif%}
+		<a href="#tabs/details">Read more</a>
 	</div>
+	<div id="togglable_details" class="togglable_area hidden">
+		{{property.description}}
+	</div>
+	<div id="togglable_map" class="togglable_area hidden">
+		<div id='single_map' class="google_map_container"></div>
+	</div>
+	<div id="togglable_streetview" class="togglable_area hidden">
+		<div id='streetview' class="google_map_container"></div>
+	</div>
+	<div id="togglable_satellite" class="togglable_area hidden">
+		<div id='satellite' class="google_map_container"></div>
+	</div>
+	{% if property.floorplans.first %}
+		<div id="togglable_floorplan" class="togglable_area hidden">
+			{% for floorplan in property.floorplans %}
+				<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}">
+			{% endfor %}
+		</div>
+	{% endif%}
+	{% if property.epc_charts.first %}
+		<div id="togglable_epc" class="togglable_area hidden">
+		{% for epc_chart in property.epc_charts %}
+			{% if epc_chart.is_pdf? %}
+				<a href="{{epc_chart | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{epc_chart | url_for_property_photo : "200x200R" }}" /> Download PDF EPC</a>
+				{% else %}
+				<img src="{{epc_chart | url_for_property_asset}}">
+			{% endif %}
+		{% endfor %}
+		</div>
+	{% endif %}
+	{% if property.brochures.first %}
+		<div id="togglable_brochure" class="togglable_area hidden">
+		{% for brochure in property.brochures %}
+			{% if brochure.is_pdf? %}
+				<a href="{{brochure | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{brochure | url_for_property_photo : "200x200R" }}" /> Download PDF Brochure</a>
+				{% else %}
+				<img src="{{brochure | url_for_property_asset}}">
+			{% endif %}
+		{% endfor %}
+		</div>
+	{% endif %}
 </div>

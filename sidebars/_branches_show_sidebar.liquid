@@ -1,0 +1,16 @@
+<h4>Find us on a map</h4>
+<div class="office-map" id="branch_map"></div>
+<div id="togglable_summary" class="togglable_area clearfix">
+	{% assign staff_list = branch.staff_profiles %}
+	{% include 'sidebar_blocks/branch_staff_list'%}
+</div>
+<h4>Send us a message</h4>
+{% include 'sidebar_blocks/contact_form' %}
+<div class="terms_form">
+	By submitting this form, you agree to our <a href="/pages/terms-of-use">terms.</a>
+</div>
+<div id="saved_properties_view" class="hidden"></div>
+<h4>Share our branch...</h4>
+{% include 'common_chunks/social' %}
+{% include 'sidebar_blocks/social_block' %}
+	

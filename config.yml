@@ -2,4 +2,7 @@ theme:
   name: "hoy"
   type: "agency_theme"
   sidebars:
-    'properties#index' : 'properties_sidebar'
+    'locations#show' : 'properties_results_sidebar'
+    'properties#index' : 'properties_results_sidebar'
+    'properties#show' : 'properties_show_sidebar'
+    'branches#show' : 'branches_show_sidebar'

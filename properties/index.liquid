@@ -6,29 +6,18 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="col-lg-8">		
-		<div class='togglable_area' id='togglable_list'>
-			{% include 'properties/properties_list' %}
-		</div>
-		<div class='togglable_area hidden' id='togglable_map'>
-		  <div id='draggable_map_view'>
-				
-		  </div>
-		</div>
+
+	<div class='togglable_area' id='togglable_list'>
+		{% include 'properties/properties_list' %}
 	</div>
-	<div class="col-lg-4">	
-		{% include 'layouts/search_form' %}
-		<div id="saved_properties_view" class="hidden"></div>
+	<div class='togglable_area hidden' id='togglable_map'>
+		<div id='draggable_map_view'></div>
 	</div>
-	<div class="row">
-		<div class="container">
-			<div class="col-lg-8">
-				<hr style="margin-top:0"/>
-				{% include 'common_chunks/bottom_list_nav' %}
-			</div>
-			<div class="col-lg-4">
-			</div>
-		</div>
-	</div>
-</div>
+
+		
+	<hr style="margin-top:0"/>
+	{% include 'common_chunks/bottom_list_nav' %}	
+
+		
+
+
