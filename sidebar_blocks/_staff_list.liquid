@@ -1,7 +1,7 @@
-{% unless staff_list == empty %} 
+{% unless agency.staff_profiles == empty %} 
 	<div class="branch-staff">
-		<h4>{% if staff_member %}Some of my colleagues{% else %}{% if property %}Meet our staff{% else %}Some of our team{% endif %}{% endif %}...</h4>	
-		{% for staff_member in staff_list limit:3 %}
+		<h4>Some of our team...</h4>	
+		{% for staff_member in agency.staff_profiles limit:3 %}
 			{% include "staff/staff_member_small" %}
 		{% endfor %}
 		{% if branch.agency.agency_portal_preferences.staff_profiles_enabled_on_branch_pages %}
