@@ -8,3 +8,4 @@ theme:
     'branches#show' : 'branches_show_sidebar'
     'branches#index' : 'our_offices_sidebar'
     'pages#show' : 'cms_page_sidebar'
+    'home#home' : 'homepage_sidebar'
