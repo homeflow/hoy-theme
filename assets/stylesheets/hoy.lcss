@@ -306,7 +306,6 @@
 		
 		.office-map {
 			height: 250px;
-			margin-bottom:20px;
 			width: 256px;
 		}
 		
@@ -343,8 +342,7 @@
 		}
 	
 		.mini_staff_member .details {
-			height:100px;
-			width:230px;
+			height:95px;
 		}
 
 		.meet_staff_member {
@@ -408,7 +406,7 @@
 			border-left:none;
 			width:320px;
 			font-style:italic;
-			font-weight:bold;
+			margin: 10px 0 11px 10px;
 		}
 
 		#profile_tab_saved_properties_content h2 {
@@ -506,16 +504,24 @@
 			vertical-align: top;
 		}
 
-		.offices-list {
-			margin-bottom:20px;
+		.sidebar_block h4 {
+			border-bottom:1px solid #dddddd;
+			padding-bottom:5px;
 		}
 
 		h4.sidebar {
 			border-bottom:1px solid #dddddd;
 			padding-bottom:5px;
-			margin-bottom:15px;
 		}
 
-		.spacer {
-			margin-top:25px;
+		.sidebar_block {
+			margin-bottom:25px;
+		}
+
+		.sidebar_shortlist {
+			margin-bottom:10px;
+		}
+
+		.social_icons {
+			margin-top:5px;
 		}

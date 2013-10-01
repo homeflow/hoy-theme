@@ -139,7 +139,6 @@
 
 		.terms_form {
 			font-size:70%;
-			margin-top:15px;
 			width:150px;
 		}
 

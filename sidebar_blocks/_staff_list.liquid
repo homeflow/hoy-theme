@@ -1,8 +1,11 @@
-{% unless agency.staff_profiles == empty %} 
-	<div class="branch-staff">
-		<h4 class="sidebar">Some of our team...</h4>	
-		{% for staff_member in agency.staff_profiles limit:3 %}
-			{% include "staff/staff_member_small" %}
-		{% endfor %}	
-	</div>
-{% endunless %} 
+<div class="sidebar_block">	
+	{% unless agency.staff_profiles == empty %} 
+		<div class="branch-staff">
+			<h4>Some of our team...</h4>	
+			{% for staff_member in agency.staff_profiles limit:3 %}
+				{% include "staff/staff_member_small" %}
+			{% endfor %}	
+		</div>
+	{% endunless %}
+</div>
+
