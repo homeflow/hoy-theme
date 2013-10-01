@@ -9,8 +9,9 @@
 	</div>
 {% endpush_to_header %}
 
-<h3>Our Office Locations</h3>
-<p>Choose an office from the map or from the list across to see the full details.</p>
+{% if agency.branches.size == 1 %}<h3>Our Office Location</h3>{% else %}<h3>Our Office Locations</h3>{% endif %}
+
+<p>Choose an office from the map or from the list across for full details, contact information and more.</p>
 <div class="col-lg-8" style="padding-left:0">
 	<div class="offices-map" id="map"></div>
 </div>

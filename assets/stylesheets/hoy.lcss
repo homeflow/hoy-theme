@@ -42,8 +42,12 @@
 			cursor:hand;
 		}
 		
-		.piped * {
-			color:#333333;
+		.piped a.orange:hover {
+			cursor:hand;
+		}
+
+		.piped a.orange {
+    		border-right: 1px solid #333333;
 		}
 
 		.logo1 {
@@ -357,7 +361,7 @@
 			margin-bottom:15px;
 		}
 
-		.meet_staff_member .details img {
+		.meet_staff_member .details .mainimg {
 			float:left;
 			border: 1px solid #dddddd;
 			margin-right:8px;
@@ -478,7 +482,7 @@
 		.articles-img {
 			float:right;
 			border:1px solid #dddddd;
-			margin-left:20px;
+			margin: 14px 0 0 10px;
 		}
 
 		.articles hr {
@@ -486,7 +490,7 @@
 		}
 
 		.article-container {
-			min-height: 330px;
+			min-height: 350px;
 		}
 
 		.ui-effects-transfer { 
@@ -511,16 +515,6 @@
 			vertical-align: top;
 		}
 
-		.sidebar_block h4 {
-			border-bottom:1px solid #dddddd;
-			padding-bottom:5px;
-		}
-
-		h4.sidebar {
-			border-bottom:1px solid #dddddd;
-			padding-bottom:5px;
-		}
-
 		.sidebar_block {
 			margin-bottom:25px;
 		}
@@ -531,4 +525,8 @@
 
 		.social_icons {
 			margin-top:5px;
+		}
+
+		.meet_staff_member .social_icons {
+			padding-bottom:8px;
 		}

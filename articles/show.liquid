@@ -1,21 +1,5 @@
-<div class="secondary-banner">
-	<div class="container">	
-		<div class="col-lg-12">
-			<h3>{{ article.title }}</h3>
-		</div>
-	</div>
-</div>
-<div class="container">	
-	<div class="col-lg-10">
-		<img src="{{ article.image | url_for_agency_logo : "214x170" }}" class="articles-img" />	
-		<div class="article-container">
-			{{ article.content }}
-		</div>
-	</div>
-	<div class="col-lg-2"></div>
-</div>
-<div class="container">	
-	<div class="col-lg-12">
-		<a href="/articles" style="margin-bottom:50px">See all articles</a>
-	</div>
+<img src="{{ article.image | url_for_agency_logo : "124x99" }}" class="articles-img" />	
+<div class="article-container">
+	<h4>{{ article.title }}</h4>
+	{{ article.content }}
 </div>

@@ -168,14 +168,12 @@
 
 		.request-valuation label {
 			float:left;
-			width:132px;
-			text-align:right;
-			margin-right:30px;
+			width:95px;
 			font-size:small;
 		}
 
 		.request-valuation {
-			width:800px;
+			width:630px;
 			margin-top:30px;
 		}
 
@@ -184,7 +182,7 @@
 		}
 
 		.request-valuation textarea {
-			width:638px;
+			width:630px;
 		}
 
 		.request-valuation .submits {
