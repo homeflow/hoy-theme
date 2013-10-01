@@ -35,10 +35,17 @@
 			color: {{theme_preferences.primary_text_colour}};
 		}
 		
-		a:hover {
+		a:hover,
+		a:active,
+		a.active {
 			color: {{theme_preferences.accent_text_colour}};
+			cursor:hand;
 		}
 		
+		.piped * {
+			color:#333333;
+		}
+
 		.logo1 {
 			margin-top:22px;
 		}
