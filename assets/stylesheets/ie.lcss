@@ -22,7 +22,6 @@
     width: 25%;
 }
 
-.span4 {
-    width: 300px;
-    float:left;
+.bottom {
+	margin-top:20px;
 }
