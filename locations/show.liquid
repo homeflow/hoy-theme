@@ -6,11 +6,12 @@
 {% endpush_to_header %}
 
 <div class='togglable_area' id='togglable_list'>
-	{% include 'properties/properties_list' %}
+	{% for property in properties %}
+		{% include "properties/property_small" %}
+	{% endfor %}
 </div>
 <div class='togglable_area hidden' id='togglable_map'>
 	<div id='draggable_map_view'></div>
 </div>
 
-<hr style="margin-top:0"/>
 {% include 'common_chunks/bottom_list_nav' %}
