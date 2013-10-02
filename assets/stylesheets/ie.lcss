@@ -22,6 +22,7 @@
     width: 25%;
 }
 
-.image-caption {
-	background-color:#000000;
+.span4 {
+    width: 300px;
+    float:left;
 }
