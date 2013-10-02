@@ -32,6 +32,11 @@
 	{% include 'layouts/js_event_registers' %}
 	{% include 'common_chunks/social' %}
 	{{ "jquery.placeholder" | theme_javascript_link_tag }}
+	<script type="text/javascript">	
+		$(function() {
+			 $('input, textarea').placeholder();
+		});
+	</script>
 </head>
 <body class="{{page.controller_name}} {{page.action_name}}">
 	<div class="navbar navbar-inverse">
