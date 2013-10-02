@@ -236,17 +236,17 @@
 			width:100%;
 			background-color: {{theme_preferences.accent_colour}};
 			box-shadow: 0px 8px 8px -8px #abacac;
-			color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
+			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 2 */
 			margin-bottom:20px;
 		}
 		
 		.secondary-banner h3 {
 			margin-top:20px;
-			color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
+			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 2 */
 		}
 
 		.secondary-banner h4 {
-			color: color: {{theme_preferences.custom_colour_2}}; /* Custom colour 2 */
+			color: color: {{theme_preferences.custom_colour_3}}; /* Custom colour 2 */
 		}
 
 		.alert {

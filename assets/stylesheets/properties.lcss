@@ -129,12 +129,12 @@
 	.list-nav li.active a {
 		text-decoration:none;
 		font-weight:bold;
-		color: {{theme_preferences.custom_colour_2}};
+		color: {{theme_preferences.custom_colour_3}};
 	}
 
 	.list-nav a:hover,
 	.list-nav a {
-		color: {{theme_preferences.custom_colour_2}};
+		color: {{theme_preferences.custom_colour_3}};
 	}
 
 	.recent-properties {
