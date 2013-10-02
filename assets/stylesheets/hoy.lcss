@@ -258,7 +258,7 @@
 		.bottom {
 			width:100%;
 			min-height:270px;
-			background-color: {{theme_preferences.primary_colour}};
+			background-color: {{theme_preferences.footer_colour}};
 			box-shadow: 0px -7px 7px -7px #abacac;
 			border-top:1px solid #abacac;
 			clear:both;
@@ -393,7 +393,7 @@
 		}
 	
 		.toggable-nav li a {
-			color: {{theme_preferences.accent_colour}};
+			color: {{theme_preferences.custom_colour_2}};
 			font-size:85%;
 		}
 	

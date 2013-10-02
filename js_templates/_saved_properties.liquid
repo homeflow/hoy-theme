@@ -1,7 +1,7 @@
 {% raw %}
   <script id="saved_properties_template" type="text/liquid">
 	  <div id="property_shortlist" class="content-block">
-		  <h4>My property shortlist</h4>
+		  <h4>My property shortlist...</h4>
 		  <div id='favourite_property_list' class="content">
 
 		  </div>
@@ -17,7 +17,7 @@
           <ul>
             <li><a href="{{property.property_url}}">{{ property.bedrooms }} bedrooms</a></li>
             <li><a href="{{property.property_url}}">{{ property.price }}</a></li>
-            <li><a href="{{property.property_url}}">{{ property.road_name }}</a></li>
+            <li><a href="{{property.property_url}}">{{ property.road_name | truncate : 20 }}</a></li>
           </ul>
         </div>
       </div>
