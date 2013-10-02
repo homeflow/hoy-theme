@@ -3,9 +3,7 @@
 		<a href="{{property | url_for_property}}">
 			<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
 		</a>
-		<h4>
-			<a href="{{property | url_for_property}}">{{property.display_address}}</a>
-		</h4>
+		<a href="{{property | url_for_property}}">{{property.display_address}}</a>
 		<p>
 			{{property.price}}
 		</p>

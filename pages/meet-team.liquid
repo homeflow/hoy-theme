@@ -1,6 +1,12 @@
-<a href="{{ staff_member | url_for_staff_member : staff_member.agency }}" class="avatar">
-	<img src="{{ staff_member.avatar | url_for_staff_profile_avatar : "82x82" }}">
-</a>
+{% if staff_member.avatar %}
+	<a href="{{ staff_member | url_for_staff_member }}">
+		<img src="{{ staff_member.avatar | url_for_staff_profile_avatar : "82x82" }}" class="mainimg">
+	</a>
+{% else %}
+	<a href="{{ staff_member | url_for_staff_member }}">
+		<img src="{{ 'siloutte.jpg' | theme_image_url}}" width="82" height="82" style="width:82px;height:82px;" class="mainimg">
+	</a>
+{% endif %}
 <a href="{{ staff_member | url_for_staff_member : staff_member.agency }}">{{staff_member.name}}</a>
 {{staff_member.job_title }}
 {% unless replace_agency_with_social_icons %}
