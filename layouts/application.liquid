@@ -25,12 +25,11 @@
 	{{ "forms" | theme_stylesheet_link_tag }}
 	{{ "custom" | theme_stylesheet_link_tag }}
 	{{ "font-awesome" | stylesheet_link_tag }}
-
+	<script type="text/javascript" src="assets/javascripts/respond.min.js"></script>
 	{% include 'layouts/js_templates' %}
 	{% include 'layouts/js_event_registers' %}
 	{% include 'common_chunks/social' %}
-	<script type="text/javascript" src="assets/javascripts/respond.min.js"></script>
-
+	
 </head>
 <body class="{{page.controller_name}} {{page.action_name}}">
 	<div class="navbar navbar-inverse">
