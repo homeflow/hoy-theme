@@ -534,3 +534,7 @@
 		.meet_staff_member .social_icons {
 			padding-bottom:8px;
 		}
+
+		.leaflet-container a {
+			color: {{theme_preferences.accent_text_colour}};
+		}
