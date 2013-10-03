@@ -156,6 +156,14 @@
 		.hradios label {
 			margin-right:4px;
 		}
+
+		.vradios {
+			margin-bottom:8px;
+		}
+
+		.vradios label {
+			margin-right:4px;
+		}
 	
 		input.search {
 			float:left;
