@@ -1,13 +1,11 @@
 {% if property or properties %}
 	{% if agency.facebook_uri %}
-		<div class="fb-like" data-href="{{agency.facebook_uri}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+		<div class="fb-like" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 	{% endif %}
 {% else %}
-	<div class="fb-like" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+	<div class="fb-like" data-href="{{agency.facebook_uri}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 {% endif %}
 
 <a href="{{agency || url_for_agency}}/{{page | url_for_page}}" class="twitter-share-button" data-lang="en">Tweet</a>    
 
 <div class="g-plus" data-action="share" data-annotation="bubble" data-href="{{agency || url_for_agency}}/{{page | url_for_page}}"></div>
-
-
