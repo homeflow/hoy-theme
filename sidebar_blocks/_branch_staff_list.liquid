@@ -1,5 +1,5 @@
 {% unless staff_list == empty %} 
-	<div style="margin-bottom:18px">		
+	<div style="margin-bottom:20px">		
 		<div class="branch-staff">
 			<h4>{% if staff_member %}Some of my colleagues{% else %}{% if property %}Meet our staff{% else %}Some of our team{% endif %}{% endif %}...</h4>	
 			{% for staff_member in staff_list limit:3 %}
