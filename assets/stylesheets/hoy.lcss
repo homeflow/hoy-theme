@@ -39,7 +39,7 @@
 		a:active,
 		a.active {
 			color: {{theme_preferences.accent_text_colour}};
-			cursor:hand;
+			cursor:pointer;
 		}
 		
 		.piped a.orange:hover {
