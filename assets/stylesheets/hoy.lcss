@@ -524,7 +524,7 @@
 		}
 
 		.sidebar_shortlist {
-			margin-bottom:25px;
+			margin-bottom:15px;
 		}
 
 		.social_icons {
