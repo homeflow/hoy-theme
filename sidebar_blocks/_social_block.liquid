@@ -1,4 +1,4 @@
-{% if page.controller_name == 'branches' %}
+{% if page.controller_name == 'branches' and page.action_name == 'show' %}
 	{% if agency.facebook_uri %}
 		<div class="fb-like" data-href="{{agency.facebook_uri}}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 		{% else %}
