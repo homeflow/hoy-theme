@@ -294,12 +294,12 @@
 			/*margin-left:30%; */
 		}
 		
-		dl {
+		.dlfooter {
 			margin-top:0;
 			width:360px;
 			color: {{theme_preferences.on_footer_text_colour}};
 		}
-		
+
 		.title {
 			margin-bottom:10px;
 			font-weight:bold;
