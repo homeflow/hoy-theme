@@ -9,7 +9,7 @@
   </script>
 
   <script id="saved_property_template" type="text/liquid">
-    <div id="mini_property_{{property.property_id}}" class="mini_property mini_property_{{property.property_id}}" style="">
+    <div id="mini_property_{{property.property_id}}" class="mini_property mini_property_{{property.property_id}}" style="margin-bottom:5px">
       <div style="position:relative;" class="clearfix">
         <img src="/liquid_assets/images/delete.png" id="remove_icon_{{property.property_id}}" class="remove_icon" onclick="javascript:Ctesius.Actions.removeSavedProperty({{property.property_id}})">
         <a href="{{property.property_url}}"><img src="{{ property.small_photo }}"></a>
