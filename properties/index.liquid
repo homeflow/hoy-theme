@@ -6,9 +6,14 @@
 {% endpush_to_header %}
 
 <div class='togglable_area' id='togglable_list'>
-	{% for property in properties %}
-		{% include "properties/property_small" %}
-	{% endfor %}
+	{% if pagination.total_count != 0 %}	
+		{% for property in properties %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% else %}
+		<h4>Sorry, we couldn't find any properties for this search.</h4>
+		<p>Try refining or changing your search using the form on the right.</p>
+	{% endif %}
 </div>
 <div class='togglable_area hidden' id='togglable_map'>
 	<div id='draggable_map_view'></div>

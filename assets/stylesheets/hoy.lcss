@@ -406,6 +406,10 @@
 			display:none;
 		}
 
+		body.branches.properties #save_search_link {
+			display:none;
+		}
+
 		body.properties.index #save_search_link {
 			padding-left:10px;
 		}

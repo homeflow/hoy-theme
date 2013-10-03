@@ -1,34 +1,22 @@
-<div class="secondary-banner">
-	<div class="container">
-		<div class="col-lg-12">
-			<h3>All {{current_channel.dictionary.general_collective}}  {{current_channel.dictionary.preposition}}, {{branch.name}} branch</h3>
-			{% include 'common_chunks/list_nav' %}
-		</div>
+{% push_to_header %}
+	<div class="col-lg-12">
+		<h3>All {{current_channel.dictionary.general_collective | capitalize}} {{current_channel.dictionary.preposition}}, {{branch.name}} branch</h3>
+		{% include 'common_chunks/list_nav' %}
 	</div>
+{% endpush_to_header %}
+
+<div class='togglable_area' id='togglable_list'>
+	{% if pagination.total_count != 0 %}	
+		{% for property in properties %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% else %}
+		<h4>Sorry, there are no properties for this branch at this time.</h4>
+		<p>Please come back another time and run a search.</p>
+	{% endif %}
 </div>
-<div class="container">
-	<div class="col-lg-8">		
-		<div class='togglable_area' id='togglable_list'>
-			{% include 'properties/properties_list' %}
-		</div>
-		<div class='togglable_area hidden' id='togglable_map'>
-		  <div id='draggable_map_view'>
-				
-		  </div>
-		</div>
-	</div>
-	<div class="col-lg-4">	
-		{% include 'layouts/search_form' %}
-		<div id="saved_properties_view" class="hidden"></div>
-	</div>
-	<div class="row">
-		<div class="container">
-			<div class="col-lg-8">
-				<hr />
-				{% include 'common_chunks/bottom_list_nav' %}
-			</div>
-			<div class="col-lg-4">
-			</div>
-		</div>
-	</div>
+<div class='togglable_area hidden' id='togglable_map'>
+	<div id='draggable_map_view'></div>
 </div>
+
+{% include 'common_chunks/bottom_list_nav' %}

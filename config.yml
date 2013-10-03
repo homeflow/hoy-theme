@@ -12,3 +12,5 @@ theme:
     'staff#show' : 'staff_show_sidebar'
     'articles#show' : 'cms_page_sidebar'
     'articles#index' : 'cms_page_sidebar'
+    'branches#properties' : 'properties_results_sidebar'
+    'pages#request_valuation' : 'our_offices_sidebar'
