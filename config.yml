@@ -14,3 +14,4 @@ theme:
     'articles#index' : 'our_offices_sidebar'
     'branches#properties' : 'properties_results_sidebar'
     'pages#request_valuation' : 'our_offices_sidebar'
+    'counties#show' : 'properties_results_sidebar'
