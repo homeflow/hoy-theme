@@ -1,22 +1,6 @@
-{% push_to_header %}
-	<div class="col-lg-12">
-		<h3>All {{current_channel.dictionary.general_collective}} {{current_channel.dictionary.preposition}} {{search.geospacial_description}}</h3>
-		{% include 'common_chunks/list_nav' %}
-	</div>
-{% endpush_to_header %}
-
-<div class='togglable_area' id='togglable_list'>
-	{% if pagination.total_count != 0 %}	
-		{% for property in properties %}
-			{% include "properties/property_small" %}
-		{% endfor %}
-	{% else %}
-		<h4>Sorry, we couldn't find any properties for this search.</h4>
-		<p>Try refining or changing your search using the form on the right.</p>
-	{% endif %}
-</div>
-<div class='togglable_area hidden' id='togglable_map'>
-	<div id='draggable_map_view'></div>
-</div>
-
-{% include 'common_chunks/bottom_list_nav' %}
+{% if properties == empty %}	
+	<h4>Sorry, we couldn't find any properties for this search.</h4>
+	<p>Try refining or changing your search using the form on the right.</p>
+{% else %}
+	{% include 'search/results' %}
+{% endif %}

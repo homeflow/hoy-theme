@@ -216,7 +216,7 @@
 		
 		.footer {
 			clear:both;
-			background-color: {{theme_preferences.primary_colour}};
+			background-color: {{theme_preferences.custom_colour_4 }}; /* Custom colour 4 for footer strip */
 			color: {{theme_preferences.custom_colour_1 }}; /* Custom colour 1 for pipe colour */
 			padding:20px 10px 12px 10px;
 		}
