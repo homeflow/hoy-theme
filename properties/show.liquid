@@ -60,6 +60,8 @@
 			$('#lead_client_email_autofil').val(user.get('email'));
 			$('#lead_client_phone_autofil').val(user.get('tel_home'));
 		});
+
+		$(".inline").colorbox({inline:true, width:"450px"});
 	});
 
 	$('a.back-to-results').attr('href', document.referrer);
@@ -71,7 +73,10 @@
 		<h4>{{property.bedrooms}} bedrooms</h4>
 	</div>
 	<div class="col-lg-5">
-		<h3>{{property.price}}</h3>
+		<h3 style="margin-bottom:0">{{property.price}}</h3>
+		<span class="feetext">
+       		{{property.lettings_fee_text}}
+     	</span>
 	</div>
 {% endpush_to_header %}
 

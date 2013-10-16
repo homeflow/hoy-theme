@@ -12,9 +12,9 @@
 				All properties {{current_channel.dictionary.preposition}}
 			</h3>
 		{% endif %}
-		{% unless pagination.page_count > 0 %}
-			{% include 'common_chunks/list_nav' %}
-		{% endunless %}
+		
+		{% include 'common_chunks/list_nav' %}
+		
 	</div>
 {% endpush_to_header %}
 
@@ -27,6 +27,10 @@
 	<div id='draggable_map_view'></div>
 </div>
 
-{% unless pagination.page_count > 0 %}
-	{% include 'common_chunks/bottom_list_nav' %}
-{% endunless %}
+{% include 'common_chunks/bottom_list_nav' %}
+
+<script>
+	$(document).ready(function(){
+		$(".inline").colorbox({inline:true, width:"450px"});
+	});
+</script>

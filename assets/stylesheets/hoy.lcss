@@ -37,6 +37,7 @@
 		
 		a:hover,
 		a:active,
+		a:focus,
 		a.active {
 			color: {{theme_preferences.accent_text_colour}};
 			cursor:pointer;
@@ -254,7 +255,14 @@
 		}
 
 		.secondary-banner h4 {
-			color: color: {{theme_preferences.custom_colour_3}}; /* Custom colour 3 */
+			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 3 */
+		}
+
+		.secondary-banner a,
+		.secondary-banner a:hover,
+		.secondary-banner a:active,
+		.secondary-banner a:focus {
+			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 3 */
 		}
 
 		.alert {
@@ -545,4 +553,12 @@
 
 		.leaflet-container a {
 			color: {{theme_preferences.accent_text_colour}};
+		}
+
+		.feetext {
+			font-size:11px;
+		}
+
+		.feetext a {
+			font-size:10px;
 		}

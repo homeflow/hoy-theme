@@ -5,7 +5,10 @@
 		</a>
 		<a href="{{property | url_for_property}}">{{property.display_address | truncate : 60}}</a>
 		<p>
-			{{property.price}}
+			{{property.price}} 
+			<span class="feetext" style="color:{{theme_preferences.custom_colour_4 }};">
+	       		{{property.lettings_fee_text}}
+	     	</span>
 		</p>
 		<p>
 			{{property.short_description | truncate:185}}
