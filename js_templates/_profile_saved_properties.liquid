@@ -1,0 +1,34 @@
+{% raw %}
+  <div class='profile_tab_content hidden' id="profile_tab_saved_properties_content">
+    {%if user_type == 'local'%}
+      <p>Here are the properties you have saved for later. If you <a href="#user">sign in or register</a> we will save these to your account.</p>
+    {% else %}
+      Here are some properties you have saved for later.
+    {% endif %}
+
+    <div class='properties'>
+      {% for property in saved_properties %}
+        {% if property.property_id %}
+          <div class='saved_property clearfix'>
+            <a href='{{property.property_url}}'>
+              <img class='thumb' src='{{property.small_photo}}'/>
+            </a>
+            <div class='sp_content'>
+               <h2>{{property.display_address}} <small>{{property.price}}</small>
+                  {% if property.property_channel == 'lettings' %}
+                    <span class="feetext">* <a href="/pages/lettings-fees" target="blank" style="float:none;">fees apply</a></span> 
+                  {% endif %}                  
+              </h2>
+              <ul class="piped">
+                {% if property.bedrooms %}<li><span>{{ property.bedrooms }} bedrooms</span></li>{% endif %}
+                {% if portal %}<li><a href='{{property.agency_url}}'>{{property.agency_name}}</a></li>{% endif %}
+                <li><a href='{{property.property_url}}'>View property</a></li>
+                <li class="last"><a onclick='Ctesius.Actions.removeSavedProperty({{property.property_id}}); '>Remove saved property</a></li>
+              </ul>
+            </div>
+          </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+{% endraw %}
