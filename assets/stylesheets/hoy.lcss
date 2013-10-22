@@ -99,11 +99,8 @@
 		.user_header a, 
 		.user_header a:hover, 
 		.user_header a:active,
-		.home_gallery a,
-		.home_gallery a:active,
-		.home_gallery a:hover
 		{
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.on_navigation_primary_tint_text_colour}};
 		}
 		
 		.home_gallery {
@@ -123,7 +120,7 @@
 		}
 
 		.image-caption p {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: #ffffff;
 			font-size:80%;
 			opacity:1;
 			padding:20px;
