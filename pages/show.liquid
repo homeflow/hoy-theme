@@ -8,3 +8,38 @@
 
 {{cms_page.content}}
 	
+<div class="recent-properties">
+	<script>
+		sales_property_for_config = []
+		lettings_property_for_config = []
+	</script>
+
+	<hr />
+	{% if agency.recent_sales_properties != empty%}
+		<h4>Latest sale listings for {{agency.name}}</h4>   
+		<hr />
+
+		<script>
+			{% assign properties = agency.recent_sales_properties %}
+			sales_property_for_config = {% include_as_json properties/properties_list %}.properties
+		</script>
+
+		{% for property in properties limit:2 %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% endif %}
+	
+	{% if agency.recent_lettings_properties != empty%}    
+		<h4>Latest lettings listings for {{agency.name}}</h4>
+		<hr />
+
+		<script>
+			{% assign properties = agency.recent_lettings_properties %}
+			lettings_property_for_config = {% include_as_json properties/properties_list %}.properties
+		</script>
+
+		{% for property in properties limit:2 %}
+			{% include "properties/property_small" %}
+		{% endfor %}
+	{% endif %}
+</div>
