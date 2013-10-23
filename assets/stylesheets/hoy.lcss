@@ -62,6 +62,14 @@
 		h1, h2, h3 {	
 			margin-top:10px;
 		}
+
+		h2 {
+			font-size:22px;
+		}
+
+		h3 {
+			font-size:20px;
+		}
 		
 		.nav1 {
 			padding:63px 0 0 8px;
@@ -99,8 +107,9 @@
 		.user_header a, 
 		.user_header a:hover, 
 		.user_header a:active,
+		.user_header a:focus
 		{
-			color: {{theme_preferences.on_navigation_primary_tint_text_colour}};
+			color: {{theme_preferences.custom_colour_5}}; /* Custom color 5 for user header */
 		}
 		
 		.home_gallery {
@@ -242,8 +251,9 @@
 			width:100%;
 			background-color: {{theme_preferences.accent_colour}};
 			box-shadow: 0px 8px 8px -8px #abacac;
-			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 3 */
+			color: {{theme_preferences.custom_colour_3}}; /* Custom colour 3 for light against dark or visa versa */
 			margin-bottom:20px;
+			border-bottom: 1px solid #ABACAC;
 		}
 		
 		.secondary-banner h3 {
@@ -278,13 +288,13 @@
 		}
 
 		.bottom p {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.on_footer_text_colour}};
 		}
 		
 		.bottom h3 {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.on_footer_text_colour}};
 		}
-
+		
 		.bottom-article {
 			margin-top:30px;
 			text-align:left;
@@ -292,11 +302,14 @@
 		}
 		
 		.bottom a {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+			color: {{theme_preferences.on_footer_text_colour}};
 		}
 		
-		.bottom a:hover {
-			color: {{theme_preferences.on_navigation_primary_text_colour}};
+		.bottom a:hover,
+		.bottom a:active,
+		.bottom a:focus,
+		.bottom a.active {
+			color: {{theme_preferences.on_footer_text_colour}};
 		}
 		
 		dt {
@@ -319,13 +332,13 @@
 		}
 		
 		footer {
-			margin-top:20px;
+			margin-top:40px;
 		}
 		
 		.offices-map {
-			width: 540px;
-			height: 295px;
-			margin: 10px 0 10px 0px;
+			width: 589px;
+			height: 400px;
+			margin: 10px 0 40px 0px;
 		}
 		
 		.office-map {

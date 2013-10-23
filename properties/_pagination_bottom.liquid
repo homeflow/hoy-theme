@@ -1,8 +1,15 @@
-{% if pagination != nil %}
+
   {% if pagination.total_count != 0 %}
 	  <li>Displaying {{ pagination.from_record}} - {{pagination.to_record}} of {{pagination.total_count}} results</li>
-	  <li>|</li>
-	  <li>{% if pagination.has_prev_page %}&lt;<a href="{{pagination.previous_page_link}}" style="color: {{theme_preferences.primary_text_colour}};">Previous 10</a>{% endif %}</li>
-	  <li>{% if pagination.has_next_page %}<a href="{{pagination.next_page_link}}" style="color: {{theme_preferences.primary_text_colour}};">Next 10</a>&gt;{% endif %}</li>
+	  {% if pagination.has_prev_page %}
+	  	 <li>|</li>
+		  <li>
+		  		&lt;<a href="{{pagination.previous_page_link}}" style="color: {{theme_preferences.primary_text_colour}};">Previous 10</a>
+		  </li>
+	  {% endif %}
+	  {% if pagination.has_next_page %}
+	 	 <li>
+	 	 	<a href="{{pagination.next_page_link}}" style="color: {{theme_preferences.primary_text_colour}};">Next 10</a>&gt;
+	 	 </li>
+	  {% endif %}
   {% endif %}
-{% endif %}
