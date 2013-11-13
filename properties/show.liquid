@@ -127,7 +127,13 @@
 	{% if property.floorplans.first %}
 		<div id="togglable_floorplan" class="togglable_area hidden">
 			{% for floorplan in property.floorplans %}
-				<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}">
+				{% if floorplan.is_image? %}
+					<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}"><br /><br />	
+				{% else %}	
+					<a href="http://mr0.homeflow.co.uk/{{ floorplan.image }}" target="_blank">
+						View floor plan
+					</a><br /><br />	
+				{% endif %}
 			{% endfor %}
 		</div>
 	{% endif%}
