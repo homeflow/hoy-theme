@@ -123,7 +123,13 @@
 						</span>
 						<span style="padding-left:2px">|</span>
 						<span style="color:{{ theme_preferences.on_footer_text_colour }};padding: 0px 2px 0px 2px;">Powered by Homeflow</span>
-						<img src="/liquid_assets/images/hf.png" height="10" width="80" style="width:80px;height:13px"/>
+						{% content_block homeflow_img %}
+							{% if content_block == 'No content chunk found: homeflow_img' %}
+								<p>Couldn't find footer chunk.</p>
+							{% else %}
+								{{ content_block }}
+							{% endif %}
+						{% endcontent_block %}
 					</p>
 				</div>
 			</div>
