@@ -572,3 +572,9 @@
 		.feetext a {
 			font-size:10px;
 		}
+
+		body img.property-status {
+		    border: none;
+		    height: 120px;
+		    left: 16px;
+		}
