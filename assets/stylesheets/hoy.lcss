@@ -113,7 +113,7 @@
 		}
 		
 		.home_gallery {
-			height:380px;
+			height:400px;
 			width:633px;
 		}
 
