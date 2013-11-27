@@ -3,13 +3,14 @@
 	  <form action='/search' id='search' method='get' onsubmit="return false;" class="advanced">
 	  <fieldset id="search-fields">
 		<input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' class='search' / >
-		<div class="radios">
-			<input type="radio" name="channel" value="sales" checked id="buy"> 
-			<label>For Sale</label>
-	
-			<input type="radio" name="channel" value="lettings" checked id="let"> 
-			<label>To Let</label>
-		</div>
+		{% unless agency.sales_count == 0 or agency.lettings_count == 0 %}	
+			<div class="radios">
+				<input type="radio" name="channel" value="sales" checked id="buy"> 
+				<label>For Sale</label>
+				<input type="radio" name="channel" value="lettings" checked id="let"> 
+				<label>To Let</label>
+			</div>
+		{% endunless %}
 		<div class="search_wrapper" id="row1">
 		  <div class="search_row">        
 			<input data-provide="typeahead" class='search' placeholder='Town or Postcode' type="text" id='location' name="location" value="{{location_field}}" onUnfocus="this.theform.submit()"/>
