@@ -124,7 +124,7 @@
 	<div id="togglable_satellite" class="togglable_area hidden">
 		<div id='satellite' class="google_map_container"></div>
 	</div>
-	{% if property.floorplans.first %}
+	{% if property.floorplans != empty %}
 		<div id="togglable_floorplan" class="togglable_area hidden">
 			{% for floorplan in property.floorplans %}
 				{% if floorplan.is_image? %}
@@ -137,7 +137,7 @@
 			{% endfor %}
 		</div>
 	{% endif%}
-	{% if property.epc_charts.first %}
+	{% if property.epc_charts != empty %}
 		<div id="togglable_epc" class="togglable_area hidden">
 		{% for epc_chart in property.epc_charts %}
 			{% if epc_chart.is_pdf? %}
@@ -148,11 +148,11 @@
 		{% endfor %}
 		</div>
 	{% endif %}
-	{% if property.brochures.first %}
+	{% if property.brochures != empty %}
 		<div id="togglable_brochure" class="togglable_area hidden">
 		{% for brochure in property.brochures %}
 			{% if brochure.is_pdf? %}
-				<a href="{{brochure | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{brochure | url_for_property_photo : "200x200R" }}" /> Download PDF Brochure</a>
+				<a href="{{brochure | url_for_property_asset}}" target="_blank" class="pdf_thumb"><img src="{{brochure | url_for_property_photo : "200x200R" }}" />Download PDF Brochure</a>
 				{% else %}
 				<img src="{{brochure | url_for_property_asset}}">
 			{% endif %}

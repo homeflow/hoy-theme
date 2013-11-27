@@ -22,16 +22,16 @@
 		});
 
 		Ctesius.registerEvent('saved_property_removed', function(saved_property, collection){
-			$("#shortlist_link_"+saved_property.id).html("Save to Shortlist")
-			$("#shortlist_link_"+saved_property.id).attr("onclick", 'Ctesius.Actions.addSavedProperty('+saved_property.id+'); return false;')
+			$(".shortlist_link_"+saved_property.id).html("Save to Shortlist")
+			$(".shortlist_link_"+saved_property.id).attr("onclick", 'Ctesius.Actions.addSavedProperty('+saved_property.id+'); return false;')
 			if(collection.size() == 0){
 				$('#saved_properties_view').addClass("hidden");
 			}
 		});
 		
 		Ctesius.registerEvent('saved_property_added', function(saved_property, collection){
-				$("#shortlist_link_" + saved_property.id).html("Remove from Shortlist");
-				$("#shortlist_link_" + saved_property.id).attr("onclick", 'Ctesius.Actions.removeSavedProperty('+saved_property.id+'); return false;')
+				$(".shortlist_link_" + saved_property.id).html("Remove from Shortlist");
+				$(".shortlist_link_" + saved_property.id).attr("onclick", 'Ctesius.Actions.removeSavedProperty('+saved_property.id+'); return false;')
 		});
 
 		Ctesius.registerEvent('saved_search_removed', function(search, collection){

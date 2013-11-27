@@ -43,3 +43,17 @@
 		{% endfor %}
 	{% endif %}
 </div>
+
+<script>
+	$(document).ready(function(){
+		properties_for_config = sales_property_for_config.concat(lettings_property_for_config);
+		Ctesius.addConfig('properties', properties_for_config);
+		Ctesius.bootPropertiesCollection(Ctesius.getConfig('properties'));
+	});
+</script>
+
+<script>
+	$(document).ready(function(){
+		$(".inline").colorbox({inline:true, width:"450px"});
+	});
+</script>

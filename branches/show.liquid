@@ -55,7 +55,7 @@
 			sales_property_for_config = {% include_as_json properties/properties_list %}.properties
 		</script>
 
-		{%for property in properties limit:2 %}
+		{% for property in properties limit:2 %}
 			{% include "properties/property_small" %}
 		{% endfor %}
 	{% endif %}
