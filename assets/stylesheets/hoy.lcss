@@ -192,7 +192,7 @@
 
 		
 		.home-articles .words {
-			min-height:159px;
+			min-height:174px;
 		}
 		
 		.home-articles a.chunk_links {
