@@ -60,7 +60,17 @@
 		</div>
 	</div>	
 	{% if page.controller_name == 'home' or page.controller_name == 'articles' %}
-		<div class="accent-strip"></div>
+		<div class="accent-strip">
+			<div class="container">
+				<div class="col-lg-12">
+					{% content_block agent_details %}
+						{% unless content_block == 'No content chunk found: agent_details' %}
+							{{content_block}}
+						{% endunless %}
+					{% endcontent_block %}
+				</div>
+			</div>
+		</div>
 	{% else %}
 		<div class="secondary-banner">
 			<div class="container">

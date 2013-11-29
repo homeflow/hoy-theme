@@ -574,3 +574,12 @@
 		    height: 120px;
 		    left: 16px;
 		}
+
+		.agent_details {
+			float:right;
+			padding-top:12px;
+		}
+
+		.agent_details p {
+			color: {{theme_preferences.on_navigation_primary_text_colour}};
+		}
