@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
-  $(window).load(function() {
-     $('#slider').nivoSlider({
+  jQuery(function(){
+     jQuery('#slider').nivoSlider({
         effect: 'fade',               // Specify sets like: 'fold,fade,sliceDown'
         animSpeed: 500,               // Slide transition speed
         pauseTime: 4000,              // How long each slide will show
@@ -15,9 +15,9 @@
 //alert("total_count = " + total_count + "\nnumber_of_thumbnails = " + number_of_thumbnails + "\npos = " + pos + "\ntotal_count - number_of_thumbnails = " + (total_count - number_of_thumbnails) + "\npos - 2 = " + (pos-2) + "\nEnd result = " + (Math.max(0, Math.min(pos - 2,  total_count - number_of_thumbnails))));
           set_thumb_range(Math.max(0, Math.min(pos - 2,  total_count - number_of_thumbnails)));
         }
-    });
-
-    function set_thumb_range(min){
+      });
+	 
+	function set_thumb_range(min){
       $('.nivo-control:first').stop();
       $('.nivo-control:first').animate({
         left: -min * 118
@@ -28,43 +28,8 @@
 				}
 			});
     }
-  });
-</script>
 
-<script type="text/javascript">
-	Ctesius.registerEvent('render_tab', function(tab_name){
-		switch(tab_name){
-			case 'map':
-				{% gmap_for property as roadmap in single_map %}
-			break;
-			case 'streetview':
-				{% gmap_for property as streetview in streetview %}
-			break;
-			case 'satellite':
-				{% gmap_for property as satellite in satellite %}
-			break;
-		}
-	});
-
-</script>
-
-<script type="text/javascript">
-	Ctesius.addConfig('property_id', '{{property.property_id}}')
-</script>
-
-<script>
-	$(document).ready(function(){
-		Ctesius.registerEvent('user_logged_in', function(user){
-			$('#lead_client_firstname_autofil').val(user.get('first_name'));
-			$('#lead_client_secondname_autofil').val(user.get('last_name'));
-			$('#lead_client_email_autofil').val(user.get('email'));
-			$('#lead_client_phone_autofil').val(user.get('tel_home'));
-		});
-
-		$(".inline").colorbox({inline:true, width:"450px"});
-	});
-
-	$('a.back-to-results').attr('href', document.referrer);
+    });
 </script>
 
 {% push_to_header %}
@@ -163,3 +128,38 @@
 		</div>
 	{% endif %}
 </div>
+
+<script type="text/javascript">
+	Ctesius.registerEvent('render_tab', function(tab_name){
+		switch(tab_name){
+			case 'map':
+				{% gmap_for property as roadmap in single_map %}
+			break;
+			case 'streetview':
+				{% gmap_for property as streetview in streetview %}
+			break;
+			case 'satellite':
+				{% gmap_for property as satellite in satellite %}
+			break;
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	Ctesius.addConfig('property_id', '{{property.property_id}}')
+</script>
+
+<script>
+	$(document).ready(function(){
+		Ctesius.registerEvent('user_logged_in', function(user){
+			$('#lead_client_firstname_autofil').val(user.get('first_name'));
+			$('#lead_client_secondname_autofil').val(user.get('last_name'));
+			$('#lead_client_email_autofil').val(user.get('email'));
+			$('#lead_client_phone_autofil').val(user.get('tel_home'));
+		});
+
+		$(".inline").colorbox({inline:true, width:"450px"});
+	});
+
+	$('a.back-to-results').attr('href', document.referrer);
+</script>

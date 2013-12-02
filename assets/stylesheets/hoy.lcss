@@ -414,13 +414,12 @@
 	
 		.toggable-nav {
 			float:right;
-			margin-right:7px;
 		}
 	
 		.toggable-nav li {
 			list-style-type:none;
 			display:inline;
-			padding-right:10px;
+			padding-right:7px;
 		}
 	
 		.toggable-nav li:last-child {
