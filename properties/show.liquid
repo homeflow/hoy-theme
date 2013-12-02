@@ -70,7 +70,9 @@
 {% push_to_header %}
 	<div class="col-lg-7">
 		<h3>{{property.display_address}}</h3>
-		<h4>{{property.bedrooms}} bedrooms</h4>
+		{% unless property.bedrooms == 0 %}	
+			<h4>{{property.bedrooms}} bedrooms</h4>
+		{% endunless %}
 	</div>
 	<div class="col-lg-5">
 		<h3 style="margin-bottom:0">{{property.price}}</h3>
