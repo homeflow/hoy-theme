@@ -26,7 +26,7 @@ $(document).ready(function(){
 				<img src="{{ carousel_item.image | url_for_agency_logo }}" title="" height="400" width="633" style="width:633px;height:400px" />
 				<div class="image-caption">	
 					<p>
-						<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a>{% if carousel_item.type == 'Property' %}- <span class="thin">{{ carousel_item.price }}</span>{% endif %}<br />
+						<a href="{{ carousel_item.link_url }}"><strong>{{ carousel_item.title }}</strong></a>{% if carousel_item.type == 'Property' %} - <span class="thin">{{ carousel_item.price }}</span>{% endif %}<br />
 						{{ carousel_item.standfirst | truncate:80 }}
 						<strong><a href="{{ carousel_item.link_url }}">Read more</a></strong>
 					</p>
