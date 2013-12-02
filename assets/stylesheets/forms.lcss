@@ -106,7 +106,7 @@
 		}
 		
 		.contact-form {
-			width:336px;
+			width:330px;
 		}
 		
 		.contact-form label {
