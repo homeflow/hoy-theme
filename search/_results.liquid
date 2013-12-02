@@ -12,9 +12,12 @@
 				All properties {{current_channel.dictionary.preposition}}
 			</h3>
 		{% endif %}
-		
-		{% include 'common_chunks/list_nav' %}
-		
+		<div class='togglable_area' id='togglable_list'>
+			{% include 'common_chunks/list_nav' %}
+		</div>
+		<div class='togglable_area hidden' id='togglable_map'>
+			{% include 'properties/pagination_for_map' %}
+		</div>
 	</div>
 {% endpush_to_header %}
 
@@ -22,12 +25,12 @@
 	{% for property in properties %}
 		{% include "properties/property_small" %}
 	{% endfor %}
+
+	{% include 'common_chunks/bottom_list_nav' %}
 </div>
 <div class='togglable_area hidden' id='togglable_map'>
 	<div id='draggable_map_view'></div>
 </div>
-
-{% include 'common_chunks/bottom_list_nav' %}
 
 <script>
 	$(document).ready(function(){

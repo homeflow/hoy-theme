@@ -16,8 +16,8 @@
 		</p>
 		<p>
 			<a href="{{property | url_for_property}}">Full details</a> |
-			<a class="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;">Save to shortlist</a> or call us on
-			{% if property.vox_number %}on {{property.vox_number}} {%endif%}
+			<a class="shortlist_link_{{ property.property_id }}" href="#" onclick="Ctesius.Actions.addSavedProperty({{property.property_id}}); return false;">Save to shortlist</a>{% if property.contact_telephone %} or call us
+			{{property.contact_telephone}} {% endif %}
 			{% if property.comment %}<div class="quote">&ldquo;{{ property.comment }}&rdquo;</div>{% endif %}
 		</p>
 	</div>

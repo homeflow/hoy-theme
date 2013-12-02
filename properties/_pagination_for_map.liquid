@@ -1,0 +1,11 @@
+<span id="map_info"></div>
+
+<script>
+  Ctesius.registerEvent('before_draggable_map_updated',function(){
+     $('#map_info').html('<span>Updating map...</span>')
+  });
+
+  Ctesius.registerEvent('draggable_map_updated',function(res){
+     $('#map_info').html('<span>Showing ' + res.properties.length + ' of ' + res.pagination.total_count + ' properties. Zoom in or drag the map to see more.</span>	<a href="#home">Back to list view.</a>' )
+  });
+</script>
