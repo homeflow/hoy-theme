@@ -609,3 +609,8 @@
 		#map_info {
 			font-size:90%;
 		}
+
+		select {
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}

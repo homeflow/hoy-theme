@@ -95,16 +95,22 @@
 		.h-search-form select {
 			width:150px;
 			margin-right:5px;
+			border: 1px solid #696969;
 		}
 		
 		.h-search-form input[type="text"] {
 			width:476px;
+			border: 1px solid #696969;
 		}
 
 		.h-search-form #location {
 			width:471px;
 		}
 		
+		.h-search-form .btn {
+			border: 1px solid #696969;
+		}
+
 		.contact-form {
 			width:330px;
 		}

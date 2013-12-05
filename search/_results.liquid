@@ -1,7 +1,7 @@
 {% push_to_header %}
 	<div class="col-lg-12">
 		{% if location.name %}
-			<h3> {{current_channel.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposition}} in 
+			<h3> {{search.dictionary.general_collective | capitalize}}  {{current_channel.dictionary.preposition}} in 
 				<span> 
 					{{ location.name }}, 
 					{{ county.name }} 
@@ -9,7 +9,7 @@
 			</h3>
 		{% else %}
 			<h3>
-				All properties {{current_channel.dictionary.preposition}}
+				All {{search.dictionary.general_collective | capitalize}} {{current_channel.dictionary.preposition}}
 			</h3>
 		{% endif %}
 		<div class='togglable_area' id='togglable_list'>
