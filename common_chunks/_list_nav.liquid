@@ -8,6 +8,9 @@
 		<a href="#map">Map</a>
 	</li>
 	<li>|</li>
-	{% include 'properties/pagination' %}
-	<li><a href="#" id="save_search_link" onClick="Ctesius.Actions.saveCurrentSearch();highlight_saved_search(); return false;">Save this search</a></li>
+	{% include 'properties/pagination' %} 
+	{% if location %}
+		<li>|</li>
+		<li><a href="#" id="save_search_link" onClick="Ctesius.Actions.saveCurrentSearch();highlight_saved_search(); return false;">Save this search</a></li>
+	{% endif %}
 </ul>

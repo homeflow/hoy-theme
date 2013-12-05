@@ -1,5 +1,5 @@
 {% if pagination.total_count != 0 %}
-  <li>Displaying {{ pagination.from_record}} - {{pagination.to_record}} of {{pagination.total_count}} results</li>
+  <li>Displaying {{ pagination.from_record}} - {{pagination.to_record}}{% if location %} of {{pagination.total_count}} results{% endif %}</li>
   {% if pagination.has_prev_page %}
   	 <li>|</li>
 	  <li>
