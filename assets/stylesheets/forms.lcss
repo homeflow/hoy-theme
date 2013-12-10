@@ -218,3 +218,9 @@
 			padding-left:30px;
 			padding-right:30px;
 		}
+
+		#rsales, #rlettings {
+			float:left;
+			margin-right:10px;
+		}
+		

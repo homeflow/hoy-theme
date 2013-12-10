@@ -5,10 +5,10 @@
 		<input type='hidden' id ='place_id' name='place_id' value='{{place_id}}' class='search' / >
 		{% unless agency.sales_count == 0 or agency.lettings_count == 0 %}	
 			<div class="radios">
-				<input type="radio" name="channel" value="sales" checked id="buy"> 
-				<label>For Sale</label>
-				<input type="radio" name="channel" value="lettings" checked id="let"> 
-				<label>To Let</label>
+				<div id="rsales"><input type="radio" name="channel" value="sales" checked="checked" id="buy"> 
+				<label>For Sale</label></div>
+				<div id="rlettings"><input type="radio" name="channel" value="lettings" id="let"> 
+				<label>To Let</label></div>
 			</div>
 		{% endunless %}
 		<div class="search_wrapper" id="row1">
