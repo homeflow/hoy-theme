@@ -1,5 +1,5 @@
 <h4><a href="{{branch | url_for_branch}}">{{ branch.name }} office</a> </h4>
-<h4>{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}}{% endif%}</h4>
+<h4>{% if property.vox_number %}{{ property.vox_number }}{% else %}{{ branch.contact_telephone }}{% endif %}</h4>
 {% unless branch.staff_profiles == empty %} 
 {% assign profile = branch.staff_profiles.first %}
 	<div class="staff-property">
