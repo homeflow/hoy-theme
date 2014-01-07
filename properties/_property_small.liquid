@@ -1,8 +1,8 @@
 <div id="property_{{property.property_id}}" class="property-small">
 	<div class="row">
+		{{ property | photo_overlay }}
 		<a href="{{property | url_for_property}}">
-			{{ property | photo_overlay }}
-			<img src="{{property.photos.first | url_for_property_asset:"176x133"}}">
+			<img src="{{property.photos.first | url_for_property_asset:"176x133"}}" class="main">
 		</a>
 		<a href="{{property | url_for_property}}">{{property.display_address | truncate : 60}}</a>
 		<p>
