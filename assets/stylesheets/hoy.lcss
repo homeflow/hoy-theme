@@ -584,7 +584,8 @@
 		body img.property-status {
 		    border: none;
 		    height: 120px;
-		    left: 16px;
+		    left: 1px;
+		    top:2px;
 		}
 
 		.agent_details {
