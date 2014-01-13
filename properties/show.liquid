@@ -95,12 +95,13 @@
 	{% if property.floorplans != empty %}
 		<div id="togglable_floorplan" class="togglable_area hidden">
 			{% for floorplan in property.floorplans %}
-				{% if floorplan.is_image? %}
-					<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}"><br /><br />	
-				{% else %}	
+				{% if floorplan.is_pdf? %}
 					<a href="http://mr0.homeflow.co.uk/{{ floorplan.image }}" target="_blank">
 						View floor plan
-					</a><br /><br />	
+					</a>
+				{% else %}	
+					<img src="http://mr0.homeflow.co.uk/{{ floorplan.image }}"><br /><br />	
+					<br /><br />	
 				{% endif %}
 			{% endfor %}
 		</div>

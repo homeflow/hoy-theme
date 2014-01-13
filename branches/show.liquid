@@ -19,7 +19,11 @@
 	{% endunless %}
 </ul>
 <p style="font-weight:bold">
-	{% if branch and branch.default_vox_number %}Tel: {{branch.default_vox_number}} <br />{% endif%}
+	{% if branch.default_vox_number %}
+		Tel: {{branch.default_vox_number}} <br />
+	{% else %}
+		Tel: {{branch.contact_telephone}} <br />
+	{% endif%}
 	{{ branch.address }}
 </p>
 <div id="togglable_summary" class="togglable_area clearfix">
